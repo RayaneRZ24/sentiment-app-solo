@@ -1,0 +1,16 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 C:\Users\NITRO5~1\AppData\Local\Temp\sentiment-solo-e3j5t4v7\kits\kit-tp3\appliquer_tp3.py C:\Users\NITRO 5\Downloads\sentiment-app-solo
+
+Dépôt cible : C:\Users\NITRO 5\Downloads\sentiment-app-solo
+  ajoute         api/__init__.py
+  ajoute         api/model.py
+  ajoute         api/schemas.py
+  ajoute         api/main.py
+  ajoute         tests/test_api.py
+  ajoute         docs/semaine3.md
+  ajoute         TP3-ENONCE.md
+  ajoute         MARCHE-A-SUIVRE-TP3.md
+  complète       requirements.txt : fastapi==0.115.*, uvicorn[standard]==0.30.*, httpx==0.27.*
+  complète       pytest.ini : pythonpath = . (les tests importent api/)
+  déjà là        .github/workflows/ci.yml
+
+Kit installé. Suite, dans le dépôt : python src/train.py, puis MARCHE-A-SUIVRE-TP3.md, contrôle T14.

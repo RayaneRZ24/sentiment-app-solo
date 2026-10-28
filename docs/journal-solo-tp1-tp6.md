@@ -7,6 +7,7 @@ Le code et les fiches sont adaptés du dépôt de binôme cité dans le README e
 | TP | Résultat local | Repère | CI du point de contrôle |
 | --- | --- | --- | --- |
 | TP1 | 38 passed in 2.04s | `tp1-valide` | [Succès](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731654315) |
-| TP2 | 42 passed in 2.23s | `tp2-valide` | Déclenchée par le push de cette étape |
+| TP2 | 42 passed in 2.23s | `tp2-valide` | [Succès](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731888889) |
+| TP3 | 48 passed, 1 warning in 3.09s | `tp3-valide` | Déclenchée par le push de cette étape |
 
 Les sorties intégrales sont enregistrées dans `docs/verification/tpN-*.txt`. Les étapes volontairement en échec servent à montrer un défaut avant sa correction ; elles ne sont pas poussées comme un état final validé.
