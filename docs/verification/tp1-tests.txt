@@ -1,0 +1,4 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pytest -q
+
+......................................                                   [100%]
+38 passed in 2.04s
