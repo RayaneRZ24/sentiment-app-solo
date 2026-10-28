@@ -1,0 +1,5 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 src/make_demo.py
+
+290 avis écrits dans data\demo_reviews.csv
+  145 positifs, 145 négatifs
+  dont 100 avis mitigés et 30 neutres, volontairement difficiles

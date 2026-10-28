@@ -1,0 +1,22 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pip install -r requirements.txt --disable-pip-version-check
+
+Requirement already satisfied: pandas==2.2.* in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from -r requirements.txt (line 1)) (2.2.3)
+Requirement already satisfied: scikit-learn==1.5.* in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from -r requirements.txt (line 2)) (1.5.2)
+Requirement already satisfied: joblib==1.4.* in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from -r requirements.txt (line 3)) (1.4.2)
+Requirement already satisfied: pytest==8.3.* in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from -r requirements.txt (line 4)) (8.3.5)
+Collecting pyarrow==17.0.* (from -r requirements.txt (line 5))
+  Using cached pyarrow-17.0.0-cp311-cp311-win_amd64.whl.metadata (3.4 kB)
+Requirement already satisfied: numpy>=1.23.2 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pandas==2.2.*->-r requirements.txt (line 1)) (2.4.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pandas==2.2.*->-r requirements.txt (line 1)) (3.0.0)
+Requirement already satisfied: pytz>=2020.1 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pandas==2.2.*->-r requirements.txt (line 1)) (2026.5)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pandas==2.2.*->-r requirements.txt (line 1)) (2026.6)
+Requirement already satisfied: scipy>=1.6.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from scikit-learn==1.5.*->-r requirements.txt (line 2)) (1.17.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from scikit-learn==1.5.*->-r requirements.txt (line 2)) (3.7.0)
+Requirement already satisfied: colorama in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pytest==8.3.*->-r requirements.txt (line 4)) (0.4.6)
+Requirement already satisfied: iniconfig in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pytest==8.3.*->-r requirements.txt (line 4)) (2.3.1)
+Requirement already satisfied: packaging in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pytest==8.3.*->-r requirements.txt (line 4)) (26.3)
+Requirement already satisfied: pluggy<2,>=1.5 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pytest==8.3.*->-r requirements.txt (line 4)) (1.7.0)
+Requirement already satisfied: six>=1.6 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from python-dateutil>=2.8.2->pandas==2.2.*->-r requirements.txt (line 1)) (1.17.0)
+Using cached pyarrow-17.0.0-cp311-cp311-win_amd64.whl (25.2 MB)
+Installing collected packages: pyarrow
+Successfully installed pyarrow-17.0.0

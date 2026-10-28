@@ -1,6 +1,6 @@
 # sentiment-app-solo
 
-Travail individuel d'**Ahmed Rayane Ramzi** (@RayaneRZ24), adapté le 28 octobre 2026 à la consigne de travail en solo. Étape actuelle : **TP1**.
+Travail individuel d'**Ahmed Rayane Ramzi** (@RayaneRZ24), adapté le 28 octobre 2026 à la consigne de travail en solo. Étape actuelle : **TP2**.
 
 ## Origine du code
 
@@ -14,6 +14,8 @@ La consigne solo remplace le contrôle de deux auteurs par le contrôle d'un aut
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
+python src/make_demo.py
+python src/train.py
 python scripts/check_setup.py
 python -m pytest -q
 ```
