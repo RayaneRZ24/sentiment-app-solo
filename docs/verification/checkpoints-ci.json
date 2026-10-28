@@ -1,0 +1,68 @@
+[
+  {
+    "stage": 1,
+    "sha": "ec0f2799d0d5e2b0a9bc1882910c87f1f55e88db",
+    "tag": "tp1-valide",
+    "summary": "38 passed in 2.04s",
+    "ci": {
+      "id": 40731654315,
+      "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731654315",
+      "conclusion": "success"
+    }
+  },
+  {
+    "stage": 2,
+    "sha": "9cb2dfaf18b69c86603739e3d81a00b137acdc5b",
+    "tag": "tp2-valide",
+    "summary": "42 passed in 2.23s",
+    "ci": {
+      "id": 40731888889,
+      "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731888889",
+      "conclusion": "success"
+    }
+  },
+  {
+    "stage": 3,
+    "sha": "bdccc426675372d172e23fa52d2c19b0528f3e65",
+    "tag": "tp3-valide",
+    "summary": "48 passed, 1 warning in 3.09s",
+    "ci": {
+      "id": 40732096196,
+      "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40732096196",
+      "conclusion": "success"
+    }
+  },
+  {
+    "stage": 4,
+    "sha": "381b2316cac61ba30edcc248c7349795c63f35bb",
+    "tag": "tp4-valide",
+    "summary": "87 passed, 4 xfailed, 1 warning in 7.02s",
+    "ci": {
+      "id": 40732610139,
+      "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40732610139",
+      "conclusion": "success"
+    }
+  },
+  {
+    "stage": 5,
+    "sha": "c53925eab091b60d7d2f6c0dc33b58ccb5f5c6ac",
+    "tag": "tp5-valide",
+    "summary": "99 passed, 4 xfailed, 1 warning in 11.28s",
+    "ci": {
+      "id": 40733058617,
+      "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40733058617",
+      "conclusion": "success"
+    }
+  },
+  {
+    "stage": 6,
+    "sha": "76c63a4789f49e52860baa2d05c425d714b4562d",
+    "tag": "v0.6.0",
+    "summary": "105 passed, 4 xfailed, 1 warning in 10.99s",
+    "ci": {
+      "id": 40733697516,
+      "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40733697516",
+      "conclusion": "success"
+    }
+  }
+]

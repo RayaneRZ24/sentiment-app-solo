@@ -1,0 +1,11 @@
+7	Ramzi Ahmed Rayane
+
+76c63a4 TP6 solo : paquet installable et verification de la roue
+c53925e TP5 solo : interface HTTP, avis et fichiers CSV
+381b231 TP4 solo : limites, abstention, integration et qualite
+bdccc42 TP3 solo : API FastAPI et tests du contrat
+9cb2dfa TP2 solo : modele reproductible et evaluations
+ec0f279 TP1 solo : cadrage, environnement et 38 controles valides
+710b0c5 TP1 solo : structure initiale et attribution du code repris
+
+Fichiers interdits suivis :

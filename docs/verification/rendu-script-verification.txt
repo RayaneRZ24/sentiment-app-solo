@@ -1,0 +1,147 @@
+$ powershell -NoProfile -ExecutionPolicy Bypass -File C:\Users\NITRO 5\Downloads\sentiment-app-solo\scripts\verifier.ps1
+
+76c63a4 TP6 solo : paquet installable et verification de la roue
+c53925e TP5 solo : interface HTTP, avis et fichiers CSV
+381b231 TP4 solo : limites, abstention, integration et qualite
+bdccc42 TP3 solo : API FastAPI et tests du contrat
+9cb2dfa TP2 solo : modele reproductible et evaluations
+ec0f279 TP1 solo : cadrage, environnement et 38 controles valides
+710b0c5 TP1 solo : structure initiale et attribution du code repris
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .github/workflows/ci.yml
+	modified:   README.md
+	modified:   docs/journal-solo-tp1-tp6.md
+	modified:   docs/semaine6.md
+	modified:   docs/verification/tp6-ui-health.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	docs/presenter-au-prof.md
+	docs/verification/checkpoints-ci.json
+	docs/verification/historique-solo.txt
+	docs/verification/rendu-dependances.txt
+	scripts/verifier.ps1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Diagnostic solo
+Diagnostic TP1 dans C:\Users\NITRO 5\Downloads\sentiment-app-solo
+
+Python
+  OK         version 3.11.9
+  OK         environnement virtuel actif (C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv)
+Paquets
+  OK         pandas 2.2.3
+  OK         scikit-learn 1.5.2
+  OK         pytest 8.3.5
+Structure du dépôt
+  OK         dossier data/
+  OK         dossier models/
+  OK         dossier app/
+  OK         dossier ui/
+  OK         dossier tests/
+  OK         dossier scripts/
+  OK         dossier docs/cadrage/
+  OK         fichier README.md
+  OK         fichier requirements.txt
+  OK         fichier .gitignore
+  OK         .gitignore contient .venv/
+  OK         .gitignore contient __pycache__/
+  OK         .gitignore contient .env
+  OK         .gitignore contient models/
+  OK         .gitignore contient mlruns/
+Git
+  OK         dépôt Git détecté
+  OK         1 auteurs de commits : Ramzi Ahmed Rayane
+  OK         .venv/ n'est pas suivi par Git
+Fiches de cadrage
+  OK         3 fiches trouvées
+  OK         cas1-pharmacie.md : une approche cochée
+  OK         cas2-reglement.md : une approche cochée
+  OK         cas3-avis-negatifs.md : une approche cochée
+
+Résultat : 0 erreur(s), 0 avertissement(s)
+Tout est en place.
+
+Donnees
+290 avis écrits dans data\demo_reviews.csv
+  145 positifs, 145 négatifs
+  dont 100 avis mitigés et 30 neutres, volontairement difficiles
+
+Modele de demonstration
+Source : demo, 290 avis (145 négatifs)
+232 avis d'entraînement, 58 de test
+Vocabulaire : 316 termes
+F1 macro sur le jeu de test : 0.879 (seuil 0.85)
+Modèle : models\sentiment.joblib
+Métriques : models\metrics.json (versionné dans Git, contrairement au modèle)
+
+Evaluation
+Évaluation sur 58 avis (demo)
+
+              precision    recall  f1-score   support
+
+    negative      0.844     0.931     0.885        29
+    positive      0.923     0.828     0.873        29
+
+    accuracy                          0.879        58
+   macro avg      0.883     0.879     0.879        58
+weighted avg      0.883     0.879     0.879        58
+
+Matrice de confusion (lignes = vérité, colonnes = prédiction)
+            negative  positive
+  negative        27         2
+  positive         5        24
+
+2 négatifs classés positifs, 5 positifs classés négatifs
+
+7 erreurs au total. Trois exemples :
+  vérité=positive  prédit=negative  | Taille trop petite et retour payant au déballage, sauf que ensuite produit conforme à la d
+  vérité=positive  prédit=negative  | Commande jamais reçue et remboursement en attente au début, sauf que ensuite je recommande
+  vérité=negative  prédit=positive  | Service impeccable et livraison en avance sur le papier, sauf que ensuite produit cassé à
+
+Ruff
+All checks passed!
+
+Mypy
+Success: no issues found in 4 source files
+
+Tests et couverture
+........................................................................ [ 66%]
+x...x..x.......x.....................                                    [100%]
+============================== warnings summary ===============================
+tests/test_api.py::test_root
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.11.9-final-0 _______________
+
+Name             Stmts   Miss  Cover   Missing
+----------------------------------------------
+api\main.py         42      2    95%   84-86
+api\model.py        17      0   100%
+api\schemas.py      24      0   100%
+----------------------------------------------
+TOTAL               83      2    98%
+
+1 empty file skipped.
+Required test coverage of 95% reached. Total coverage: 97.59%
+=========================== short test summary info ===========================
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-6] - Faux négatif observé au-dessus du seuil 0.60 : le vocabulaire du problème domine malgré sa résolution.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-10] - Faux positif observé : vocabulaire des dégâts peu représenté dans les 290 avis.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-13] - Faux positif observé : le sac de mots conserve conforme et description sans comprendre ni...ni.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-21] - Faux positif observé : le modèle e-commerce ne comprend pas le risque lié aux allergènes.
+105 passed, 4 xfailed, 1 warning in 11.63s
+
+Version du paquet
+sentiment-app 0.6.0
+
+Prediction via le paquet
+{"label": "POSITIVE", "score": 0.7087, "text": "Livraison rapide, produit conforme, tres satisfait"}

@@ -4,7 +4,9 @@
 
 La roue contient sentiment_app, api et ui ainsi que les métadonnées. Les tests, les données, le modèle et src sont exclus. Le modèle possède son propre cycle de vie ; le code installé le retrouve grâce à SENTIMENT_MODELE. Le contenu réel est consigné dans tp6-contenu-roue.txt.
 
-## Développement et installation
+## Changements dans api/model.py et installation
+
+L'API importe maintenant ModelLabel, charger_modele et predict depuis sentiment_app.predict, sans ajouter src/ dans sys.path. L'import repose sur le paquet installable plutôt que sur l'emplacement du dossier courant. Le fichier de compatibilité src/predict.py renvoie vers le même module : les tests qui modifient predict.MODELE continuent donc de modifier le module réel.
 
 L'installation éditable pointe vers les sources pendant le développement. L'installation d'une roue copie le paquet et doit fonctionner sans le dépôt. Un venv neuf, placé hors du dépôt, a été créé pour installer et tester la roue. Sans la variable, la commande échoue proprement avec le code 1 ; avec le chemin absolu du modèle, elle prédit POSITIVE. La version affichée est 0.6.0.
 

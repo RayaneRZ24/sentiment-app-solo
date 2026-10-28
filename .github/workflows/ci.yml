@@ -34,4 +34,4 @@ jobs:
           python -m venv /tmp/roue-solo
           /tmp/roue-solo/bin/pip install dist/*.whl
           cd /tmp
-          SENTIMENT_MODELE="$GITHUB_WORKSPACE/models/sentiment.joblib" /tmp/roue-solo/bin/sentiment predict "Livraison rapide, produit conforme, tr?s satisfait"
+          SENTIMENT_MODELE="$GITHUB_WORKSPACE/models/sentiment.joblib" /tmp/roue-solo/bin/sentiment predict "Livraison rapide, produit conforme, très satisfait"

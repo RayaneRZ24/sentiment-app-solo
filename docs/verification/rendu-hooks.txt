@@ -1,0 +1,4 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pre_commit run --all-files
+
+ruff (erreurs probables, imports)........................................Passed
+mypy (contrat typé de l'API).............................................Passed

@@ -32,3 +32,26 @@ python -m pytest tests/ -v
 ```
 
 Les erreurs connues du modèle sont documentées en `xfail(strict=True)` à partir du TP4 ; une abstention n'est pas présentée comme une prédiction correcte.
+
+## Résultats par étape
+
+| Étape | Tests locaux | Repère | CI |
+| --- | --- | --- | --- |
+| TP1 | 38 passed in 2.04s | `tp1-valide` | [CI réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731654315) |
+| TP2 | 42 passed in 2.23s | `tp2-valide` | [CI réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731888889) |
+| TP3 | 48 passed, 1 warning in 3.09s | `tp3-valide` | [CI réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40732096196) |
+| TP4 | 87 passed, 4 xfailed, 1 warning in 7.02s | `tp4-valide` | [CI réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40732610139) |
+| TP5 | 99 passed, 4 xfailed, 1 warning in 11.28s | `tp5-valide` | [CI réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40733058617) |
+| TP6 | 105 passed, 4 xfailed, 1 warning in 10.99s | `v0.6.0` | [CI réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40733697516) |
+
+Le dossier de travail personnel est `C:\Users\NITRO 5\Downloads\sentiment-app-solo`. [Présenter le projet au professeur](docs/presenter-au-prof.md).
+
+```powershell
+python -m pip install -e ".[ui]"
+sentiment --version
+sentiment predict "Livraison rapide, produit conforme, très satisfait"
+sentiment serve
+# Dans un autre terminal activé : sentiment ui
+```
+
+Le TP6 est terminé : paquet 0.6.0, roue vérifiée dans un environnement neuf hors dépôt et étape CI de la roue réussie. Le modèle reste extérieur au paquet ; utiliser `SENTIMENT_MODELE` hors du dossier source. La fiche de choix d'un projet d'agent IA est un livrable séparé et n'est pas remplie avec un numéro de sujet inventé.

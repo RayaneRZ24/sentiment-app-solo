@@ -1,1 +1,1 @@
-Commande sentiment ui : serveur Streamlit d?marr?, endpoint de sant? HTTP 200. Aucun appel de pr?diction attribu? ? cet essai de lancement.
+Commande sentiment ui : serveur Streamlit démarré, endpoint de santé HTTP 200. Aucun appel de prédiction attribué à cet essai de lancement.
