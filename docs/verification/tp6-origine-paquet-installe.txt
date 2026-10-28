@@ -1,0 +1,4 @@
+$ C:\Users\NITRO5~1\AppData\Local\Temp\sentiment-solo-roue-iobpz9i3\venv\Scripts\python.exe -c import sentiment_app, sklearn; print(sentiment_app.__file__); print(sklearn.__version__)
+
+C:\Users\NITRO5~1\AppData\Local\Temp\sentiment-solo-roue-iobpz9i3\venv\Lib\site-packages\sentiment_app\__init__.py
+1.5.2

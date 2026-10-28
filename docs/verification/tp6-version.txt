@@ -1,0 +1,3 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\sentiment.exe --version
+
+sentiment-app 0.6.0

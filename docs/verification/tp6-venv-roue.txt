@@ -1,0 +1,5 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m venv C:\Users\NITRO5~1\AppData\Local\Temp\sentiment-solo-roue-iobpz9i3\venv
+
+Actual environment location may have moved due to redirects, links or junctions.
+  Requested location: "C:\Users\NITRO5~1\AppData\Local\Temp\sentiment-solo-roue-iobpz9i3\venv\Scripts\python.exe"
+  Actual location:    "C:\Users\NITRO 5\AppData\Local\Temp\sentiment-solo-roue-iobpz9i3\venv\Scripts\python.exe"

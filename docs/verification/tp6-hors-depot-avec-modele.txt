@@ -1,0 +1,3 @@
+$ C:\Users\NITRO5~1\AppData\Local\Temp\sentiment-solo-roue-iobpz9i3\venv\Scripts\sentiment.exe predict Livraison rapide, produit conforme, très satisfait
+
+{"label": "POSITIVE", "score": 0.777, "text": "Livraison rapide, produit conforme, très satisfait"}

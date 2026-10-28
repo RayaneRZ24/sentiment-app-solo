@@ -1,0 +1,3 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\sentiment.exe predict xqzvb wlkptr grombu
+
+{"label": "INDETERMINE", "score": 0.5162, "text": "xqzvb wlkptr grombu"}

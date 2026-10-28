@@ -1,0 +1,3 @@
+$ C:\Users\NITRO5~1\AppData\Local\Temp\sentiment-solo-roue-iobpz9i3\venv\Scripts\sentiment.exe predict Livraison rapide, produit conforme, très satisfait
+
+modèle introuvable : C:\Users\NITRO 5\AppData\Local\Temp\sentiment-solo-roue-iobpz9i3\venv\Lib\site-packages\models\sentiment.joblib. Lancez python src/train.py, ou indiquez son chemin dans SENTIMENT_MODELE.

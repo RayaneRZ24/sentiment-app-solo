@@ -1,0 +1,77 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pip install -e .[ui] --disable-pip-version-check
+
+Obtaining file:///C:/Users/NITRO%205/Downloads/sentiment-app-solo
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: fastapi<0.116,>=0.115 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from sentiment-app==0.6.0) (0.115.14)
+Requirement already satisfied: uvicorn<0.31,>=0.30 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from sentiment-app==0.6.0) (0.30.6)
+Requirement already satisfied: pydantic<3,>=2.9 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from sentiment-app==0.6.0) (2.9.2)
+Requirement already satisfied: scikit-learn<1.6,>=1.5 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from sentiment-app==0.6.0) (1.5.2)
+Requirement already satisfied: joblib<2,>=1.4 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from sentiment-app==0.6.0) (1.4.2)
+Requirement already satisfied: streamlit<1.40,>=1.39 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from sentiment-app==0.6.0) (1.39.1)
+Requirement already satisfied: pandas<3,>=2.2 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from sentiment-app==0.6.0) (2.2.3)
+Requirement already satisfied: httpx<0.28,>=0.27 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from sentiment-app==0.6.0) (0.27.2)
+Requirement already satisfied: starlette<0.47.0,>=0.40.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from fastapi<0.116,>=0.115->sentiment-app==0.6.0) (0.46.2)
+Requirement already satisfied: typing-extensions>=4.8.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from fastapi<0.116,>=0.115->sentiment-app==0.6.0) (4.16.0)
+Requirement already satisfied: anyio in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from httpx<0.28,>=0.27->sentiment-app==0.6.0) (4.15.1)
+Requirement already satisfied: certifi in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from httpx<0.28,>=0.27->sentiment-app==0.6.0) (2026.10.23)
+Requirement already satisfied: httpcore==1.* in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from httpx<0.28,>=0.27->sentiment-app==0.6.0) (1.0.9)
+Requirement already satisfied: idna in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from httpx<0.28,>=0.27->sentiment-app==0.6.0) (3.20)
+Requirement already satisfied: sniffio in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from httpx<0.28,>=0.27->sentiment-app==0.6.0) (1.3.1)
+Requirement already satisfied: h11>=0.16 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from httpcore==1.*->httpx<0.28,>=0.27->sentiment-app==0.6.0) (0.16.0)
+Requirement already satisfied: numpy>=1.23.2 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pandas<3,>=2.2->sentiment-app==0.6.0) (2.4.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pandas<3,>=2.2->sentiment-app==0.6.0) (3.0.0)
+Requirement already satisfied: pytz>=2020.1 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pandas<3,>=2.2->sentiment-app==0.6.0) (2026.5)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pandas<3,>=2.2->sentiment-app==0.6.0) (2026.6)
+Requirement already satisfied: annotated-types>=0.6.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pydantic<3,>=2.9->sentiment-app==0.6.0) (0.8.0)
+Requirement already satisfied: pydantic-core==2.23.4 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from pydantic<3,>=2.9->sentiment-app==0.6.0) (2.23.4)
+Requirement already satisfied: scipy>=1.6.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from scikit-learn<1.6,>=1.5->sentiment-app==0.6.0) (1.17.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from scikit-learn<1.6,>=1.5->sentiment-app==0.6.0) (3.7.0)
+Requirement already satisfied: altair<6,>=4.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (5.5.0)
+Requirement already satisfied: blinker<2,>=1.0.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (1.9.0)
+Requirement already satisfied: cachetools<6,>=4.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (5.5.2)
+Requirement already satisfied: click<9,>=7.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (8.5.0)
+Requirement already satisfied: packaging<25,>=20 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (24.2)
+Requirement already satisfied: pillow<11,>=7.1.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (10.4.0)
+Requirement already satisfied: protobuf<6,>=3.20 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (5.29.6)
+Requirement already satisfied: pyarrow>=7.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (17.0.0)
+Requirement already satisfied: requests<3,>=2.27 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (2.34.2)
+Requirement already satisfied: rich<14,>=10.14.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (13.9.4)
+Requirement already satisfied: tenacity<10,>=8.1.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (9.2.1)
+Requirement already satisfied: toml<2,>=0.10.1 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (0.10.2)
+Requirement already satisfied: gitpython!=3.1.19,<4,>=3.0.7 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (3.2.1)
+Requirement already satisfied: pydeck<1,>=0.8.0b4 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (0.9.3)
+Requirement already satisfied: tornado<7,>=6.0.3 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (6.6)
+Requirement already satisfied: watchdog<6,>=2.1.5 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from streamlit<1.40,>=1.39->sentiment-app==0.6.0) (5.0.3)
+Requirement already satisfied: jinja2 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from altair<6,>=4.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (3.1.6)
+Requirement already satisfied: jsonschema>=3.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from altair<6,>=4.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (4.26.0)
+Requirement already satisfied: narwhals>=1.14.2 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from altair<6,>=4.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (2.28.0)
+Requirement already satisfied: gitdb<5,>=4.0.1 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from gitpython!=3.1.19,<4,>=3.0.7->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (4.0.12)
+Requirement already satisfied: six>=1.6 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from python-dateutil>=2.8.2->pandas<3,>=2.2->sentiment-app==0.6.0) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from requests<3,>=2.27->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (3.5.2)
+Requirement already satisfied: urllib3<3,>=1.26 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from requests<3,>=2.27->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (2.8.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from rich<14,>=10.14.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from rich<14,>=10.14.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (2.21.0)
+Requirement already satisfied: smmap<6,>=3.0.1 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (5.0.3)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from jinja2->altair<6,>=4.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (3.0.4)
+Requirement already satisfied: attrs>=22.2.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (26.1.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (0.37.0)
+Requirement already satisfied: rpds-py>=0.25.0 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from jsonschema>=3.0->altair<6,>=4.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (2026.9.1)
+Requirement already satisfied: mdurl~=0.1 in c:\users\nitro 5\downloads\sentiment-app-solo\.venv\lib\site-packages (from markdown-it-py>=2.2.0->rich<14,>=10.14.0->streamlit<1.40,>=1.39->sentiment-app==0.6.0) (0.1.2)
+Checking if build backend supports build_editable: started
+Checking if build backend supports build_editable: finished with status 'done'
+Building wheels for collected packages: sentiment-app
+  Building editable for sentiment-app (pyproject.toml): started
+  Building editable for sentiment-app (pyproject.toml): finished with status 'done'
+  Created wheel for sentiment-app: filename=sentiment_app-0.6.0-0.editable-py3-none-any.whl size=4304 sha256=80af5ba1c6ec595991ec5a0ef9391e15f97cd494b8b7c352d3fa2b6a6be23189
+  Stored in directory: C:\Users\NITRO 5\AppData\Local\Temp\pip-ephem-wheel-cache-pf34bc9z\wheels\9a\5d\ad\abfb071d64ccf440db3f1f285cabf3f33e6ece21d790609a6c
+Successfully built sentiment-app
+Installing collected packages: sentiment-app
+Successfully installed sentiment-app-0.6.0

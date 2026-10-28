@@ -1,0 +1,37 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pytest -q --tb=short
+
+........................................................................ [ 66%]
+x...x..x.......x.................FF..                                    [100%]
+================================== FAILURES ===================================
+_______________ test_l_api_ne_bricole_plus_le_chemin_de_python ________________
+tests\test_packaging.py:37: in test_l_api_ne_bricole_plus_le_chemin_de_python
+    assert "sys.path" not in fichier.read_text(encoding="utf-8"), f"{fichier.name} modifie encore sys.path"
+E   AssertionError: model.py modifie encore sys.path
+E   assert 'sys.path' not in '"""Raccord ...assifier()\n'
+E
+E     'sys.path' is contained here:
+E       arents[1]
+E       sys.path.insert(0, str(RACINE / "src"))
+E     ? ++++++++
+E       from predict import ModelLabel, charger_modele  # noqa: E402 (le TP2 expose ses scripts dans src/)
+E       from predict import predict as _predict  # noqa: E402 (même module TP2)...
+E
+E     ...Full output truncated (25 lines hidden), use '-vv' to show
+____________________ test_le_modele_se_place_ou_l_on_veut _____________________
+tests\test_packaging.py:42: in test_le_modele_se_place_ou_l_on_veut
+    from sentiment_app import predict
+E   ImportError: cannot import name 'predict' from 'sentiment_app' (C:\Users\NITRO 5\Downloads\sentiment-app-solo\sentiment_app\__init__.py)
+============================== warnings summary ===============================
+tests/test_api.py::test_root
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-6] - Faux négatif observé au-dessus du seuil 0.60 : le vocabulaire du problème domine malgré sa résolution.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-10] - Faux positif observé : vocabulaire des dégâts peu représenté dans les 290 avis.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-13] - Faux positif observé : le sac de mots conserve conforme et description sans comprendre ni...ni.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-21] - Faux positif observé : le modèle e-commerce ne comprend pas le risque lié aux allergènes.
+FAILED tests/test_packaging.py::test_l_api_ne_bricole_plus_le_chemin_de_python
+FAILED tests/test_packaging.py::test_le_modele_se_place_ou_l_on_veut - Import...
+2 failed, 103 passed, 4 xfailed, 1 warning in 7.84s

@@ -1,0 +1,4 @@
+{
+  "status": "OK",
+  "model": "tfidf-logreg (TP2, models/sentiment.joblib)"
+}

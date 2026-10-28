@@ -1,0 +1,19 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 C:\Users\NITRO5~1\AppData\Local\Temp\sentiment-solo-e3j5t4v7\kits\tp6-packaging\appliquer_tp6.py C:\Users\NITRO 5\Downloads\sentiment-app-solo
+
+Dépôt cible : C:\Users\NITRO 5\Downloads\sentiment-app-solo
+  ajoute         sentiment_app/__init__.py
+  ajoute         sentiment_app/__main__.py
+  ajoute         sentiment_app/cli.py
+  ajoute         tests/test_packaging.py
+  ajoute         CHANGELOG.md
+  ajoute         docs/semaine6.md
+  ajoute         TP6-ENONCE.md
+  ajoute         MARCHE-A-SUIVRE-TP6.md
+  complète       pyproject.toml : [build-system], [project], la commande sentiment
+  complète       requirements-dev.txt : build==1.2.2.post1
+  complète       pytest.ini : pythonpath = . src (pour « import predict » dans les tests)
+  déjà là        .gitignore : dist/, build/
+  déjà là        .github/workflows/ci.yml : scikit-learn épinglé
+  complète       .github/workflows/ci.yml : la roue construite, installée et essayée hors du dépôt
+
+Kit installé. Suite, dans le dépôt : pip install -r requirements-dev.txt, puis python -m pytest -q (contrôle T35 de MARCHE-A-SUIVRE-TP6.md).
