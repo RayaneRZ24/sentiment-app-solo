@@ -1,0 +1,10 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pytest tests/test_client.py tests/test_interface.py -q
+
+............                                                             [100%]
+============================== warnings summary ===============================
+tests/test_client.py::test_sante_api_prete
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+12 passed, 1 warning in 6.53s
