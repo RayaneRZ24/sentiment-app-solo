@@ -1,0 +1,39 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Journal — preuve enregistrée</title><style>
+body{margin:0;background:#f2f5f9;color:#142237;font:18px/1.5 Segoe UI,Arial,sans-serif}main{margin:36px auto;padding:36px 44px;background:white;max-width:1090px;border:1px solid #d6e0eb;border-radius:12px}h1{font-size:30px;line-height:1.25;margin:8px 0 20px}h2{font-size:19px;color:#184b78;margin:26px 0 10px}.tag{font-weight:700;color:#184b78;letter-spacing:.04em}.note{background:#edf4fb;border-left:4px solid #3975a8;padding:12px 16px;font-size:15px}pre{background:#f5f7fa;border:1px solid #dce4ed;border-radius:6px;padding:17px;font:15px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}p{margin:12px 0}.foot{font-size:13px;color:#53627a;border-top:1px solid #dae2ed;padding-top:14px}
+</style><main><div class="tag">JOURNAL TP1–TP6 · TRAVAIL INDIVIDUEL</div><h1>T35 · Le kit installé (membre A)</h1><p>Ahmed Rayane Ramzi · RayaneRZ24</p><div class="note">Capture d’un rapport affichant les résultats réellement enregistrés. Les reproductions complémentaires sont identifiées dans le journal. Ce document n’imite ni un ancien terminal ni une page GitHub.</div><h2>Résultat consigné</h2><pre>2 failed, 103 passed, 4 xfailed, 1 warning in 7.84s</pre><h2>Extrait de la preuve : tp6-t35-avant.txt</h2><pre>$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pytest -q --tb=short
+
+........................................................................ [ 66%]
+x...x..x.......x.................FF..                                    [100%]
+================================== FAILURES ===================================
+_______________ test_l_api_ne_bricole_plus_le_chemin_de_python ________________
+tests\test_packaging.py:37: in test_l_api_ne_bricole_plus_le_chemin_de_python
+    assert &quot;sys.path&quot; not in fichier.read_text(encoding=&quot;utf-8&quot;), f&quot;{fichier.name} modifie encore sys.path&quot;
+E   AssertionError: model.py modifie encore sys.path
+E   assert &#x27;sys.path&#x27; not in &#x27;&quot;&quot;&quot;Raccord ...assifier()\n&#x27;
+E
+E     &#x27;sys.path&#x27; is contained here:
+E       arents[1]
+E       sys.path.insert(0, str(RACINE / &quot;src&quot;))
+E     ? ++++++++
+E       from predict import ModelLabel, charger_modele  # noqa: E402 (le TP2 expose ses scripts dans src/)
+E       from predict import predict as _predict  # noqa: E402 (même module TP2)...
+E
+E     ...Full output truncated (25 lines hidden), use &#x27;-vv&#x27; to show
+____________________ test_le_modele_se_place_ou_l_on_veut _____________________
+tests\test_packaging.py:42: in test_le_modele_se_place_ou_l_on_veut
+    from sentiment_app import predict
+E   ImportError: cannot import name &#x27;predict&#x27; from &#x27;sentiment_app&#x27; (C:\Users\NITRO 5\Downloads\sentiment-app-solo\sentiment_app\__init__.py)
+============================== warnings summary ===============================
+tests/test_api.py::test_root
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-6] - Faux négatif observé au-dessus du seuil 0.60 : le vocabulaire du problème domine malgré sa résolution.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-10] - Faux positif observé : vocabulaire des dégâts peu représenté dans les 290 avis.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-13] - Faux positif observé : le sac de mots conserve conforme et description sans comprendre ni...ni.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-21] - Faux positif observé : le modèle e-commerce ne comprend pas le risque lié aux allergènes.
+FAILED tests/test_packaging.py::test_l_api_ne_bricole_plus_le_chemin_de_python
+FAILED tests/test_packaging.py::test_le_modele_se_place_ou_l_on_veut - Import...
+2 failed, 103 passed, 4 xfailed, 1 warning in 7.84s</pre><h2>Commentaire</h2><p>Les deux échecs attendus demandent le module predict dans le paquet et le retrait de sys.path dans l&#x27;API. Les 103 autres réussites et les quatre xfail appartiennent aux tests déjà présents ; les xfail restent des erreurs connues du modèle.</p><p class="foot">Sources : tp6-t35-avant.txt</p></main></html>

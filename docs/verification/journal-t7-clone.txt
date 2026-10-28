@@ -1,0 +1,5 @@
+$ git clone https://github.com/RayaneRZ24/sentiment-app-solo C:\Users\NITRO5~1\AppData\Local\Temp\journal-preuves-3j9b5e2u\clone-tp1
+
+Cloning into 'C:\Users\NITRO5~1\AppData\Local\Temp\journal-preuves-3j9b5e2u\clone-tp1'...
+
+Code de sortie : 0

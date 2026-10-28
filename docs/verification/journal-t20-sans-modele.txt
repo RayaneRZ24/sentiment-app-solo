@@ -1,0 +1,23 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -c from pathlib import Path
+from tempfile import TemporaryDirectory
+from fastapi.testclient import TestClient
+from sentiment_app import predict
+from api.main import app
+with TemporaryDirectory() as dossier:
+ ancien=predict.MODELE
+ predict.MODELE=Path(dossier)/'modele-absent.joblib'
+ predict.charger_modele.cache_clear()
+ try:
+  with TestClient(app):
+   raise RuntimeError('Démarrage accepté à tort')
+ except FileNotFoundError as erreur:
+  print('FileNotFoundError :',erreur)
+  print('Démarrage refusé avant la première requête : contrôle validé.')
+ finally:
+  predict.MODELE=ancien
+  predict.charger_modele.cache_clear()
+
+
+FileNotFoundError : modèle introuvable : C:\Users\NITRO5~1\AppData\Local\Temp\tmpg7dnp5va\modele-absent.joblib. Lancez python src/train.py, ou indiquez son chemin dans SENTIMENT_MODELE.
+Démarrage refusé avant la première requête : contrôle validé.
+2026-10-28 17:54:10,899 INFO Démarrage de l'API...

@@ -1,0 +1,60 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Journal — preuve enregistrée</title><style>
+body{margin:0;background:#f2f5f9;color:#142237;font:18px/1.5 Segoe UI,Arial,sans-serif}main{margin:36px auto;padding:36px 44px;background:white;max-width:1090px;border:1px solid #d6e0eb;border-radius:12px}h1{font-size:30px;line-height:1.25;margin:8px 0 20px}h2{font-size:19px;color:#184b78;margin:26px 0 10px}.tag{font-weight:700;color:#184b78;letter-spacing:.04em}.note{background:#edf4fb;border-left:4px solid #3975a8;padding:12px 16px;font-size:15px}pre{background:#f5f7fa;border:1px solid #dce4ed;border-radius:6px;padding:17px;font:15px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}p{margin:12px 0}.foot{font-size:13px;color:#53627a;border-top:1px solid #dae2ed;padding-top:14px}
+</style><main><div class="tag">JOURNAL TP1–TP6 · TRAVAIL INDIVIDUEL</div><h1>C5 · Le vrai jeu de données, les tests, le push</h1><p>Ahmed Rayane Ramzi · RayaneRZ24</p><div class="note">Capture d’un rapport affichant les résultats réellement enregistrés. Les reproductions complémentaires sont identifiées dans le journal. Ce document n’imite ni un ancien terminal ni une page GitHub.</div><h2>Résultat consigné</h2><pre>Allociné : 20 000 avis ; 16 000 train / 4 000 test.
+F1 macro : 0.9205 ; accuracy : 0.9205 ; rappel négatif : 0.9113.
+Suite TP2 après retour à la démonstration : 42 passed in 2.23s
+CI TP2 : success.</pre><h2>GitHub Actions — relevé API réel</h2><pre>{
+  &quot;tp&quot;: 2,
+  &quot;sha&quot;: &quot;9cb2dfaf18b69c86603739e3d81a00b137acdc5b&quot;,
+  &quot;url&quot;: &quot;https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731888889&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;conclusion&quot;: &quot;success&quot;,
+  &quot;jobs&quot;: [
+    {
+      &quot;name&quot;: &quot;tp-solo&quot;,
+      &quot;conclusion&quot;: &quot;success&quot;,
+      &quot;steps&quot;: [
+        {
+          &quot;name&quot;: &quot;Set up job&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Run actions/checkout@v4&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Run actions/setup-python@v5&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Environnement et dependances&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Diagnostic solo&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Modele de demonstration&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Tests&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Post Run actions/setup-python@v5&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Post Run actions/checkout@v4&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Complete job&quot;,
+          &quot;conclusion&quot;: &quot;success&quot;
+        }
+      ]
+    }
+  ]
+}</pre><h2>Commentaire</h2><p>Le F1 Allociné porte sur un jeu plus grand et un autre domaine : sa différence ne suffit pas à prouver une meilleure qualité pour le service client. Ses métriques sont conservées, puis le modèle de démonstration est réentraîné pour rester identique à celui de la CI.</p><p class="foot">Sources : tp2-entrainement-allocine.txt, tp2-metrics-allocine.json, tp2-modele-final-demo.txt, tp2-tests.txt</p></main></html>

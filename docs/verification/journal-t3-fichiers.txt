@@ -1,0 +1,4 @@
+$ git ls-files .env .venv/* models/*.joblib data/demo_reviews.csv
+
+
+Code de sortie : 0

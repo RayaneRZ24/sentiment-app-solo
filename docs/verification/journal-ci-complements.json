@@ -1,0 +1,360 @@
+[
+  {
+    "tp": 1,
+    "sha": "ec0f2799d0d5e2b0a9bc1882910c87f1f55e88db",
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731654315",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "tp-solo",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Environnement et dependances",
+            "conclusion": "success"
+          },
+          {
+            "name": "Diagnostic solo",
+            "conclusion": "success"
+          },
+          {
+            "name": "Tests",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tp": 2,
+    "sha": "9cb2dfaf18b69c86603739e3d81a00b137acdc5b",
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731888889",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "tp-solo",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Environnement et dependances",
+            "conclusion": "success"
+          },
+          {
+            "name": "Diagnostic solo",
+            "conclusion": "success"
+          },
+          {
+            "name": "Modele de demonstration",
+            "conclusion": "success"
+          },
+          {
+            "name": "Tests",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tp": 3,
+    "sha": "bdccc426675372d172e23fa52d2c19b0528f3e65",
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40732096196",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "tp-solo",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Environnement et dependances",
+            "conclusion": "success"
+          },
+          {
+            "name": "Diagnostic solo",
+            "conclusion": "success"
+          },
+          {
+            "name": "Modele de demonstration",
+            "conclusion": "success"
+          },
+          {
+            "name": "Tests",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tp": 4,
+    "sha": "381b2316cac61ba30edcc248c7349795c63f35bb",
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40732610139",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "tp-solo",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Environnement et dependances",
+            "conclusion": "success"
+          },
+          {
+            "name": "Diagnostic solo",
+            "conclusion": "success"
+          },
+          {
+            "name": "Modele de demonstration",
+            "conclusion": "success"
+          },
+          {
+            "name": "Ruff",
+            "conclusion": "success"
+          },
+          {
+            "name": "Mypy",
+            "conclusion": "success"
+          },
+          {
+            "name": "Tests et couverture API",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tp": 5,
+    "sha": "c53925eab091b60d7d2f6c0dc33b58ccb5f5c6ac",
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40733058617",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "tp-solo",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Environnement et dependances",
+            "conclusion": "success"
+          },
+          {
+            "name": "Diagnostic solo",
+            "conclusion": "success"
+          },
+          {
+            "name": "Modele de demonstration",
+            "conclusion": "success"
+          },
+          {
+            "name": "Ruff",
+            "conclusion": "success"
+          },
+          {
+            "name": "Mypy",
+            "conclusion": "success"
+          },
+          {
+            "name": "Tests et couverture API",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tp": 6,
+    "sha": "76c63a4789f49e52860baa2d05c425d714b4562d",
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40733697516",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "tp-solo",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Environnement et dependances",
+            "conclusion": "success"
+          },
+          {
+            "name": "Installation editable du paquet",
+            "conclusion": "success"
+          },
+          {
+            "name": "Diagnostic solo",
+            "conclusion": "success"
+          },
+          {
+            "name": "Modele de demonstration",
+            "conclusion": "success"
+          },
+          {
+            "name": "Ruff",
+            "conclusion": "success"
+          },
+          {
+            "name": "Mypy",
+            "conclusion": "success"
+          },
+          {
+            "name": "Tests et couverture API",
+            "conclusion": "success"
+          },
+          {
+            "name": "Roue installee hors du depot",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  }
+]

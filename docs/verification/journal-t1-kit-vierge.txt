@@ -1,0 +1,33 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m pytest -q --tb=short
+
+.........FFF......................ssss                                   [100%]
+================================== FAILURES ===================================
+__________________________ test_sections_are_filled ___________________________
+tests\test_cadrage.py:55: in test_sections_are_filled
+    assert not empty, "rubriques vides ou trop courtes : " + ", ".join(empty)
+E   AssertionError: rubriques vides ou trop courtes : cas1-pharmacie.md / Besoin en une phrase, cas1-pharmacie.md / Utilisateur final, cas1-pharmacie.md / Justification, cas1-pharmacie.md / Données nécessaires, cas1-pharmacie.md / Métrique de succès, cas1-pharmacie.md / Conséquence d'une erreur, cas1-pharmacie.md / Risques éthiques, cas2-reglement.md / Besoin en une phrase, cas2-reglement.md / Utilisateur final, cas2-reglement.md / Justification, cas2-reglement.md / Données nécessaires, cas2-reglement.md / Métrique de succès, cas2-reglement.md / Conséquence d'une erreur, cas2-reglement.md / Risques éthiques, cas3-avis-negatifs.md / Besoin en une phrase, cas3-avis-negatifs.md / Utilisateur final, cas3-avis-negatifs.md / Justification, cas3-avis-negatifs.md / Données nécessaires, cas3-avis-negatifs.md / Métrique de succès, cas3-avis-negatifs.md / Conséquence d'une erreur, cas3-avis-negatifs.md / Risques éthiques
+E   assert not ['cas1-pharmacie.md / Besoin en une phrase', 'cas1-pharmacie.md / Utilisateur final', 'cas1-pharmacie.md / Justificati... / Données nécessaires', 'cas1-pharmacie.md / Métrique de succès', "cas1-pharmacie.md / Conséquence d'une erreur", ...]
+______________________ test_exactly_one_approach_checked ______________________
+tests\test_cadrage.py:61: in test_exactly_one_approach_checked
+    assert text.count("- [x]") == 1, f"{fiche.name} : cocher exactement une approche"
+E   AssertionError: cas1-pharmacie.md : cocher exactement une approche
+E   assert 0 == 1
+E    +  where 0 = <built-in method count of str object at 0x000002C666A13230>('- [x]')
+E    +    where <built-in method count of str object at 0x000002C666A13230> = '# Fiche de cadrage : Ordonnances incomplètes en pharmacie\n\n> Remplir chaque rubrique en une à trois phrases. Les ru...re)\n\n\n## Risques éthiques ou de confidentialité (obligatoire)\n\n\n## Approche écartée et pourquoi (facultatif)\n\n'.count
+____________________ test_justification_cites_two_criteria ____________________
+tests\test_cadrage.py:68: in test_justification_cites_two_criteria
+    assert len(cited) >= 2, f"{fiche.name} : la justification doit citer au moins deux critères (a), (b), (c), (d)"
+E   AssertionError: cas1-pharmacie.md : la justification doit citer au moins deux critères (a), (b), (c), (d)
+E   assert 0 >= 2
+E    +  where 0 = len([])
+=========================== short test summary info ===========================
+SKIPPED [1] tests\test_environment.py:55: pas un dépôt Git
+SKIPPED [1] tests\test_git_history.py:29: pas un dépôt Git
+SKIPPED [1] tests\test_git_history.py:33: pas un dépôt Git
+SKIPPED [1] tests\test_git_history.py:41: pas un dépôt Git
+FAILED tests/test_cadrage.py::test_sections_are_filled - AssertionError: rubr...
+FAILED tests/test_cadrage.py::test_exactly_one_approach_checked - AssertionEr...
+FAILED tests/test_cadrage.py::test_justification_cites_two_criteria - Asserti...
+3 failed, 31 passed, 4 skipped in 2.25s
+
+Code de sortie : 1

@@ -1,0 +1,28 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m pytest tests/test_integration.py -v
+
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-8.3.5, pluggy-1.7.0 -- C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\NITRO 5\Downloads\sentiment-app-solo
+configfile: pytest.ini
+plugins: anyio-4.15.1, hypothesis-6.168.3, platformdirs-4.13.7, cov-7.1.0
+collecting ... collected 7 items
+
+tests/test_integration.py::test_demarrage_reel_charge_le_modele PASSED   [ 14%]
+tests/test_integration.py::test_modele_absent_refuse_demarrage PASSED    [ 28%]
+tests/test_integration.py::test_modele_retire_repond_503[/health] PASSED [ 42%]
+tests/test_integration.py::test_modele_retire_repond_503[/predict] PASSED [ 57%]
+tests/test_integration.py::test_panne_modele_repond_500_sans_detail_interne[erreur0] PASSED [ 71%]
+tests/test_integration.py::test_panne_modele_repond_500_sans_detail_interne[erreur1] PASSED [ 85%]
+tests/test_integration.py::test_classes_inconnues_refusees PASSED        [100%]
+
+============================== warnings summary ===============================
+tests/test_integration.py::test_demarrage_reel_charge_le_modele
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 7 passed, 1 warning in 2.90s =========================
+
+Code de sortie : 0

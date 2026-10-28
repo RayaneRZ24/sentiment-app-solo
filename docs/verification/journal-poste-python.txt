@@ -1,0 +1,5 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe --version
+
+Python 3.11.9
+
+Code de sortie : 0

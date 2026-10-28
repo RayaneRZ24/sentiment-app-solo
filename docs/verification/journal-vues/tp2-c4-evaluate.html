@@ -1,0 +1,30 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Journal — preuve enregistrée</title><style>
+body{margin:0;background:#f2f5f9;color:#142237;font:18px/1.5 Segoe UI,Arial,sans-serif}main{margin:36px auto;padding:36px 44px;background:white;max-width:1090px;border:1px solid #d6e0eb;border-radius:12px}h1{font-size:30px;line-height:1.25;margin:8px 0 20px}h2{font-size:19px;color:#184b78;margin:26px 0 10px}.tag{font-weight:700;color:#184b78;letter-spacing:.04em}.note{background:#edf4fb;border-left:4px solid #3975a8;padding:12px 16px;font-size:15px}pre{background:#f5f7fa;border:1px solid #dce4ed;border-radius:6px;padding:17px;font:15px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}p{margin:12px 0}.foot{font-size:13px;color:#53627a;border-top:1px solid #dae2ed;padding-top:14px}
+</style><main><div class="tag">JOURNAL TP1–TP6 · TRAVAIL INDIVIDUEL</div><h1>C4 · L&#x27;évaluation</h1><p>Ahmed Rayane Ramzi · RayaneRZ24</p><div class="note">Capture d’un rapport affichant les résultats réellement enregistrés. Les reproductions complémentaires sont identifiées dans le journal. Ce document n’imite ni un ancien terminal ni une page GitHub.</div><h2>Résultat consigné</h2><pre>Matrice : lignes vérité, colonnes prédiction
+             negative positive
+negative           27        2
+positive            5       24
+7 erreurs sur 58 avis de test.</pre><h2>Extrait de la preuve : tp2-evaluation-demo.txt</h2><pre>$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 src/evaluate.py
+
+Évaluation sur 58 avis (demo)
+
+              precision    recall  f1-score   support
+
+    negative      0.844     0.931     0.885        29
+    positive      0.923     0.828     0.873        29
+
+    accuracy                          0.879        58
+   macro avg      0.883     0.879     0.879        58
+weighted avg      0.883     0.879     0.879        58
+
+Matrice de confusion (lignes = vérité, colonnes = prédiction)
+            negative  positive
+  negative        27         2
+  positive         5        24
+
+2 négatifs classés positifs, 5 positifs classés négatifs
+
+7 erreurs au total. Trois exemples :
+  vérité=positive  prédit=negative  | Taille trop petite et retour payant au déballage, sauf que ensuite produit conforme à la d
+  vérité=positive  prédit=negative  | Commande jamais reçue et remboursement en attente au début, sauf que ensuite je recommande
+  vérité=negative  prédit=positive  | Service impeccable et livraison en avance sur le papier, sauf que ensuite produit cassé à</pre><h2>Commentaire</h2><p>Les erreurs portent sur les avis mitigés. TF-IDF et les bigrammes captent des mots et voisinages, sans bien représenter le retournement de la phrase. Davantage d&#x27;exemples représentatifs ou une représentation contextuelle pourraient aider ; les trois erreurs affichées sont dans la sortie liée.</p><p class="foot">Sources : tp2-evaluation-demo.txt</p></main></html>

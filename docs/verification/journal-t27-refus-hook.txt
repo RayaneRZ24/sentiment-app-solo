@@ -1,0 +1,24 @@
+$ git commit -m Journal T27 : essai de refus attendu
+
+ruff (erreurs probables, imports)........................................Failed
+- hook id: ruff
+- exit code: 1
+
+F401 [*] `os` imported but unused
+ --> scripts\journal_hook_probe.py:1:8
+  |
+1 | import os
+  |        ^^
+help: Remove unused import: `os`
+  |
+  - import os
+  |
+
+Found 1 error.
+[*] 1 fixable with the `--fix` option.
+
+mypy (contrat typé de l'API).............................................Passed
+
+Code de sortie : 1
+
+HEAD inchangé : oui. Aucun commit d’essai créé.

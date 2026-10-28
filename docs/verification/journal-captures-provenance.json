@@ -1,0 +1,439 @@
+[
+  {
+    "capture": "tp0-poste-membre-a.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp0-poste-membre-a.html",
+    "sources": [
+      "journal-poste-python.txt",
+      "journal-poste-git.txt",
+      "journal-poste-auteur.txt"
+    ],
+    "sha256": "4b8f47db78697f86288fcf42b330382c0358ee5732b0c9f1a2d4d84b0354ec78"
+  },
+  {
+    "capture": "tp1-t0-structure.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp1-t0-structure.html",
+    "sources": [
+      "journal-t0-structure.txt",
+      "tp1-diagnostic.txt"
+    ],
+    "sha256": "e5ad6a9dd2b8e90658b937046889dc6b0a567c0696927649bb085ca59407a005"
+  },
+  {
+    "capture": "tp1-t1-pytest.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp1-t1-pytest.html",
+    "sources": [
+      "journal-t1-kit-vierge.txt",
+      "tp1-diagnostic.txt",
+      "tp1-tests.txt"
+    ],
+    "sha256": "0d04d5373fb591027d59481baa983e1571065102970e4997f0451bd862e5e74e"
+  },
+  {
+    "capture": "tp1-t2-cadrage.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp1-t2-cadrage.html",
+    "sources": [
+      "journal-t2-cadrage.txt",
+      "tp1-tests.txt"
+    ],
+    "sha256": "cb9962add71a7888885f2c54722af6e60aed3b36ede29662c771a9889a53748d"
+  },
+  {
+    "capture": "tp1-t3-depot-github.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp1-t3-depot-github.html",
+    "sources": [
+      "journal-depot.json",
+      "journal-t3-fichiers.txt",
+      "tp1-tests.txt"
+    ],
+    "sha256": "8c34154739caae2ab6a9eacfccc690ef3fad97ddd4100678604f425b4593aea8"
+  },
+  {
+    "capture": "tp1-t5-shortlog.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp1-t5-shortlog.html",
+    "sources": [
+      "journal-t5-auteur.txt",
+      "journal-t5-tests-git.txt"
+    ],
+    "sha256": "76f3dc19b138c13c0ce13523abc0acb6a5c10a0a1be8f7742c1f9e03f950e4b6"
+  },
+  {
+    "capture": "tp1-t6-pytest.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp1-t6-pytest.html",
+    "sources": [
+      "tp1-diagnostic.txt",
+      "tp1-tests.txt"
+    ],
+    "sha256": "6763e7c0c312bc87d3ac38dfa2ca44d1ea931034bb3cd94e6cb743935969c1d4"
+  },
+  {
+    "capture": "tp1-t6-actions.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp1-t6-actions.html",
+    "sources": [
+      "tp1-diagnostic.txt",
+      "tp1-tests.txt"
+    ],
+    "sha256": "c10ae86ff111ebb7aeba4c2636ecbca363adb2ae46e29c2e837c436948a2ea53"
+  },
+  {
+    "capture": "tp1-t7-clone-frais.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp1-t7-clone-frais.html",
+    "sources": [
+      "journal-t7-clone.txt",
+      "journal-t7-checkpoint.txt",
+      "journal-t7-venv.txt",
+      "journal-t7-installation.txt",
+      "journal-t7-diagnostic.txt",
+      "journal-t7-tests.txt"
+    ],
+    "sha256": "bd375239d538c79fcd94d7bada154e81b8acb475ec5494970f3593504dcf41b8"
+  },
+  {
+    "capture": "tp2-c1-pytest.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp2-c1-pytest.html",
+    "sources": [
+      "journal-c1-avant-mesures.txt",
+      "tp2-tests.txt"
+    ],
+    "sha256": "41cf86c2191ba9d86c49002d5e63e2e77524da20631261ef8ce2ec53f36750dd"
+  },
+  {
+    "capture": "tp2-c2-make-demo.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp2-c2-make-demo.html",
+    "sources": [
+      "tp2-donnees.txt"
+    ],
+    "sha256": "a7ec6d1d62b6d1b016bf162286c8c68d2d7cd99c8a47a539fcc3d5fb41bb63c8"
+  },
+  {
+    "capture": "tp2-c3-train.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp2-c3-train.html",
+    "sources": [
+      "tp2-entrainement-demo.txt",
+      "journal-t3-fichiers.txt"
+    ],
+    "sha256": "8bc26b59f1933b13e5842c332428d4d36dccdaacb1cd3cc63b037963629b5e4b"
+  },
+  {
+    "capture": "tp2-c4-evaluate.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp2-c4-evaluate.html",
+    "sources": [
+      "tp2-evaluation-demo.txt"
+    ],
+    "sha256": "0c9743dea8b83581ac4762022c75cd3891f0c12326f46389b08cfdd8e991c280"
+  },
+  {
+    "capture": "tp2-c5-allocine.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp2-c5-allocine.html",
+    "sources": [
+      "tp2-entrainement-allocine.txt",
+      "tp2-metrics-allocine.json",
+      "tp2-modele-final-demo.txt",
+      "tp2-tests.txt"
+    ],
+    "sha256": "f9d9fc5253f0f6c0b5c5f392106912c4328a432da6a8d3c312e0ce0d6dae2517"
+  },
+  {
+    "capture": "tp3-t14-pytest.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp3-t14-pytest.html",
+    "sources": [
+      "tp3-installation-kit.txt",
+      "tp3-tests.txt"
+    ],
+    "sha256": "87295ec495796b4a4bbfd25b4f34a21f17b15736584f8daca848faa793348dfb"
+  },
+  {
+    "capture": "tp3-t15-health.png",
+    "nature": "capture navigateur de l’application solo",
+    "source": "tp3-t15-health.png",
+    "sha256": "67fdb84ae94938add73f0c4cbd178979a12c574ba49908d180336de1d4adf469"
+  },
+  {
+    "capture": "tp3-t16-positif.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp3-t16-positif.html",
+    "sources": [
+      "journal-api-complement.json",
+      "tp6-cli-positif.txt"
+    ],
+    "sha256": "bcd34b1e42d4302d7503ab36b41c0d8d89348443e3a04fba262774120e30835b"
+  },
+  {
+    "capture": "tp3-t17-negatif.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp3-t17-negatif.html",
+    "sources": [
+      "journal-api-complement.json",
+      "tp3-tests.txt"
+    ],
+    "sha256": "ba6c5e2f10944036fe7562021a43605121c8539b1232e78e823f74490e75a904"
+  },
+  {
+    "capture": "tp3-t18-refus.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp3-t18-refus.html",
+    "sources": [
+      "journal-api-complement.json"
+    ],
+    "sha256": "2c58a90d9928852706c8ba011dea2b6d5837bcdb89adc383cc4a2eb20c75c4cf"
+  },
+  {
+    "capture": "tp3-t19-actions.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp3-t19-actions.html",
+    "sources": [
+      "tp3-tests.txt"
+    ],
+    "sha256": "70cf68890e6129057576dfce4d72c68843f85d2654d09f5affd2a8223168dfcc"
+  },
+  {
+    "capture": "tp3-t20-sans-modele.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp3-t20-sans-modele.html",
+    "sources": [
+      "journal-t20-sans-modele.txt",
+      "journal-t20-integration.txt"
+    ],
+    "sha256": "a6adae6522b1178aaaaa45dbd084d3dee892f17eb33e0a769957d4755acdecfd"
+  },
+  {
+    "capture": "tp4-t21-couverture.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp4-t21-couverture.html",
+    "sources": [
+      "journal-t21-depart.txt",
+      "tp4-couverture-avant.txt",
+      "tp4-ruff-avant.txt",
+      "tp4-mypy-avant.txt"
+    ],
+    "sha256": "ea2e4c602eaf70998f68b9a6766e6a3254721775239611370fbd2dfd46b367b9"
+  },
+  {
+    "capture": "tp4-t22-espaces.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp4-t22-espaces.html",
+    "sources": [
+      "journal-t22-avant.txt",
+      "journal-api-complement.json"
+    ],
+    "sha256": "62213d446db698d0bb8e8b5e0ea3f7eafa26b42621767a535d9a6637032ee7a9"
+  },
+  {
+    "capture": "tp4-t23-proprietes.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp4-t23-proprietes.html",
+    "sources": [
+      "tp4-limites-1.txt",
+      "tp4-limites-2.txt",
+      "tp4-limites-3.txt"
+    ],
+    "sha256": "b1b167ccb8b800b445dc44a725f02768c85f77ad8da0290cf1d8ca8c8c239eef"
+  },
+  {
+    "capture": "tp4-t24-courbe.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp4-t24-courbe.html",
+    "sources": [
+      "tp4-courbe-seuil.txt",
+      "journal-api-complement.json"
+    ],
+    "sha256": "7c4c98856f28bf3afe13dd3e23345f864f0b5f6e87b9bcec24f834d8fe9deb15"
+  },
+  {
+    "capture": "tp4-t24-indetermine.png",
+    "nature": "capture navigateur de l’application solo",
+    "source": "tp5-abstention.png",
+    "sha256": "ff6cf92d2781880807832d648ddd8d649a159f3a348738b2dbefb8a89cc0c814"
+  },
+  {
+    "capture": "tp4-t25-jeu-or.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp4-t25-jeu-or.html",
+    "sources": [
+      "tp4-bilan-jeu-or.txt",
+      "journal-t25-tests.txt"
+    ],
+    "sha256": "58355a424c14a3c69c5f4095a4dce4d672bee73eddb04c3ac46e2631242c2399"
+  },
+  {
+    "capture": "tp4-t26-couverture.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp4-t26-couverture.html",
+    "sources": [
+      "journal-t20-integration.txt",
+      "tp6-tests.txt"
+    ],
+    "sha256": "5160e58dc6fbc6c60810726308135346431552e0f0497179bc752454b5581506"
+  },
+  {
+    "capture": "tp4-t27-pre-commit.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp4-t27-pre-commit.html",
+    "sources": [
+      "tp4-ruff-final.txt",
+      "tp4-mypy-final.txt",
+      "journal-t27-refus-hook.txt"
+    ],
+    "sha256": "0b7bd77548187d8f57c23885d4387b8b53543164f3898184f5395182e3902e9b"
+  },
+  {
+    "capture": "tp4-t27-actions.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp4-t27-actions.html",
+    "sources": [
+      "tp4-ruff-final.txt",
+      "tp4-mypy-final.txt",
+      "journal-t27-refus-hook.txt"
+    ],
+    "sha256": "4762fa83f9a12bb9f18ec0d77e91e6f8984defd9b63dd623218d2ecba537d814"
+  },
+  {
+    "capture": "tp5-t28-pytest.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp5-t28-pytest.html",
+    "sources": [
+      "tp5-tests.txt",
+      "tp5-interface-tests.txt"
+    ],
+    "sha256": "e52f522d1165c3c8976df7d8d1fa1fb1972e118c63a1710d3ddfb39f1fddb765"
+  },
+  {
+    "capture": "tp5-t29-page.png",
+    "nature": "capture navigateur de l’application solo",
+    "source": "tp5-t29-api-prete.png",
+    "sha256": "da02a5470413ea66a7931b80d2d8be967d5814dc5afbebcc9b7f7b18bb3ca62c"
+  },
+  {
+    "capture": "tp5-t30-positif.png",
+    "nature": "capture navigateur de l’application solo",
+    "source": "tp5-positif.png",
+    "sha256": "fcdfca1ccc306d65cec71489f889cfc041b6b34fb5d96fd94661428cadd0ef9d"
+  },
+  {
+    "capture": "tp5-t30-negatif.png",
+    "nature": "capture navigateur de l’application solo",
+    "source": "tp5-negatif.png",
+    "sha256": "324d4992763b1bc3aaa08c678b3e7645605c7ae8709e85a65165d3f2eacdb284"
+  },
+  {
+    "capture": "tp5-t31-abstention.png",
+    "nature": "capture navigateur de l’application solo",
+    "source": "tp5-abstention.png",
+    "sha256": "ff6cf92d2781880807832d648ddd8d649a159f3a348738b2dbefb8a89cc0c814"
+  },
+  {
+    "capture": "tp5-t32-refus.png",
+    "nature": "capture navigateur de l’application solo",
+    "source": "tp5-t32-refus.png",
+    "sha256": "7bc647a906fbe23778389d0afce583ed3849c879737d256464f2b2053007954f"
+  },
+  {
+    "capture": "tp5-t32-injoignable.png",
+    "nature": "capture navigateur de l’application solo",
+    "source": "tp5-t32-api-arretee.png",
+    "sha256": "bd7f52a0593c7d40d3a142245a09a1a3f7d790e26fec1d1360138ad5812d56bd"
+  },
+  {
+    "capture": "tp5-t33-lot.png",
+    "nature": "capture navigateur de l’application solo",
+    "source": "tp5-t33-lot.png",
+    "sha256": "c3fa98c5dc421db7685cb45261bdfae3dfb02b1e1f537db4b8bc2f0d311903a0"
+  },
+  {
+    "capture": "tp5-t34-actions.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp5-t34-actions.html",
+    "sources": [
+      "tp5-tests.txt"
+    ],
+    "sha256": "427f75aba150a4bc128f9260194998947de8129f3d390cca04fc912d115eeae5"
+  },
+  {
+    "capture": "tp6-t35-pytest.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp6-t35-pytest.html",
+    "sources": [
+      "tp6-t35-avant.txt"
+    ],
+    "sha256": "9edc2e2140fd30c09a9bfbfd22ec51a93f1f199a4eec2f383cb3b41ef322b55d"
+  },
+  {
+    "capture": "tp6-t36-deplacement.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp6-t36-deplacement.html",
+    "sources": [
+      "tp6-t36-avant-api.txt",
+      "tp6-compatibilite.txt",
+      "journal-t36-historique.txt"
+    ],
+    "sha256": "84226d5db5c1a04f95b6ae8d1ab5c4c1cab356558594551d3d8c9a54f119237d"
+  },
+  {
+    "capture": "tp6-t37-api.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp6-t37-api.html",
+    "sources": [
+      "tp6-tests.txt",
+      "tp6-ruff.txt",
+      "tp6-mypy.txt"
+    ],
+    "sha256": "2219479c9891d72ca821540fe402b28c1943b071233bd54c24ff5e78789f5ecb"
+  },
+  {
+    "capture": "tp6-t38-commande.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp6-t38-commande.html",
+    "sources": [
+      "tp6-version.txt",
+      "tp6-cli-positif.txt",
+      "tp6-cli-abstention.txt",
+      "tp6-serve-health.json",
+      "tp6-ui-health.txt"
+    ],
+    "sha256": "1eb11000fbc16f9cd9da7fe3f6a6f914c49ea9c728392fe998a12ba72a36ea30"
+  },
+  {
+    "capture": "tp6-t39-roue.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp6-t39-roue.html",
+    "sources": [
+      "tp6-construction-roue.txt",
+      "tp6-contenu-roue.txt"
+    ],
+    "sha256": "d9cb39b55fdd747d9d21f2f79d6dbc502c54e18ce69ecb85985f2a84029e553b"
+  },
+  {
+    "capture": "tp6-t40-ailleurs.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp6-t40-ailleurs.html",
+    "sources": [
+      "tp6-hors-depot-sans-modele.txt",
+      "tp6-hors-depot-avec-modele.txt",
+      "tp6-origine-paquet-installe.txt"
+    ],
+    "sha256": "72d859add0eb879ebe04c401002ffa707a7405d11705f18e9aa43ba98f7ad5c7"
+  },
+  {
+    "capture": "tp6-t41-actions.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "rapport": "docs/verification/journal-vues/tp6-t41-actions.html",
+    "sources": [
+      "tp6-tests.txt"
+    ],
+    "sha256": "d5056dabb1b8b7299ce262231dfc3363006b083e6f574607e9e5cb61762b99b8"
+  }
+]

@@ -1,0 +1,6 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m pytest tests/test_cadrage.py tests/test_environment.py tests/test_git_history.py -q
+
+......................................                                   [100%]
+38 passed in 2.35s
+
+Code de sortie : 0

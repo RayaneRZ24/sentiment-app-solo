@@ -1,0 +1,5 @@
+$ git checkout --detach tp1-valide
+
+HEAD is now at ec0f279 TP1 solo : cadrage, environnement et 38 controles valides
+
+Code de sortie : 0

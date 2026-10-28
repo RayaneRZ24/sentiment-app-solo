@@ -1,0 +1,4 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m pytest tests/test_cadrage.py -q
+
+............                                                             [100%]
+12 passed in 0.29s

@@ -1,0 +1,4 @@
+$ git log --follow --oneline -- sentiment_app/predict.py
+
+76c63a4 TP6 solo : paquet installable et verification de la roue
+9cb2dfa TP2 solo : modele reproductible et evaluations

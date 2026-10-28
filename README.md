@@ -23,7 +23,7 @@ python -m pytest -q
 
 `requirements.txt` contient les dépendances nécessaires aux TP atteints, sans installer les bibliothèques des semaines futures. `requirements.lock` conserve les versions du poste Windows. Le modèle et les données générées ne sont jamais commités.
 
-Les résultats de chaque TP sont conservés dans [le journal solo](docs/journal-solo-tp1-tp6.md) et dans `docs/verification/`. Chaque étape validée possède son repère Git (`tp1-valide` à `tp5-valide`, puis `v0.6.0`) et sa propre exécution GitHub Actions.
+Les résultats de chaque TP sont conservés dans [le journal solo](docs/journal-tp1-tp6.md) et dans `docs/verification/`. Chaque étape validée possède son repère Git (`tp1-valide` à `tp5-valide`, puis `v0.6.0`) et sa propre exécution GitHub Actions.
 
 ```powershell
 git log --oneline -20
@@ -55,3 +55,7 @@ sentiment serve
 ```
 
 Le TP6 est terminé : paquet 0.6.0, roue vérifiée dans un environnement neuf hors dépôt et étape CI de la roue réussie. Le modèle reste extérieur au paquet ; utiliser `SENTIMENT_MODELE` hors du dossier source. La fiche de choix d'un projet d'agent IA est un livrable séparé et n'est pas remplie avec un numéro de sujet inventé.
+
+## Fichier à joindre au formulaire
+
+Déposer [docs/journal-tp1-tp6.md](docs/journal-tp1-tp6.md), qui reprend le modèle du professeur, ses contrôles et ses annexes, avec les résultats de cette reprise solo.

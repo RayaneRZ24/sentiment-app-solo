@@ -1,0 +1,15 @@
+$ git ls-tree -d --name-only tp1-valide
+
+.github
+.vscode
+app
+data
+docs
+exemples
+models
+notebooks
+scripts
+tests
+ui
+
+Code de sortie : 0

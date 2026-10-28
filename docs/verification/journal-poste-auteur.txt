@@ -1,0 +1,5 @@
+$ git config user.name
+
+Ramzi Ahmed Rayane
+
+Code de sortie : 0

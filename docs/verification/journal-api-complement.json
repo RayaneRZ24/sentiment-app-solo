@@ -1,0 +1,103 @@
+{
+  "health": {
+    "code": 200,
+    "body": {
+      "status": "OK",
+      "model": "tfidf-logreg (TP2, models/sentiment.joblib)"
+    }
+  },
+  "positif": {
+    "code": 200,
+    "body": {
+      "label": "POSITIVE",
+      "score": 0.777,
+      "text": "Livraison rapide, produit conforme, très satisfait"
+    }
+  },
+  "negatif": {
+    "code": 200,
+    "body": {
+      "label": "NEGATIVE",
+      "score": 0.7465,
+      "text": "Produit cassé et service injoignable, à fuir"
+    }
+  },
+  "inconnu": {
+    "code": 200,
+    "body": {
+      "label": "INDETERMINE",
+      "score": 0.5162,
+      "text": "xqzvb wlkptr grombu"
+    }
+  },
+  "vide": {
+    "code": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "string_too_short",
+          "loc": [
+            "body",
+            "text"
+          ],
+          "msg": "String should have at least 1 character",
+          "input": "",
+          "ctx": {
+            "min_length": 1
+          }
+        }
+      ]
+    }
+  },
+  "espaces": {
+    "code": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "value_error",
+          "loc": [
+            "body",
+            "text"
+          ],
+          "msg": "Value error, texte vide",
+          "input": "   ",
+          "ctx": {
+            "error": {}
+          }
+        }
+      ]
+    }
+  },
+  "absent": {
+    "code": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "text"
+          ],
+          "msg": "Field required",
+          "input": {}
+        }
+      ]
+    }
+  },
+  "nombre": {
+    "code": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "string_type",
+          "loc": [
+            "body",
+            "text"
+          ],
+          "msg": "Input should be a valid string",
+          "input": 42
+        }
+      ]
+    }
+  }
+}

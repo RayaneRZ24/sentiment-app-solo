@@ -1,0 +1,6 @@
+$ C:\Users\NITRO5~1\AppData\Local\Temp\journal-preuves-3j9b5e2u\clone-tp1\.venv\Scripts\python.exe -m pytest -q
+
+......................................                                   [100%]
+38 passed in 2.06s
+
+Code de sortie : 0

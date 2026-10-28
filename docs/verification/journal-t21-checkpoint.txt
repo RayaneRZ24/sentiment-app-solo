@@ -1,0 +1,6 @@
+$ git checkout --detach --force tp3-valide
+
+Previous HEAD position was ec0f279 TP1 solo : cadrage, environnement et 38 controles valides
+HEAD is now at bdccc42 TP3 solo : API FastAPI et tests du contrat
+
+Code de sortie : 0

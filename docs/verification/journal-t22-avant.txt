@@ -1,0 +1,44 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m pytest tests/test_limites.py -q --tb=short
+
+.FF.......F                                                              [100%]
+================================== FAILURES ===================================
+_____________________ test_frontieres_du_contrat[espaces] _____________________
+tests\test_limites.py:52: in test_frontieres_du_contrat
+    verifier_erreur(reponse.json())
+tests\test_limites.py:58: in verifier_erreur
+    assert isinstance(corps["detail"], list)
+E   AssertionError: assert False
+E    +  where False = isinstance('texte vide', list)
+__________________ test_frontieres_du_contrat[blanc-unicode] __________________
+tests\test_limites.py:52: in test_frontieres_du_contrat
+    verifier_erreur(reponse.json())
+tests\test_limites.py:58: in verifier_erreur
+    assert isinstance(corps["detail"], list)
+E   AssertionError: assert False
+E    +  where False = isinstance('texte vide', list)
+________________________ test_tout_texte_blanc_refuse _________________________
+tests\test_limites.py:81: in test_tout_texte_blanc_refuse
+    @given(texte=st.text(alphabet=BLANCS, min_size=1, max_size=2000))
+tests\test_limites.py:85: in test_tout_texte_blanc_refuse
+    verifier_erreur(reponse.json())
+tests\test_limites.py:58: in verifier_erreur
+    assert isinstance(corps["detail"], list)
+E   AssertionError: assert False
+E    +  where False = isinstance('texte vide', list)
+E   Failing test case: test_tout_texte_blanc_refuse(
+E       client=<starlette.testclient.TestClient object at 0x00000160E1674390>,
+E       texte='\x85',  # or any other generated value
+E   )
+============================== warnings summary ===============================
+tests/test_limites.py::test_frontieres_du_contrat[texte-vide]
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_limites.py::test_frontieres_du_contrat[espaces] - Assertion...
+FAILED tests/test_limites.py::test_frontieres_du_contrat[blanc-unicode] - Ass...
+FAILED tests/test_limites.py::test_tout_texte_blanc_refuse - AssertionError: ...
+3 failed, 8 passed, 1 warning in 6.62s
+
+Code de sortie : 1

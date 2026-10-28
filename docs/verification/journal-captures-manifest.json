@@ -1,0 +1,653 @@
+[
+  {
+    "key": "poste",
+    "title": "Poste du membre A",
+    "file": "tp0-poste-membre-a.png",
+    "mode": "report",
+    "results": [
+      "Python 3.11.9\nGit 2.49.0.windows.1\nAuteur Git : Ramzi Ahmed Rayane\nCompte : RayaneRZ24"
+    ],
+    "comment": "Le poste disponible utilise Python 3.11.9 et l'environnement du projet solo. L'identité est réglée localement au dépôt, sans créer un second auteur.",
+    "proofs": [
+      "journal-poste-python.txt",
+      "journal-poste-git.txt",
+      "journal-poste-auteur.txt"
+    ]
+  },
+  {
+    "key": "T0",
+    "title": "T0 · La structure du kit (membre A)",
+    "file": "tp1-t0-structure.png",
+    "mode": "report",
+    "results": [
+      "Répertoires requis présents : app, data, docs, models, scripts, tests, ui, .github.\nPoint de contrôle : tp1-valide."
+    ],
+    "comment": "La structure est vérifiée à partir de l'arbre Git du checkpoint TP1. Le dossier réel est C:\\Users\\NITRO 5\\Downloads\\sentiment-app-solo ; le projet du binôme n'a pas été modifié.",
+    "proofs": [
+      "journal-t0-structure.txt",
+      "tp1-diagnostic.txt"
+    ]
+  },
+  {
+    "key": "T1",
+    "title": "T1 · L'environnement et le point de départ (membre A)",
+    "file": "tp1-t1-pytest.png",
+    "mode": "report",
+    "results": [
+      "Python 3.11.9\nKit vierge, reproduction complémentaire : 3 failed, 31 passed, 4 skipped in 2.25s\nCheckpoint solo après reprise des fiches : 38 passed in 2.04s"
+    ],
+    "comment": "Le kit vierge a été reproduit dans un dossier temporaire pour vérifier les trois défauts de cadrage et les quatre contrôles Git ignorés. Cette reproduction complémentaire n'est pas un ancien résultat du checkpoint : le dépôt solo reprend les fiches du projet source et les valide. Son diagnostic final est sans erreur ni avertissement.",
+    "proofs": [
+      "journal-t1-kit-vierge.txt",
+      "tp1-diagnostic.txt",
+      "tp1-tests.txt"
+    ]
+  },
+  {
+    "key": "T2",
+    "title": "T2 · Les fiches de cadrage (à deux)",
+    "file": "tp1-t2-cadrage.png",
+    "mode": "report",
+    "results": [
+      "12 passed in 0.29s\nSuite TP1 : 38 passed in 2.04s"
+    ],
+    "comment": "Les choix sont règles métier pour la pharmacie, RAG pour le règlement et ML pour les avis. Ils sont justifiés par les données (a), la vérifiabilité (b), le coût (c) et les conséquences d'erreur (d). Le total est déjà 38 réussites car Git est initialisé ; les quatre contrôles Git ne sont donc plus ignorés.",
+    "proofs": [
+      "journal-t2-cadrage.txt",
+      "tp1-tests.txt"
+    ]
+  },
+  {
+    "key": "T3",
+    "title": "T3 · Le dépôt GitHub et le premier push (membre A)",
+    "file": "tp1-t3-depot-github.png",
+    "mode": "report",
+    "results": [
+      "Dépôt : https://github.com/RayaneRZ24/sentiment-app-solo\nVisibilité : privée\nAucun .env, .venv/, modèle .joblib ni data/demo_reviews.csv suivi.\n38 passed in 2.04s"
+    ],
+    "comment": "Le dépôt est personnel et l'origine du code est citée dans le README. L'échec prévu pour l'absence d'un deuxième auteur ne s'applique pas à la consigne solo : le contrôle exige un auteur unique. Le professeur doit recevoir l'accès au dépôt privé.",
+    "proofs": [
+      "journal-depot.json",
+      "journal-t3-fichiers.txt",
+      "tp1-tests.txt"
+    ]
+  },
+  {
+    "key": "T5",
+    "title": "T5 · Un commit par membre (membres B puis A)",
+    "file": "tp1-t5-shortlog.png",
+    "mode": "report",
+    "results": [
+      "$ git shortlog -sn tp1-valide\n\n     2\tRamzi Ahmed Rayane\n\nCode de sortie : 0\n3 passed in 0.42s"
+    ],
+    "comment": "Un seul auteur est attendu et vérifié : Ramzi Ahmed Rayane. L'adaptation est déclarée dans le README, sans changer les seuils du modèle ni simuler un autre contributeur.",
+    "proofs": [
+      "journal-t5-auteur.txt",
+      "journal-t5-tests-git.txt"
+    ]
+  },
+  {
+    "key": "T6",
+    "title": "T6 · La vérification finale (à deux)",
+    "file": "tp1-t6-pytest.png",
+    "mode": "report",
+    "results": [
+      "Diagnostic : 0 erreur(s), 0 avertissement(s).\n38 passed in 2.04s\nCI TP1 : success."
+    ],
+    "comment": "La structure, les fiches, les paquets et l'historique solo sont valides. La CI repart d'un checkout et d'un environnement neufs, sans dépendre des caches du poste.",
+    "proofs": [
+      "tp1-diagnostic.txt",
+      "tp1-tests.txt"
+    ]
+  },
+  {
+    "key": "T6",
+    "title": "T6 · La vérification finale (à deux)",
+    "file": "tp1-t6-actions.png",
+    "mode": "ci1",
+    "results": [
+      "Diagnostic : 0 erreur(s), 0 avertissement(s).\n38 passed in 2.04s\nCI TP1 : success."
+    ],
+    "comment": "La structure, les fiches, les paquets et l'historique solo sont valides. La CI repart d'un checkout et d'un environnement neufs, sans dépendre des caches du poste.",
+    "proofs": [
+      "tp1-diagnostic.txt",
+      "tp1-tests.txt"
+    ]
+  },
+  {
+    "key": "T7",
+    "title": "T7 · Le clone frais",
+    "file": "tp1-t7-clone-frais.png",
+    "mode": "report",
+    "results": [
+      "Clone GitHub neuf, checkout tp1-valide et nouveau .venv.\nInstallation réussie ; diagnostic : 0 erreur(s), 0 avertissement(s).\n38 passed in 2.06s"
+    ],
+    "comment": "La vérification est rejouée dans un répertoire temporaire distinct et un environnement neuf au checkpoint TP1. Elle confirme que les fichiers versionnés suffisent. Elle est effectuée sur le même ordinateur et n'est pas attribuée à un deuxième poste.",
+    "proofs": [
+      "journal-t7-clone.txt",
+      "journal-t7-checkpoint.txt",
+      "journal-t7-venv.txt",
+      "journal-t7-installation.txt",
+      "journal-t7-diagnostic.txt",
+      "journal-t7-tests.txt"
+    ]
+  },
+  {
+    "key": "C1",
+    "title": "C1 · Le kit installé (membre A)",
+    "file": "tp2-c1-pytest.png",
+    "mode": "report",
+    "results": [
+      "Avant production des métriques, reproduction complémentaire :\n2 failed, 38 passed, 2 skipped in 2.57s\nCheckpoint TP2 terminé : 42 passed in 2.23s"
+    ],
+    "comment": "Le point de départ est reproduit depuis TP1 avec les scripts et tests TP2, avant entraînement. Les deux échecs réclament metrics.json ; les deux prédictions attendent le modèle. Cette reproduction est distincte de l'exécution finale conservée au tag tp2-valide.",
+    "proofs": [
+      "journal-c1-avant-mesures.txt",
+      "tp2-tests.txt"
+    ]
+  },
+  {
+    "key": "C2",
+    "title": "C2 · Le jeu de démonstration",
+    "file": "tp2-c2-make-demo.png",
+    "mode": "report",
+    "results": [
+      "$ C:\\Users\\NITRO 5\\Downloads\\sentiment-app-solo\\.venv\\Scripts\\python.exe -X utf8 src/make_demo.py\n\n290 avis écrits dans data\\demo_reviews.csv\n  145 positifs, 145 négatifs\n  dont 100 avis mitigés et 30 neutres, volontairement difficiles"
+    ],
+    "comment": "Exemple : « Produit conforme à la description, très satisfait au déballage, sauf que ensuite application qui plante à chaque ouverture. ». La seconde partie renverse la première : l'étiquette dépend de la conclusion. Ces données synthétiques ne sont pas présentées comme de vrais avis clients.",
+    "proofs": [
+      "tp2-donnees.txt"
+    ]
+  },
+  {
+    "key": "C3",
+    "title": "C3 · L'entraînement",
+    "file": "tp2-c3-train.png",
+    "mode": "report",
+    "results": [
+      "$ C:\\Users\\NITRO 5\\Downloads\\sentiment-app-solo\\.venv\\Scripts\\python.exe -X utf8 src/train.py\n\nSource : demo, 290 avis (145 négatifs)\n232 avis d'entraînement, 58 de test\nVocabulaire : 316 termes\nF1 macro sur le jeu de test : 0.879 (seuil 0.85)\nModèle : models\\sentiment.joblib\nMétriques : models\\metrics.json (versionné dans Git, contrairement au modèle)"
+    ],
+    "comment": "Le découpage précède la vectorisation : 232 avis d'entraînement et 58 de test. Les métriques légères sont versionnées pour comparer les expériences ; le modèle binaire est reconstruit et reste ignoré.",
+    "proofs": [
+      "tp2-entrainement-demo.txt",
+      "journal-t3-fichiers.txt"
+    ]
+  },
+  {
+    "key": "C4",
+    "title": "C4 · L'évaluation",
+    "file": "tp2-c4-evaluate.png",
+    "mode": "report",
+    "results": [
+      "Matrice : lignes vérité, colonnes prédiction\n             negative positive\nnegative           27        2\npositive            5       24\n7 erreurs sur 58 avis de test."
+    ],
+    "comment": "Les erreurs portent sur les avis mitigés. TF-IDF et les bigrammes captent des mots et voisinages, sans bien représenter le retournement de la phrase. Davantage d'exemples représentatifs ou une représentation contextuelle pourraient aider ; les trois erreurs affichées sont dans la sortie liée.",
+    "proofs": [
+      "tp2-evaluation-demo.txt"
+    ]
+  },
+  {
+    "key": "C5",
+    "title": "C5 · Le vrai jeu de données, les tests, le push",
+    "file": "tp2-c5-allocine.png",
+    "mode": "ci2+result",
+    "results": [
+      "Allociné : 20 000 avis ; 16 000 train / 4 000 test.\nF1 macro : 0.9205 ; accuracy : 0.9205 ; rappel négatif : 0.9113.\nSuite TP2 après retour à la démonstration : 42 passed in 2.23s\nCI TP2 : success."
+    ],
+    "comment": "Le F1 Allociné porte sur un jeu plus grand et un autre domaine : sa différence ne suffit pas à prouver une meilleure qualité pour le service client. Ses métriques sont conservées, puis le modèle de démonstration est réentraîné pour rester identique à celui de la CI.",
+    "proofs": [
+      "tp2-entrainement-allocine.txt",
+      "tp2-metrics-allocine.json",
+      "tp2-modele-final-demo.txt",
+      "tp2-tests.txt"
+    ]
+  },
+  {
+    "key": "T14",
+    "title": "T14 · Le kit installé (membre A)",
+    "file": "tp3-t14-pytest.png",
+    "mode": "report",
+    "results": [
+      "48 passed, 1 warning in 3.09s"
+    ],
+    "comment": "Le kit API ajoute six tests HTTP aux 42 tests du TP2. La CI installe les dépendances et entraîne la démonstration avant pytest ; les prédictions ne sont pas ignorées faute de modèle.",
+    "proofs": [
+      "tp3-installation-kit.txt",
+      "tp3-tests.txt"
+    ]
+  },
+  {
+    "key": "T15",
+    "title": "T15 · `/health`",
+    "file": "tp3-t15-health.png",
+    "mode": "real:tp3-t15-health.png",
+    "results": [
+      "{\n  \"code\": 200,\n  \"body\": {\n    \"status\": \"OK\",\n    \"model\": \"tfidf-logreg (TP2, models/sentiment.joblib)\"\n  }\n}"
+    ],
+    "comment": "La route indique que le modèle TP2 est chargé. La capture vient de l'essai navigateur du dépôt solo ; le relevé complémentaire confirme le même résultat après packaging.",
+    "proofs": [
+      "journal-api-complement.json"
+    ]
+  },
+  {
+    "key": "T16",
+    "title": "T16 · Un avis positif",
+    "file": "tp3-t16-positif.png",
+    "mode": "report",
+    "results": [
+      "{\n  \"code\": 200,\n  \"body\": {\n    \"label\": \"POSITIVE\",\n    \"score\": 0.777,\n    \"text\": \"Livraison rapide, produit conforme, très satisfait\"\n  }\n}"
+    ],
+    "comment": "L'avis positif reçoit POSITIVE avec une confiance de 0,777. Le relevé complémentaire et la commande packagée confirment ce résultat ; les tests TP3 vérifiaient déjà l'étiquette.",
+    "proofs": [
+      "journal-api-complement.json",
+      "tp6-cli-positif.txt"
+    ]
+  },
+  {
+    "key": "T17",
+    "title": "T17 · Un avis négatif",
+    "file": "tp3-t17-negatif.png",
+    "mode": "report",
+    "results": [
+      "{\n  \"code\": 200,\n  \"body\": {\n    \"label\": \"NEGATIVE\",\n    \"score\": 0.7465,\n    \"text\": \"Produit cassé et service injoignable, à fuir\"\n  }\n}"
+    ],
+    "comment": "L'avis négatif reçoit NEGATIVE avec une confiance de 0,7465. La route appelle le modèle existant sans l'entraîner et respecte le contrat de réponse.",
+    "proofs": [
+      "journal-api-complement.json",
+      "tp3-tests.txt"
+    ]
+  },
+  {
+    "key": "T18",
+    "title": "T18 · Les refus",
+    "file": "tp3-t18-refus.png",
+    "mode": "report",
+    "results": [
+      "Texte vide : 422\nChamp absent : 422\nNombre à la place du texte : 422\nDans les trois cas, detail est une liste avec loc, msg et type."
+    ],
+    "comment": "Ce sont des erreurs d'entrée : Pydantic les refuse avant la prédiction en 422, pas en 500. Les trois réponses complètes figurent dans le relevé complémentaire.",
+    "proofs": [
+      "journal-api-complement.json"
+    ]
+  },
+  {
+    "key": "T19",
+    "title": "T19 · La CI",
+    "file": "tp3-t19-actions.png",
+    "mode": "ci3",
+    "results": [
+      "CI du checkpoint TP3 : success\n48 passed, 1 warning in 3.09s"
+    ],
+    "comment": "Le modèle n'entre pas dans Git, donc la CI doit le produire avant les tests API. L'exécution TP3 comporte installation, diagnostic, entraînement et tests.",
+    "proofs": [
+      "tp3-tests.txt"
+    ]
+  },
+  {
+    "key": "T20",
+    "title": "T20 · L'API sans modèle",
+    "file": "tp3-t20-sans-modele.png",
+    "mode": "report",
+    "results": [
+      "$ C:\\Users\\NITRO 5\\Downloads\\sentiment-app-solo\\.venv\\Scripts\\python.exe -X utf8 -c from pathlib import Path\nfrom tempfile import TemporaryDirectory\nfrom fastapi.testclient import TestClient\nfrom sentiment_app import predict\n[Extrait ; sortie intégrale dans le fichier cité.]\n  predict.MODELE=ancien\n  predict.charger_modele.cache_clear()\n\n\nFileNotFoundError : modèle introuvable : C:\\Users\\NITRO5~1\\AppData\\Local\\Temp\\tmpg7dnp5va\\modele-absent.joblib. Lancez python src/train.py, ou indiquez son chemin dans SENTIMENT_MODELE.\nDémarrage refusé avant la première requête : contrôle validé.\n2026-10-28 17:54:10,899 INFO Démarrage de l'API..."
+    ],
+    "comment": "Le chemin est redirigé vers un fichier absent et le cache vidé, sans renommer le modèle actif. Le démarrage est refusé avant les requêtes. Ce relevé est complémentaire après TP6 : le comportement est identique, mais le message indique maintenant SENTIMENT_MODELE.",
+    "proofs": [
+      "journal-t20-sans-modele.txt",
+      "journal-t20-integration.txt"
+    ]
+  },
+  {
+    "key": "T21",
+    "title": "T21 · Le kit installé et le point de départ (membre A)",
+    "file": "tp4-t21-couverture.png",
+    "mode": "report",
+    "results": [
+      "Kit TP4 initial, reproduction complémentaire :\n1 failed, 51 passed, 1 skipped, 1 warning in 3.49s\nCouverture initiale : 91 %.\nRuff : 5 remarques.\nMypy : Success: no issues found in 4 source files."
+    ],
+    "comment": "Le jeu d'or du kit est vide, d'où l'échec et le cas ignoré attendus. Les lignes non couvertes correspondent au 503 sans classifieur, à l'erreur 500 et au lancement direct __main__. Les remarques ruff sont celles de cette reprise, où certains fichiers avaient déjà été corrigés dans la source.",
+    "proofs": [
+      "journal-t21-depart.txt",
+      "tp4-couverture-avant.txt",
+      "tp4-ruff-avant.txt",
+      "tp4-mypy-avant.txt"
+    ]
+  },
+  {
+    "key": "T22",
+    "title": "T22 · Le contrat d'entrée corrigé",
+    "file": "tp4-t22-espaces.png",
+    "mode": "report",
+    "results": [
+      "3 failed, 8 passed, 1 warning in 6.62s\nUn cas explicite supplémentaire vérifie U+0085.",
+      "{\n  \"code\": 422,\n  \"body\": {\n    \"detail\": [\n      {\n        \"type\": \"value_error\",\n        \"loc\": [\n          \"body\",\n          \"text\"\n        ],\n        \"msg\": \"Value error, texte vide\",\n        \"input\": \"   \",\n        \"ctx\": {\n          \"error\": {}\n        }\n      }\n    ]\n  }\n}"
+    ],
+    "comment": "Avant correction, les espaces, le blanc Unicode explicite et la propriété des blancs renvoient detail en chaîne. Les 3 échecs au lieu de 2 viennent du cas supplémentaire. Le validateur emploie maintenant str.strip() comme le modèle ; le contre-exemple exact de Hypothesis reste dans la preuve.",
+    "proofs": [
+      "journal-t22-avant.txt",
+      "journal-api-complement.json"
+    ]
+  },
+  {
+    "key": "T23",
+    "title": "T23 · Les propriétés",
+    "file": "tp4-t23-proprietes.png",
+    "mode": "report",
+    "results": [
+      "Exécution 1 : 11 passed, 1 warning in 3.85s\nExécution 2 : 11 passed, 1 warning in 3.75s\nExécution 3 : 11 passed, 1 warning in 3.69s"
+    ],
+    "comment": "Les onze cas et propriétés passent trois fois. Le guide en annonce dix ; U+0085 est ici un cas explicite de plus. Les bornes du contrat et les assertions ne sont pas diminuées pour faire passer la suite.",
+    "proofs": [
+      "tp4-limites-1.txt",
+      "tp4-limites-2.txt",
+      "tp4-limites-3.txt"
+    ]
+  },
+  {
+    "key": "T24",
+    "title": "T24 · L'abstention",
+    "file": "tp4-t24-courbe.png",
+    "mode": "report",
+    "results": [
+      "Seuil 0,50 : 58 réponses, 7 erreurs, 0 relecture.\nSeuil 0,60 : 42 réponses, 2 erreurs, 16 relectures.\nSeuil 0,70 : 37 réponses, 0 erreur, 21 relectures.\nMots inconnus : {\"code\": 200, \"body\": {\"label\": \"INDETERMINE\", \"score\": 0.5162, \"text\": \"xqzvb wlkptr grombu\"}}"
+    ],
+    "comment": "À 0,60, cinq erreurs automatiques sont évitées pour 16 relectures sur 58 (27,6 %). Sans mot connu, le vecteur TF-IDF est nul et seul le biais de la régression subsiste. Le verdict devient INDETERMINE, avec le score conservé.",
+    "proofs": [
+      "tp4-courbe-seuil.txt",
+      "journal-api-complement.json"
+    ]
+  },
+  {
+    "key": "T24",
+    "title": "T24 · L'abstention",
+    "file": "tp4-t24-indetermine.png",
+    "mode": "real:tp5-abstention.png",
+    "results": [
+      "Seuil 0,50 : 58 réponses, 7 erreurs, 0 relecture.\nSeuil 0,60 : 42 réponses, 2 erreurs, 16 relectures.\nSeuil 0,70 : 37 réponses, 0 erreur, 21 relectures.\nMots inconnus : {\"code\": 200, \"body\": {\"label\": \"INDETERMINE\", \"score\": 0.5162, \"text\": \"xqzvb wlkptr grombu\"}}"
+    ],
+    "comment": "À 0,60, cinq erreurs automatiques sont évitées pour 16 relectures sur 58 (27,6 %). Sans mot connu, le vecteur TF-IDF est nul et seul le biais de la régression subsiste. Le verdict devient INDETERMINE, avec le score conservé.",
+    "proofs": [
+      "tp4-courbe-seuil.txt",
+      "journal-api-complement.json"
+    ]
+  },
+  {
+    "key": "T25",
+    "title": "T25 · Le jeu d'or",
+    "file": "tp4-t25-jeu-or.png",
+    "mode": "report",
+    "results": [
+      "20 avis, dont 10 difficiles.\nBilan : 5 justes, 11 abstentions, 4 erreurs franches déclarées.\n17 passed, 4 xfailed, 1 warning in 3.36s"
+    ],
+    "comment": "Les vingt avis sont repris de la source et relus, sans changer leurs attentes. Les erreurs restent avec leur motif et xfail(strict=True), qui exigera aussi une revue en cas de correction inattendue. Aucune répartition fictive de dix avis par membre n'est revendiquée.",
+    "proofs": [
+      "tp4-bilan-jeu-or.txt",
+      "journal-t25-tests.txt"
+    ]
+  },
+  {
+    "key": "T26",
+    "title": "T26 · L'intégration et la couverture",
+    "file": "tp4-t26-couverture.png",
+    "mode": "report",
+    "results": [
+      "7 passed, 1 warning in 2.90s\nCouverture API finale : 97,59 % ; 2 instructions non couvertes sur 83.\nPannes RuntimeError et ValueError : 500 générique ; modèle retiré : 503."
+    ],
+    "comment": "Les tests couvrent démarrage, fichier absent, cache vidé, classifieur retiré, deux pannes et classes inconnues. Les messages internes ne sont pas exposés. Les deux instructions restantes appartiennent au lancement direct, sans exclusion ajoutée.",
+    "proofs": [
+      "journal-t20-integration.txt",
+      "tp6-tests.txt"
+    ]
+  },
+  {
+    "key": "T27",
+    "title": "T27 · Qualité statique, crochet et CI",
+    "file": "tp4-t27-pre-commit.png",
+    "mode": "report",
+    "results": [
+      "Ruff : All checks passed!\nMypy : Success: no issues found in 4 source files.\nEssai du crochet : F401, import os inutilisé ; code 1 ; HEAD inchangé.\nCI TP4 : success."
+    ],
+    "comment": "Le commit fautif est réellement refusé puis la sonde retirée, sans créer de commit d'essai. Le contrat utilise TypedDict, Literal et une correspondance vérifiée au démarrage. Ces contrôles statiques complètent les tests de comportement.",
+    "proofs": [
+      "tp4-ruff-final.txt",
+      "tp4-mypy-final.txt",
+      "journal-t27-refus-hook.txt"
+    ]
+  },
+  {
+    "key": "T27",
+    "title": "T27 · Qualité statique, crochet et CI",
+    "file": "tp4-t27-actions.png",
+    "mode": "ci4",
+    "results": [
+      "Ruff : All checks passed!\nMypy : Success: no issues found in 4 source files.\nEssai du crochet : F401, import os inutilisé ; code 1 ; HEAD inchangé.\nCI TP4 : success."
+    ],
+    "comment": "Le commit fautif est réellement refusé puis la sonde retirée, sans créer de commit d'essai. Le contrat utilise TypedDict, Literal et une correspondance vérifiée au démarrage. Ces contrôles statiques complètent les tests de comportement.",
+    "proofs": [
+      "tp4-ruff-final.txt",
+      "tp4-mypy-final.txt",
+      "journal-t27-refus-hook.txt"
+    ]
+  },
+  {
+    "key": "T28",
+    "title": "T28 · Le kit installé (membre A)",
+    "file": "tp5-t28-pytest.png",
+    "mode": "report",
+    "results": [
+      "99 passed, 4 xfailed, 1 warning in 11.28s\nClient et page : 12 passed, 1 warning in 6.53s"
+    ],
+    "comment": "L'interface ajoute sept tests du client et cinq tests AppTest. Le total diffère du guide parce que cette reprise ajoute des cas TP4 ; les quatre xfail sont des erreurs connues distinctes des échecs inattendus.",
+    "proofs": [
+      "tp5-tests.txt",
+      "tp5-interface-tests.txt"
+    ]
+  },
+  {
+    "key": "T29",
+    "title": "T29 · La page ouverte, l'API prête",
+    "file": "tp5-t29-page.png",
+    "mode": "real:tp5-t29-api-prete.png",
+    "results": [
+      "API prête : tfidf-logreg (TP2, models/sentiment.joblib)"
+    ],
+    "comment": "L'API et la page sont lancées pour l'essai navigateur solo sur les ports temporaires 18000 et 18501. L'usage habituel conserve 8000 et 8501. Les processus de contrôle sont arrêtés à la fin.",
+    "proofs": [
+      "tp5-essais-navigateur.txt"
+    ]
+  },
+  {
+    "key": "T30",
+    "title": "T30 · Les verdicts",
+    "file": "tp5-t30-positif.png",
+    "mode": "real:tp5-positif.png",
+    "results": [
+      "Avis positif : 78 % (score 0,777).\nAvis négatif : 75 % (score 0,7465)."
+    ],
+    "comment": "La page traduit les étiquettes en verdicts lisibles et affiche la confiance arrondie. Les captures proviennent de l'exécution des textes du guide dans ce projet solo.",
+    "proofs": [
+      "tp5-essais-navigateur.txt"
+    ]
+  },
+  {
+    "key": "T30",
+    "title": "T30 · Les verdicts",
+    "file": "tp5-t30-negatif.png",
+    "mode": "real:tp5-negatif.png",
+    "results": [
+      "Avis positif : 78 % (score 0,777).\nAvis négatif : 75 % (score 0,7465)."
+    ],
+    "comment": "La page traduit les étiquettes en verdicts lisibles et affiche la confiance arrondie. Les captures proviennent de l'exécution des textes du guide dans ce projet solo.",
+    "proofs": [
+      "tp5-essais-navigateur.txt"
+    ]
+  },
+  {
+    "key": "T31",
+    "title": "T31 · L'abstention",
+    "file": "tp5-t31-abstention.png",
+    "mode": "real:tp5-abstention.png",
+    "results": [
+      "Je ne sais pas : à faire vérifier par un humain.\nConfiance : 52 % (score 0,5162).\nMessage : confiance sous le seuil d’abstention."
+    ],
+    "comment": "Le score reste affiché et la page explique la demande de relecture. Une abstention n'est pas présentée comme une classification correcte.",
+    "proofs": [
+      "tp5-essais-navigateur.txt"
+    ]
+  },
+  {
+    "key": "T32",
+    "title": "T32 · Les erreurs",
+    "file": "tp5-t32-refus.png",
+    "mode": "real:tp5-t32-refus.png",
+    "results": [
+      "Trois espaces : avertissement Texte refusé.\nAPI arrêtée puis page rechargée : API injoignable."
+    ],
+    "comment": "Les erreurs HTTP et de connexion sont traduites pour l'utilisateur. L'arrêt du serveur et le rechargement ont réellement été faits pendant l'essai navigateur ; le refus des blancs provient du 422 standard.",
+    "proofs": [
+      "tp5-essais-navigateur.txt"
+    ]
+  },
+  {
+    "key": "T32",
+    "title": "T32 · Les erreurs",
+    "file": "tp5-t32-injoignable.png",
+    "mode": "real:tp5-t32-api-arretee.png",
+    "results": [
+      "Trois espaces : avertissement Texte refusé.\nAPI arrêtée puis page rechargée : API injoignable."
+    ],
+    "comment": "Les erreurs HTTP et de connexion sont traduites pour l'utilisateur. L'arrêt du serveur et le rechargement ont réellement été faits pendant l'essai navigateur ; le refus des blancs provient du 422 standard.",
+    "proofs": [
+      "tp5-essais-navigateur.txt"
+    ]
+  },
+  {
+    "key": "T33",
+    "title": "T33 · Un fichier d'avis",
+    "file": "tp5-t33-lot.png",
+    "mode": "real:tp5-t33-lot.png",
+    "results": [
+      "6 avis : 3 POSITIVE, 2 NEGATIVE, 1 INDETERMINE.\nTéléchargement : resultats.csv, six lignes."
+    ],
+    "comment": "Un avis sur six part vers un humain. Le CSV réellement téléchargé est conservé ; la capture montre le tableau et le résumé. La page ne lit jamais le joblib directement.",
+    "proofs": [
+      "tp5-essais-navigateur.txt",
+      "resultats-exemple.csv"
+    ]
+  },
+  {
+    "key": "T34",
+    "title": "T34 · Compte rendu, push, CI",
+    "file": "tp5-t34-actions.png",
+    "mode": "ci5",
+    "results": [
+      "CI TP5 : success\n99 passed, 4 xfailed, 1 warning in 11.28s"
+    ],
+    "comment": "Le compte rendu répond sur l'architecture HTTP, l'abstention et les erreurs. La CI rejoue les douze tests d'interface après avoir entraîné le modèle, qui reste hors Git.",
+    "proofs": [
+      "tp5-tests.txt"
+    ]
+  },
+  {
+    "key": "T35",
+    "title": "T35 · Le kit installé (membre A)",
+    "file": "tp6-t35-pytest.png",
+    "mode": "report",
+    "results": [
+      "2 failed, 103 passed, 4 xfailed, 1 warning in 7.84s"
+    ],
+    "comment": "Les deux échecs attendus demandent le module predict dans le paquet et le retrait de sys.path dans l'API. Les 103 autres réussites et les quatre xfail appartiennent aux tests déjà présents ; les xfail restent des erreurs connues du modèle.",
+    "proofs": [
+      "tp6-t35-avant.txt"
+    ]
+  },
+  {
+    "key": "T36",
+    "title": "T36 · predict.py dans le paquet",
+    "file": "tp6-t36-deplacement.png",
+    "mode": "report",
+    "results": [
+      "1 failed, 104 passed, 4 xfailed, 1 warning in 7.77s\npositive (confiance 78%)\nHistorique du fichier : TP6 puis TP2 avec git log --follow."
+    ],
+    "comment": "Le déplacement utilise git mv. Le fichier src/predict.py renvoie au même module réel : modifier predict.MODELE agit encore sur le bon objet et son cache. L'installation éditable précède ce contrôle de compatibilité.",
+    "proofs": [
+      "tp6-t36-avant-api.txt",
+      "tp6-compatibilite.txt",
+      "journal-t36-historique.txt"
+    ]
+  },
+  {
+    "key": "T37",
+    "title": "T37 · L'API branchée sur le paquet",
+    "file": "tp6-t37-api.png",
+    "mode": "report",
+    "results": [
+      "105 passed, 4 xfailed, 1 warning in 10.99s\nAucun sys.path dans api/*.py.\nRuff : All checks passed!\nMypy : Success: no issues found in 4 source files."
+    ],
+    "comment": "api/model.py importe maintenant ModelLabel, charger_modele et predict depuis sentiment_app.predict. Les imports reposent sur le paquet installé ; le test du kit vérifie l'absence de sys.path dans l'API.",
+    "proofs": [
+      "tp6-tests.txt",
+      "tp6-ruff.txt",
+      "tp6-mypy.txt"
+    ]
+  },
+  {
+    "key": "T38",
+    "title": "T38 · La commande sentiment",
+    "file": "tp6-t38-commande.png",
+    "mode": "report",
+    "results": [
+      "sentiment-app 0.6.0\n{\"label\": \"POSITIVE\", \"score\": 0.777, \"text\": \"Livraison rapide, produit conforme, très satisfait\"}\n{\"label\": \"INDETERMINE\", \"score\": 0.5162, \"text\": \"xqzvb wlkptr grombu\"}\nserve : /health OK ; ui : serveur Streamlit HTTP 200."
+    ],
+    "comment": "La commande predict utilise le même adaptateur que l'API et applique donc le même seuil. serve et ui ont été démarrés puis arrêtés. La version vient d'une seule définition dans sentiment_app/__init__.py.",
+    "proofs": [
+      "tp6-version.txt",
+      "tp6-cli-positif.txt",
+      "tp6-cli-abstention.txt",
+      "tp6-serve-health.json",
+      "tp6-ui-health.txt"
+    ]
+  },
+  {
+    "key": "T39",
+    "title": "T39 · La roue",
+    "file": "tp6-t39-roue.png",
+    "mode": "report",
+    "results": [
+      "Successfully built sentiment_app-0.6.0-py3-none-any.whl\nPaquets : api, sentiment_app, ui ; métadonnées .dist-info.\nAbsents : tests, data, models, src."
+    ],
+    "comment": "La roue distribue le code indépendamment des tests et des jeux de données. Le modèle peut être remplacé sans republier ce code ; sa localisation est une configuration d'exécution. La liste réelle des fichiers est conservée.",
+    "proofs": [
+      "tp6-construction-roue.txt",
+      "tp6-contenu-roue.txt"
+    ]
+  },
+  {
+    "key": "T40",
+    "title": "T40 · La roue hors du dépôt",
+    "file": "tp6-t40-ailleurs.png",
+    "mode": "report",
+    "results": [
+      "Sans SENTIMENT_MODELE : modèle introuvable, code 1.\nAvec le chemin absolu : POSITIVE, score 0,777.\nPaquet chargé depuis le site-packages du venv neuf ; scikit-learn 1.5.2."
+    ],
+    "comment": "Le modèle est fourni séparément et pip installe les dépendances déclarées. Le venv et le répertoire de lancement sont hors du dépôt ; les chemins réels prouvent qu'il ne s'agit pas de l'installation éditable. La même série scikit-learn relit le modèle.",
+    "proofs": [
+      "tp6-hors-depot-sans-modele.txt",
+      "tp6-hors-depot-avec-modele.txt",
+      "tp6-origine-paquet-installe.txt"
+    ]
+  },
+  {
+    "key": "T41",
+    "title": "T41 · Version, étiquette, push",
+    "file": "tp6-t41-actions.png",
+    "mode": "ci6",
+    "results": [
+      "Version : 0.6.0 ; étiquette publiée : v0.6.0.\nCI TP6 et étape Roue installee hors du depot : success.\n105 passed, 4 xfailed, 1 warning in 10.99s"
+    ],
+    "comment": "Le tag pointe vers le vrai checkpoint TP6 testé. La CI reconstruit la roue, l'installe dans un nouveau venv sous /tmp et lui fournit le modèle entraîné : la prédiction réussit. Les commits de documentation ultérieurs ne déplacent pas le tag.",
+    "proofs": [
+      "tp6-tests.txt"
+    ]
+  }
+]

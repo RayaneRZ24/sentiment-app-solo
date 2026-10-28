@@ -1,0 +1,32 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Journal — preuve enregistrée</title><style>
+body{margin:0;background:#f2f5f9;color:#142237;font:18px/1.5 Segoe UI,Arial,sans-serif}main{margin:36px auto;padding:36px 44px;background:white;max-width:1090px;border:1px solid #d6e0eb;border-radius:12px}h1{font-size:30px;line-height:1.25;margin:8px 0 20px}h2{font-size:19px;color:#184b78;margin:26px 0 10px}.tag{font-weight:700;color:#184b78;letter-spacing:.04em}.note{background:#edf4fb;border-left:4px solid #3975a8;padding:12px 16px;font-size:15px}pre{background:#f5f7fa;border:1px solid #dce4ed;border-radius:6px;padding:17px;font:15px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}p{margin:12px 0}.foot{font-size:13px;color:#53627a;border-top:1px solid #dae2ed;padding-top:14px}
+</style><main><div class="tag">JOURNAL TP1–TP6 · TRAVAIL INDIVIDUEL</div><h1>T28 · Le kit installé (membre A)</h1><p>Ahmed Rayane Ramzi · RayaneRZ24</p><div class="note">Capture d’un rapport affichant les résultats réellement enregistrés. Les reproductions complémentaires sont identifiées dans le journal. Ce document n’imite ni un ancien terminal ni une page GitHub.</div><h2>Résultat consigné</h2><pre>99 passed, 4 xfailed, 1 warning in 11.28s
+Client et page : 12 passed, 1 warning in 6.53s</pre><h2>Extrait de la preuve : tp5-tests.txt</h2><pre>$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pytest -q --cov=api --cov-report=term-missing --cov-fail-under=95
+
+........................................................................ [ 69%]
+x...x..x.......x...............                                          [100%]
+============================== warnings summary ===============================
+tests/test_api.py::test_root
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.11.9-final-0 _______________
+
+Name             Stmts   Miss  Cover   Missing
+----------------------------------------------
+api\main.py         42      2    95%   84-86
+api\model.py        21      0   100%
+api\schemas.py      24      0   100%
+----------------------------------------------
+TOTAL               87      2    98%
+
+1 empty file skipped.
+Required test coverage of 95% reached. Total coverage: 97.70%
+=========================== short test summary info ===========================
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-6] - Faux négatif observé au-dessus du seuil 0.60 : le vocabulaire du problème domine malgré sa résolution.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-10] - Faux positif observé : vocabulaire des dégâts peu représenté dans les 290 avis.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-13] - Faux positif observé : le sac de mots conserve conforme et description sans comprendre ni...ni.
+XFAIL tests/test_jeu_or.py::test_pas_d_erreur_franche[ligne-21] - Faux positif observé : le modèle e-commerce ne comprend pas le risque lié aux allergènes.
+99 passed, 4 xfailed, 1 warning in 11.28s</pre><h2>Commentaire</h2><p>L&#x27;interface ajoute sept tests du client et cinq tests AppTest. Le total diffère du guide parce que cette reprise ajoute des cas TP4 ; les quatre xfail sont des erreurs connues distinctes des échecs inattendus.</p><p class="foot">Sources : tp5-tests.txt, tp5-interface-tests.txt</p></main></html>

@@ -1,3 +1,7 @@
+## Journal à déposer
+
+Le fichier conforme au modèle du professeur est [journal-tp1-tp6.md](journal-tp1-tp6.md). La synthèse historique ci-dessous reste en complément.
+
 # Journal individuel : TP1 à TP6
 
 **Auteur : Ahmed Rayane Ramzi (@RayaneRZ24).** Expériences rejouées le 28 octobre 2026 dans le nouveau dépôt personnel, à partir d'un clone effectif du projet de binôme et des kits étudiants d'A. Larhlimi.

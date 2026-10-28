@@ -1,0 +1,20 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe C:\Users\NITRO5~1\AppData\Local\Temp\sentiment-solo-e3j5t4v7\kits\tp4-tests-qualite\appliquer_tp4.py C:\Users\NITRO5~1\AppData\Local\Temp\journal-preuves-3j9b5e2u\clone-tp1
+
+Dépôt cible : C:\Users\NITRO 5\AppData\Local\Temp\journal-preuves-3j9b5e2u\clone-tp1
+  ajoute         requirements-dev.txt
+  ajoute         .pre-commit-config.yaml
+  ajoute         src/courbe_seuil.py
+  ajoute         src/bilan_jeu_or.py
+  ajoute         tests/test_limites.py
+  ajoute         tests/test_integration.py
+  ajoute         tests/test_jeu_or.py
+  ajoute         data/jeu_or.csv
+  ajoute         docs/semaine4.md
+  ajoute         TP4-ENONCE.md
+  ajoute         MARCHE-A-SUIVRE-TP4.md
+  ajoute         pyproject.toml (configuration de ruff, mypy et de la couverture)
+  déjà là        .gitignore
+
+Kit installé. Suite, dans le dépôt : pip install -r requirements-dev.txt, puis MARCHE-A-SUIVRE-TP4.md, contrôle T21.
+
+Code de sortie : 0

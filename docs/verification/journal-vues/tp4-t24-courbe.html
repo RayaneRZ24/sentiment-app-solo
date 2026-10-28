@@ -1,0 +1,20 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Journal — preuve enregistrée</title><style>
+body{margin:0;background:#f2f5f9;color:#142237;font:18px/1.5 Segoe UI,Arial,sans-serif}main{margin:36px auto;padding:36px 44px;background:white;max-width:1090px;border:1px solid #d6e0eb;border-radius:12px}h1{font-size:30px;line-height:1.25;margin:8px 0 20px}h2{font-size:19px;color:#184b78;margin:26px 0 10px}.tag{font-weight:700;color:#184b78;letter-spacing:.04em}.note{background:#edf4fb;border-left:4px solid #3975a8;padding:12px 16px;font-size:15px}pre{background:#f5f7fa;border:1px solid #dce4ed;border-radius:6px;padding:17px;font:15px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}p{margin:12px 0}.foot{font-size:13px;color:#53627a;border-top:1px solid #dae2ed;padding-top:14px}
+</style><main><div class="tag">JOURNAL TP1–TP6 · TRAVAIL INDIVIDUEL</div><h1>T24 · L&#x27;abstention</h1><p>Ahmed Rayane Ramzi · RayaneRZ24</p><div class="note">Capture d’un rapport affichant les résultats réellement enregistrés. Les reproductions complémentaires sont identifiées dans le journal. Ce document n’imite ni un ancien terminal ni une page GitHub.</div><h2>Résultat consigné</h2><pre>Seuil 0,50 : 58 réponses, 7 erreurs, 0 relecture.
+Seuil 0,60 : 42 réponses, 2 erreurs, 16 relectures.
+Seuil 0,70 : 37 réponses, 0 erreur, 21 relectures.
+Mots inconnus : {&quot;code&quot;: 200, &quot;body&quot;: {&quot;label&quot;: &quot;INDETERMINE&quot;, &quot;score&quot;: 0.5162, &quot;text&quot;: &quot;xqzvb wlkptr grombu&quot;}}</pre><h2>Extrait de la preuve : tp4-courbe-seuil.txt</h2><pre>$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 src/courbe_seuil.py
+
+Jeu de test : 58 avis (demo)
+
+ seuil  répond à   part  exactitude  erreurs  vers un humain
+  0.50        58   100%       0.879        7               0
+  0.55        47    81%       0.915        4              11
+  0.60        42    72%       0.952        2              16
+  0.65        41    71%       0.976        1              17
+  0.70        37    64%       1.000        0              21
+  0.75        29    50%       1.000        0              29
+  0.80        13    22%       1.000        0              45
+  0.85         6    10%       1.000        0              52
+  0.90         0     0%           -        0              58
+  0.95         0     0%           -        0              58</pre><h2>Commentaire</h2><p>À 0,60, cinq erreurs automatiques sont évitées pour 16 relectures sur 58 (27,6 %). Sans mot connu, le vecteur TF-IDF est nul et seul le biais de la régression subsiste. Le verdict devient INDETERMINE, avec le score conservé.</p><p class="foot">Sources : tp4-courbe-seuil.txt, journal-api-complement.json</p></main></html>

@@ -1,0 +1,29 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Journal — preuve enregistrée</title><style>
+body{margin:0;background:#f2f5f9;color:#142237;font:18px/1.5 Segoe UI,Arial,sans-serif}main{margin:36px auto;padding:36px 44px;background:white;max-width:1090px;border:1px solid #d6e0eb;border-radius:12px}h1{font-size:30px;line-height:1.25;margin:8px 0 20px}h2{font-size:19px;color:#184b78;margin:26px 0 10px}.tag{font-weight:700;color:#184b78;letter-spacing:.04em}.note{background:#edf4fb;border-left:4px solid #3975a8;padding:12px 16px;font-size:15px}pre{background:#f5f7fa;border:1px solid #dce4ed;border-radius:6px;padding:17px;font:15px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}p{margin:12px 0}.foot{font-size:13px;color:#53627a;border-top:1px solid #dae2ed;padding-top:14px}
+</style><main><div class="tag">JOURNAL TP1–TP6 · TRAVAIL INDIVIDUEL</div><h1>T27 · Qualité statique, crochet et CI</h1><p>Ahmed Rayane Ramzi · RayaneRZ24</p><div class="note">Capture d’un rapport affichant les résultats réellement enregistrés. Les reproductions complémentaires sont identifiées dans le journal. Ce document n’imite ni un ancien terminal ni une page GitHub.</div><h2>Résultat consigné</h2><pre>Ruff : All checks passed!
+Mypy : Success: no issues found in 4 source files.
+Essai du crochet : F401, import os inutilisé ; code 1 ; HEAD inchangé.
+CI TP4 : success.</pre><h2>Extrait de la preuve : journal-t27-refus-hook.txt</h2><pre>$ git commit -m Journal T27 : essai de refus attendu
+
+ruff (erreurs probables, imports)........................................Failed
+- hook id: ruff
+- exit code: 1
+
+F401 [*] `os` imported but unused
+ --&gt; scripts\journal_hook_probe.py:1:8
+  |
+1 | import os
+  |        ^^
+help: Remove unused import: `os`
+  |
+  - import os
+  |
+
+Found 1 error.
+[*] 1 fixable with the `--fix` option.
+
+mypy (contrat typé de l&#x27;API).............................................Passed
+
+Code de sortie : 1
+
+HEAD inchangé : oui. Aucun commit d’essai créé.</pre><h2>Commentaire</h2><p>Le commit fautif est réellement refusé puis la sonde retirée, sans créer de commit d&#x27;essai. Le contrat utilise TypedDict, Literal et une correspondance vérifiée au démarrage. Ces contrôles statiques complètent les tests de comportement.</p><p class="foot">Sources : tp4-ruff-final.txt, tp4-mypy-final.txt, journal-t27-refus-hook.txt</p></main></html>

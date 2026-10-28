@@ -1,0 +1,37 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Journal — preuve enregistrée</title><style>
+body{margin:0;background:#f2f5f9;color:#142237;font:18px/1.5 Segoe UI,Arial,sans-serif}main{margin:36px auto;padding:36px 44px;background:white;max-width:1090px;border:1px solid #d6e0eb;border-radius:12px}h1{font-size:30px;line-height:1.25;margin:8px 0 20px}h2{font-size:19px;color:#184b78;margin:26px 0 10px}.tag{font-weight:700;color:#184b78;letter-spacing:.04em}.note{background:#edf4fb;border-left:4px solid #3975a8;padding:12px 16px;font-size:15px}pre{background:#f5f7fa;border:1px solid #dce4ed;border-radius:6px;padding:17px;font:15px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}p{margin:12px 0}.foot{font-size:13px;color:#53627a;border-top:1px solid #dae2ed;padding-top:14px}
+</style><main><div class="tag">JOURNAL TP1–TP6 · TRAVAIL INDIVIDUEL</div><h1>T1 · L&#x27;environnement et le point de départ (membre A)</h1><p>Ahmed Rayane Ramzi · RayaneRZ24</p><div class="note">Capture d’un rapport affichant les résultats réellement enregistrés. Les reproductions complémentaires sont identifiées dans le journal. Ce document n’imite ni un ancien terminal ni une page GitHub.</div><h2>Résultat consigné</h2><pre>Python 3.11.9
+Kit vierge, reproduction complémentaire : 3 failed, 31 passed, 4 skipped in 2.25s
+Checkpoint solo après reprise des fiches : 38 passed in 2.04s</pre><h2>Extrait de la preuve : journal-t1-kit-vierge.txt</h2><pre>$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m pytest -q --tb=short
+
+.........FFF......................ssss                                   [100%]
+================================== FAILURES ===================================
+__________________________ test_sections_are_filled ___________________________
+tests\test_cadrage.py:55: in test_sections_are_filled
+    assert not empty, &quot;rubriques vides ou trop courtes : &quot; + &quot;, &quot;.join(empty)
+E   AssertionError: rubriques vides ou trop courtes : cas1-pharmacie.md / Besoin en une phrase, cas1-pharmacie.md / Utilisateur final, cas1-pharmacie.md / Justification, cas1-pharmacie.md / Données nécessaires, cas1-pharmacie.md / Métrique de succès, cas1-pharmacie.md / Conséquence d&#x27;une erreur, cas1-pharmacie.md / Risques éthiques, cas2-reglement.md / Besoin en une phrase, cas2-reglement.md / Utilisateur final, cas2-reglement.md / Justification, cas2-reglement.md / Données nécessaires, cas2-reglement.md / Métrique de succès, cas2-reglement.md / Conséquence d&#x27;une erreur, cas2-reglement.md / Risques éthiques, cas3-avis-negatifs.md / Besoin en une phrase, cas3-avis-negatifs.md / Utilisateur final, cas3-avis-negatifs.md / Justification, cas3-avis-negatifs.md / Données nécessaires, cas3-avis-negatifs.md / Métrique de succès, cas3-avis-negatifs.md / Conséquence d&#x27;une erreur, cas3-avis-negatifs.md / Risques éthiques
+E   assert not [&#x27;cas1-pharmacie.md / Besoin en une phrase&#x27;, &#x27;cas1-pharmacie.md / Utilisateur final&#x27;, &#x27;cas1-pharmacie.md / Justificati... / Données nécessaires&#x27;, &#x27;cas1-pharmacie.md / Métrique de succès&#x27;, &quot;cas1-pharmacie.md / Conséquence d&#x27;une erreur&quot;, ...]
+______________________ test_exactly_one_approach_checked ______________________
+tests\test_cadrage.py:61: in test_exactly_one_approach_checked
+    assert text.count(&quot;- [x]&quot;) == 1, f&quot;{fiche.name} : cocher exactement une approche&quot;
+E   AssertionError: cas1-pharmacie.md : cocher exactement une approche
+E   assert 0 == 1
+E    +  where 0 = &lt;built-in method count of str object at 0x000002C666A13230&gt;(&#x27;- [x]&#x27;)
+E    +    where &lt;built-in method count of str object at 0x000002C666A13230&gt; = &#x27;# Fiche de cadrage : Ordonnances incomplètes en pharmacie\n\n&gt; Remplir chaque rubrique en une à trois phrases. Les ru...re)\n\n\n## Risques éthiques ou de confidentialité (obligatoire)\n\n\n## Approche écartée et pourquoi (facultatif)\n\n&#x27;.count
+____________________ test_justification_cites_two_criteria ____________________
+tests\test_cadrage.py:68: in test_justification_cites_two_criteria
+    assert len(cited) &gt;= 2, f&quot;{fiche.name} : la justification doit citer au moins deux critères (a), (b), (c), (d)&quot;
+E   AssertionError: cas1-pharmacie.md : la justification doit citer au moins deux critères (a), (b), (c), (d)
+E   assert 0 &gt;= 2
+E    +  where 0 = len([])
+=========================== short test summary info ===========================
+SKIPPED [1] tests\test_environment.py:55: pas un dépôt Git
+SKIPPED [1] tests\test_git_history.py:29: pas un dépôt Git
+SKIPPED [1] tests\test_git_history.py:33: pas un dépôt Git
+SKIPPED [1] tests\test_git_history.py:41: pas un dépôt Git
+FAILED tests/test_cadrage.py::test_sections_are_filled - AssertionError: rubr...
+FAILED tests/test_cadrage.py::test_exactly_one_approach_checked - AssertionEr...
+FAILED tests/test_cadrage.py::test_justification_cites_two_criteria - Asserti...
+3 failed, 31 passed, 4 skipped in 2.25s
+
+Code de sortie : 1</pre><h2>Commentaire</h2><p>Le kit vierge a été reproduit dans un dossier temporaire pour vérifier les trois défauts de cadrage et les quatre contrôles Git ignorés. Cette reproduction complémentaire n&#x27;est pas un ancien résultat du checkpoint : le dépôt solo reprend les fiches du projet source et les valide. Son diagnostic final est sans erreur ni avertissement.</p><p class="foot">Sources : journal-t1-kit-vierge.txt, tp1-diagnostic.txt, tp1-tests.txt</p></main></html>

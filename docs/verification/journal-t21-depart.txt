@@ -1,0 +1,22 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m pytest -q --tb=short
+
+.............................................Fs......                    [100%]
+================================== FAILURES ===================================
+_____________________________ test_jeu_or_complet _____________________________
+tests\test_jeu_or.py:39: in test_jeu_or_complet
+    assert len(LIGNES) >= MINIMUM_AVIS, f"jeu d'or incomplet : {len(LIGNES)} avis sur {MINIMUM_AVIS}"
+E   AssertionError: jeu d'or incomplet : 0 avis sur 20
+E   assert 0 >= 20
+E    +  where 0 = len([])
+============================== warnings summary ===============================
+tests/test_api.py::test_root
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+SKIPPED [1] tests\test_jeu_or.py:60: got empty parameter set ['texte', 'attendu'], function test_pas_d_erreur_franche at C:\Users\NITRO5~1\AppData\Local\Temp\journal-preuves-3j9b5e2u\clone-tp1\tests\test_jeu_or.py:59
+FAILED tests/test_jeu_or.py::test_jeu_or_complet - AssertionError: jeu d'or i...
+1 failed, 51 passed, 1 skipped, 1 warning in 3.49s
+
+Code de sortie : 1

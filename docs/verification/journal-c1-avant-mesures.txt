@@ -1,0 +1,30 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m pytest -q --tb=short
+
+......................................FFss                               [100%]
+================================== FAILURES ===================================
+__________________________ test_metriques_completes ___________________________
+tests\test_model.py:36: in test_metriques_completes
+    metriques = lire_metriques()
+tests\test_model.py:23: in lire_metriques
+    assert METRIQUES.exists(), "models/metrics.json absent : lancez python src/train.py"
+E   AssertionError: models/metrics.json absent : lancez python src/train.py
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('C:/Users/NITRO 5/AppData/Local/Temp/journal-preuves-3j9b5e2u/clone-tp1/models/metrics.json').exists
+_________________________ test_f1_au_dessus_du_seuil __________________________
+tests\test_model.py:43: in test_f1_au_dessus_du_seuil
+    metriques = lire_metriques()
+tests\test_model.py:23: in lire_metriques
+    assert METRIQUES.exists(), "models/metrics.json absent : lancez python src/train.py"
+E   AssertionError: models/metrics.json absent : lancez python src/train.py
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('C:/Users/NITRO 5/AppData/Local/Temp/journal-preuves-3j9b5e2u/clone-tp1/models/metrics.json').exists
+=========================== short test summary info ===========================
+SKIPPED [1] tests\test_model.py:48: models/sentiment.joblib absent sur ce poste (normal en CI)
+SKIPPED [1] tests\test_model.py:53: models/sentiment.joblib absent sur ce poste (normal en CI)
+FAILED tests/test_model.py::test_metriques_completes - AssertionError: models...
+FAILED tests/test_model.py::test_f1_au_dessus_du_seuil - AssertionError: mode...
+2 failed, 38 passed, 2 skipped in 2.57s
+
+Code de sortie : 1

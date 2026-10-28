@@ -1,0 +1,32 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Journal — preuve enregistrée</title><style>
+body{margin:0;background:#f2f5f9;color:#142237;font:18px/1.5 Segoe UI,Arial,sans-serif}main{margin:36px auto;padding:36px 44px;background:white;max-width:1090px;border:1px solid #d6e0eb;border-radius:12px}h1{font-size:30px;line-height:1.25;margin:8px 0 20px}h2{font-size:19px;color:#184b78;margin:26px 0 10px}.tag{font-weight:700;color:#184b78;letter-spacing:.04em}.note{background:#edf4fb;border-left:4px solid #3975a8;padding:12px 16px;font-size:15px}pre{background:#f5f7fa;border:1px solid #dce4ed;border-radius:6px;padding:17px;font:15px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}p{margin:12px 0}.foot{font-size:13px;color:#53627a;border-top:1px solid #dae2ed;padding-top:14px}
+</style><main><div class="tag">JOURNAL TP1–TP6 · TRAVAIL INDIVIDUEL</div><h1>T26 · L&#x27;intégration et la couverture</h1><p>Ahmed Rayane Ramzi · RayaneRZ24</p><div class="note">Capture d’un rapport affichant les résultats réellement enregistrés. Les reproductions complémentaires sont identifiées dans le journal. Ce document n’imite ni un ancien terminal ni une page GitHub.</div><h2>Résultat consigné</h2><pre>7 passed, 1 warning in 2.90s
+Couverture API finale : 97,59 % ; 2 instructions non couvertes sur 83.
+Pannes RuntimeError et ValueError : 500 générique ; modèle retiré : 503.</pre><h2>Extrait de la preuve : journal-t20-integration.txt</h2><pre>$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -m pytest tests/test_integration.py -v
+
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-8.3.5, pluggy-1.7.0 -- C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile &#x27;default&#x27;
+rootdir: C:\Users\NITRO 5\Downloads\sentiment-app-solo
+configfile: pytest.ini
+plugins: anyio-4.15.1, hypothesis-6.168.3, platformdirs-4.13.7, cov-7.1.0
+collecting ... collected 7 items
+
+tests/test_integration.py::test_demarrage_reel_charge_le_modele PASSED   [ 14%]
+tests/test_integration.py::test_modele_absent_refuse_demarrage PASSED    [ 28%]
+tests/test_integration.py::test_modele_retire_repond_503[/health] PASSED [ 42%]
+tests/test_integration.py::test_modele_retire_repond_503[/predict] PASSED [ 57%]
+tests/test_integration.py::test_panne_modele_repond_500_sans_detail_interne[erreur0] PASSED [ 71%]
+tests/test_integration.py::test_panne_modele_repond_500_sans_detail_interne[erreur1] PASSED [ 85%]
+tests/test_integration.py::test_classes_inconnues_refusees PASSED        [100%]
+
+============================== warnings summary ===============================
+tests/test_integration.py::test_demarrage_reel_charge_le_modele
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 7 passed, 1 warning in 2.90s =========================
+
+Code de sortie : 0</pre><h2>Commentaire</h2><p>Les tests couvrent démarrage, fichier absent, cache vidé, classifieur retiré, deux pannes et classes inconnues. Les messages internes ne sont pas exposés. Les deux instructions restantes appartiennent au lancement direct, sans exclusion ajoutée.</p><p class="foot">Sources : journal-t20-integration.txt, tp6-tests.txt</p></main></html>

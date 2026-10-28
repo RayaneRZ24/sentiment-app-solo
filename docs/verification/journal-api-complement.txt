@@ -1,0 +1,130 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -c import json
+from fastapi.testclient import TestClient
+from api.main import app
+results={}
+with TestClient(app) as client:
+ r=client.get('/health'); results['health']={'code':r.status_code,'body':r.json()}
+ for name,payload in [('positif',{'text':'Livraison rapide, produit conforme, très satisfait'}),('negatif',{'text':'Produit cassé et service injoignable, à fuir'}),('inconnu',{'text':'xqzvb wlkptr grombu'}),('vide',{'text':''}),('espaces',{'text':'   '}),('absent',{}),('nombre',{'text':42})]:
+  r=client.post('/predict',json=payload); results[name]={'code':r.status_code,'body':r.json()}
+print(json.dumps(results,ensure_ascii=False,indent=2))
+
+
+{
+  "health": {
+    "code": 200,
+    "body": {
+      "status": "OK",
+      "model": "tfidf-logreg (TP2, models/sentiment.joblib)"
+    }
+  },
+  "positif": {
+    "code": 200,
+    "body": {
+      "label": "POSITIVE",
+      "score": 0.777,
+      "text": "Livraison rapide, produit conforme, très satisfait"
+    }
+  },
+  "negatif": {
+    "code": 200,
+    "body": {
+      "label": "NEGATIVE",
+      "score": 0.7465,
+      "text": "Produit cassé et service injoignable, à fuir"
+    }
+  },
+  "inconnu": {
+    "code": 200,
+    "body": {
+      "label": "INDETERMINE",
+      "score": 0.5162,
+      "text": "xqzvb wlkptr grombu"
+    }
+  },
+  "vide": {
+    "code": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "string_too_short",
+          "loc": [
+            "body",
+            "text"
+          ],
+          "msg": "String should have at least 1 character",
+          "input": "",
+          "ctx": {
+            "min_length": 1
+          }
+        }
+      ]
+    }
+  },
+  "espaces": {
+    "code": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "value_error",
+          "loc": [
+            "body",
+            "text"
+          ],
+          "msg": "Value error, texte vide",
+          "input": "   ",
+          "ctx": {
+            "error": {}
+          }
+        }
+      ]
+    }
+  },
+  "absent": {
+    "code": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "text"
+          ],
+          "msg": "Field required",
+          "input": {}
+        }
+      ]
+    }
+  },
+  "nombre": {
+    "code": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "string_type",
+          "loc": [
+            "body",
+            "text"
+          ],
+          "msg": "Input should be a valid string",
+          "input": 42
+        }
+      ]
+    }
+  }
+}
+2026-10-28 17:42:48,507 INFO Démarrage de l'API...
+2026-10-28 17:42:50,178 INFO Modèle chargé avec succès : tfidf-logreg (TP2, models/sentiment.joblib)
+2026-10-28 17:42:50,180 INFO HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-10-28 17:42:50,184 INFO predict: 'Livraison rapide, produit conforme, très satisfait' -> POSITIVE (0.78)
+2026-10-28 17:42:50,184 INFO HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2026-10-28 17:42:50,186 INFO predict: 'Produit cassé et service injoignable, à fuir' -> NEGATIVE (0.75)
+2026-10-28 17:42:50,187 INFO HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2026-10-28 17:42:50,188 INFO predict: 'xqzvb wlkptr grombu' -> INDETERMINE (0.52)
+2026-10-28 17:42:50,188 INFO HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2026-10-28 17:42:50,190 INFO HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2026-10-28 17:42:50,190 INFO HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2026-10-28 17:42:50,191 INFO HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2026-10-28 17:42:50,192 INFO HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2026-10-28 17:42:50,193 INFO Arrêt de l'API
+
+Code de sortie : 0

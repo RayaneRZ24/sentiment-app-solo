@@ -1,0 +1,5 @@
+$ git shortlog -sn tp1-valide
+
+     2	Ramzi Ahmed Rayane
+
+Code de sortie : 0
