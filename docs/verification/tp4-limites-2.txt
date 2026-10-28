@@ -1,0 +1,10 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pytest tests/test_limites.py -q
+
+...........                                                              [100%]
+============================== warnings summary ===============================
+tests/test_limites.py::test_frontieres_du_contrat[texte-vide]
+  C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+11 passed, 1 warning in 3.75s

@@ -6,9 +6,15 @@ predict() de src/predict.py, qui charge models/sentiment.joblib une seule fois.
 import sys
 from pathlib import Path
 
+from api.schemas import ApiLabel, ApiPrediction
+
 RACINE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RACINE / "src"))
-from predict import MODELE, charger_modele, predict as _predict  # noqa: E402  (fonctions du TP2)
+from predict import ModelLabel, charger_modele  # noqa: E402 (le TP2 expose ses scripts dans src/)
+from predict import predict as _predict  # noqa: E402 (même module TP2)
+
+SEUIL_ABSTENTION = 0.60
+ETIQUETTES: dict[ModelLabel, ApiLabel] = {"negative": "NEGATIVE", "positive": "POSITIVE"}
 
 
 class SentimentClassifier:
@@ -17,12 +23,15 @@ class SentimentClassifier:
     model_name = "tfidf-logreg (TP2, models/sentiment.joblib)"
 
     def __init__(self) -> None:
-        charger_modele()  # échoue immédiatement si le joblib manque : on ne démarre pas sans modèle
+        pipeline = charger_modele()  # refuse immédiatement un modèle absent
+        if set(pipeline.classes_) != set(ETIQUETTES):
+            raise ValueError("classes du modèle incompatibles : negative et positive attendues")
 
-    def predict(self, text: str) -> dict:
-        """Renvoie {'label': 'POSITIVE'|'NEGATIVE', 'score': float, 'text': aperçu}."""
+    def predict(self, text: str) -> ApiPrediction:
+        """Renvoie le verdict du contrat ; s'abstient sous le seuil de confiance."""
         r = _predict(text)  # lève ValueError si le texte est vide
-        return {"label": r["label"].upper(), "score": r["score"], "text": text[:100]}
+        label: ApiLabel = "INDETERMINE" if r["score"] < SEUIL_ABSTENTION else ETIQUETTES[r["label"]]
+        return {"label": label, "score": r["score"], "text": text[:100]}
 
 
 def load_model() -> SentimentClassifier:

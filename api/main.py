@@ -4,20 +4,21 @@ Lancer : uvicorn api.main:app --reload
 Doc    : http://localhost:8000/docs
 """
 import logging
+from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.model import load_model
-from api.schemas import HealthResponse, PredictRequest, PredictResponse
+from api.model import SentimentClassifier, load_model
+from api.schemas import ApiPrediction, HealthResponse, PredictRequest, PredictResponse
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger("sentiment_api")
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """Charge le modèle une seule fois, avant la première requête."""
     logger.info("Démarrage de l'API...")
     app.state.classifier = load_model()
@@ -43,7 +44,7 @@ app.add_middleware(
 )
 
 
-def _classifier():
+def _classifier() -> SentimentClassifier:
     clf = getattr(app.state, "classifier", None)
     if clf is None:
         raise HTTPException(status_code=503, detail="Modèle non chargé")
@@ -51,32 +52,30 @@ def _classifier():
 
 
 @app.get("/", summary="Accueil")
-async def root():
+async def root() -> dict[str, str]:
     return {"message": "Sentiment Analysis API", "docs": "/docs", "health": "/health"}
 
 
 @app.get("/health", response_model=HealthResponse, summary="Santé de l'API")
-async def health_check():
+async def health_check() -> dict[str, str]:
     """Répond 200 si le modèle est chargé, 503 sinon. Appelé par les outils de déploiement (TP4)."""
     return {"status": "OK", "model": _classifier().model_name}
 
 
 @app.post("/predict", response_model=PredictResponse, summary="Classifier un texte")
-async def predict(request: PredictRequest):
-    """Renvoie le sentiment (POSITIVE ou NEGATIVE) et la confiance.
+async def predict(request: PredictRequest) -> ApiPrediction:
+    """Renvoie POSITIVE, NEGATIVE ou INDETERMINE et la confiance.
 
-    - 422 : texte vide ou trop long (Pydantic), ou refusé par le modèle
+    - 422 : entrée invalide, refusée par Pydantic avant l'appel du modèle
     - 503 : modèle non chargé
     - 500 : erreur inattendue (journalisée côté serveur, jamais renvoyée au client)
     """
     clf = _classifier()
     try:
         result = clf.predict(request.text)
-    except ValueError as e:
-        raise HTTPException(status_code=422, detail=str(e))
     except Exception:
         logger.exception("Erreur lors de la prédiction")
-        raise HTTPException(status_code=500, detail="Erreur interne du serveur")
+        raise HTTPException(status_code=500, detail="Erreur interne du serveur") from None
     logger.info("predict: %r -> %s (%.2f)", request.text[:50], result["label"], result["score"])
     return result
 

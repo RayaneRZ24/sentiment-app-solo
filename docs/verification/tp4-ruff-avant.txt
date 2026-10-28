@@ -1,0 +1,75 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m ruff check .
+
+B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+  --> api\main.py:76:9
+   |
+74 |         result = clf.predict(request.text)
+75 |     except ValueError as e:
+76 |         raise HTTPException(status_code=422, detail=str(e))
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+77 |     except Exception:
+78 |         logger.exception("Erreur lors de la prédiction")
+   |
+
+B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+  --> api\main.py:79:9
+   |
+77 |     except Exception:
+78 |         logger.exception("Erreur lors de la prédiction")
+79 |         raise HTTPException(status_code=500, detail="Erreur interne du serveur")
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+80 |     logger.info("predict: %r -> %s (%.2f)", request.text[:50], result["label"], result["score"])
+81 |     return result
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> api\model.py:11:1
+   |
+ 9 | RACINE = Path(__file__).resolve().parents[1]
+10 | sys.path.insert(0, str(RACINE / "src"))
+11 | from predict import MODELE, charger_modele, predict as _predict  # noqa: E402  (fonctions du TP2)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: Organize imports
+   |
+10 | sys.path.insert(0, str(RACINE / "src"))
+   - from predict import MODELE, charger_modele, predict as _predict  # noqa: E402  (fonctions du TP2)
+11 + from predict import MODELE, charger_modele  # noqa: E402  (fonctions du TP2)
+12 + from predict import predict as _predict
+13 |
+   |
+
+F401 [*] `predict.MODELE` imported but unused
+  --> api\model.py:11:21
+   |
+ 9 | RACINE = Path(__file__).resolve().parents[1]
+10 | sys.path.insert(0, str(RACINE / "src"))
+11 | from predict import MODELE, charger_modele, predict as _predict  # noqa: E402  (fonctions du TP2)
+   |                     ^^^^^^
+help: Remove unused import: `predict.MODELE`
+   |
+10 | sys.path.insert(0, str(RACINE / "src"))
+   - from predict import MODELE, charger_modele, predict as _predict  # noqa: E402  (fonctions du TP2)
+11 + from predict import charger_modele, predict as _predict  # noqa: E402  (fonctions du TP2)
+12 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests\test_api.py:16:5
+   |
+14 |   @pytest.fixture(scope="module")
+15 |   def client():
+16 | /     from fastapi.testclient import TestClient
+17 | |     from api.main import app
+   | |____________________________^
+18 |       with TestClient(app) as c:  # le "with" déclenche lifespan (chargement du modèle)
+19 |           yield c
+   |
+help: Organize imports
+   |
+16 |     from fastapi.testclient import TestClient
+17 +
+18 |     from api.main import app
+   |
+
+Found 5 errors.
+[*] 3 fixable with the `--fix` option.
