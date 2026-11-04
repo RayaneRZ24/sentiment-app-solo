@@ -81,7 +81,7 @@ python -m build --wheel
 
 Attendu : version 0.6.1, POSITIVE puis INDETERMINE. Le tag v0.6.0 conserve le checkpoint initial du TP6. Les preuves de la roue installée dans un venv neuf hors dépôt, sans puis avec SENTIMENT_MODELE, sont dans docs/verification/tp6-hors-depot-*.txt. La roue est générée localement dans dist/ et reste ignorée par Git.
 
-Les liens vers les six exécutions CI réussies figurent dans le journal. Le professeur doit disposer d'un accès au dépôt privé pour les consulter.
+Les liens vers les six exécutions CI réussies figurent dans le journal. Le dépôt est actuellement public (vérification du 4 novembre 2026) ; le professeur peut consulter directement ces liens.
 
 Pour tout rejouer en une commande : `.\scripts\verifier.ps1 -Detail`.
 

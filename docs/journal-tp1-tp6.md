@@ -16,7 +16,7 @@
 >
 > **Lecture des preuves.** Les checkpoints sont les étapes réellement poussées le 28 octobre 2026. Les reproductions complémentaires des états initiaux sont effectuées ensuite dans des dossiers temporaires ; elles sont identifiées comme telles. Les images de l'application sont de vraies captures du navigateur. Les images de commandes et CI sont des captures de rapports affichant les sorties enregistrées et leurs sources : elles ne prétendent pas être des captures historiques d'un terminal ou de l'interface GitHub.
 >
-> **Images et dépôt Forms.** La [version illustrée sur GitHub](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/journal-tp1-tp6.md) contient les liens vers les captures et sorties versionnées. Le professeur doit avoir accès au dépôt privé. Le fichier Markdown seul ne contient pas les images comme pièces jointes.
+> **Images et dépôt Forms.** La [version illustrée sur GitHub](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/journal-tp1-tp6.md) contient les liens vers les captures et sorties versionnées. Le dépôt est actuellement public (visibilité vérifiée le 4 novembre 2026) ; le professeur peut ouvrir directement les liens. Les captures anciennes conservent la visibilité constatée au checkpoint du 28 octobre. Le fichier Markdown seul ne contient pas les images comme pièces jointes.
 >
 > **Protocole.** Les blocs de commandes gardent les chemins d'exemple C:\IA-DEV du professeur. Le chemin réel est C:\Users\NITRO 5\Downloads\sentiment-app-solo, avec .venv activé ; les commandes exactes sont dans les sorties liées. Les annexes A–H sont conservées comme explications du cours, séparées des mesures de ce journal.
 
