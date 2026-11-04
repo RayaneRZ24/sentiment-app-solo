@@ -1,0 +1,16 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 src/expliquer.py Produit cassé et service injoignable, à fuir
+
+Les 8 termes qui poussent le plus vers « positive » :
+  je (+0.771), que je (+0.764), en (+0.683), et livraison (+0.677), service impeccable (+0.677), livraison en (+0.677), en avance (+0.677), impeccable (+0.677)
+Les 8 termes qui poussent le plus vers « negative » :
+  arrivée (-0.923), cassé arrivée (-0.923), cassé (-0.923), produit cassé (-0.923), au (-0.689), facture (-0.656), facture erronée (-0.656), erronée aucun (-0.656)
+
+Avis : « Produit cassé et service injoignable, à fuir »
+Prédiction : negative (confiance 0.7465)
+Valeur de base, l'avis moyen d'entraînement : -0.0114
+Termes présents qui poussent vers « negative » : 3, au total -1.0406
+  cassé (-0.4636), produit cassé (-0.4636), produit (-0.1134)
+Termes présents qui poussent vers « positive » : 2, au total +0.0738
+  service (+0.0703), et (+0.0035)
+Les termes absents, au total : -0.1020
+Base + contributions = -1.0801 ; sortie du modèle = -1.0801

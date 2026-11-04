@@ -7,3 +7,6 @@ mypy==2.3.1
 pre-commit==4.6.2
 # TP6 : construire la roue
 build==1.2.2.post1
+
+# TP2 : explicabilite, outil de developpement absent de la roue
+shap==0.46.*
