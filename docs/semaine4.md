@@ -11,3 +11,11 @@ Sur les 58 avis de test, le seuil 0,60 répond à 42 avis, envoie 16 avis vers u
 Les 20 avis de référence sont repris du projet source et leurs étiquettes ont été relues ; ils ne sont pas présentés comme nouvellement écrits par deux personnes. Le bilan est conservé dans `tp4-bilan-jeu-or.txt` : 5 justes, 11 abstentions et 4 erreurs franches déclarées. Ces erreurs restent visibles avec xfail strict ; les textes et les attentes ne sont pas modifiés pour améliorer le résultat.
 
 Ruff et mypy ne détectaient pas ces défauts de comportement ; les tests exécutés sont indispensables en plus du contrôle de types et du lint. Le crochet local est installé, et la CI exécute ruff, mypy et pytest avec 95 % de couverture minimale.
+
+## Complément T27a : performances par groupes, 4 novembre 2026
+
+Le script et les huit tests sont repris du complément étudiant d’A. Larhlimi ; les [mesures observées](verification/complements-t27a-biais.txt) et leur [version JSON](verification/complements-t27a-biais.json) proviennent du modèle actif du dépôt.
+
+Les 17 avis avec retournement sont moins bien servis : exactitude 0,588, 7 erreurs, contre 1,000 sur les 41 avis directs. Les 27 avis longs ont une exactitude de 0,741, mais les 10 avis longs sans retournement sont tous corrects : la longueur seule ne permet donc pas d’attribuer la cause ; le croisement montre le rôle des retournements sur ce petit échantillon.
+
+L’abstention règle-t-elle le problème, ou le déplace-t-elle vers les agents ? Au seuil 0,60, 15 des 17 avis avec retournement sont envoyés vers un humain, et deux erreurs automatiques subsistent. La relecture réduit les erreurs sans supprimer le biais : elle concentre la charge sur les avis difficiles. Ces groupes textuels ne permettent pas de conclure sur une équité démographique, qui n’a pas été mesurée.
