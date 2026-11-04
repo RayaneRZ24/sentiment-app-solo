@@ -15,3 +15,9 @@ L'installation éditable pointe vers les sources pendant le développement. L'in
 Le modèle a été entraîné avec scikit-learn 1.5.2 ; le paquet impose une version >=1.5,<1.6 et la CI entraîne en 1.5. Un joblib n'est pas un format indépendant des versions de scikit-learn. Aucune panne de version n'a été artificiellement provoquée ici : la vérification hors dépôt utilise la même série 1.5 et réussit. Le chemin du paquet réellement installé et la version de scikit-learn sont enregistrés dans tp6-origine-paquet-installe.txt.
 
 Les deux échecs initiaux du kit et l'échec restant avant branchement de l'API sont conservés dans tp6-t35-avant.txt et tp6-t36-avant-api.txt. La commande serve a été démarrée réellement : /health répond OK, puis le serveur a été arrêté. Les commandes predict et la compatibilité src/predict.py ont été exécutées séparément.
+
+## Complément T41a : fiche modèle, 4 novembre 2026
+
+La [fiche modèle](fiche-modele.md) renseigne les dix rubriques du nouveau modèle étudiant. Le contrôle initial a effectivement produit [13 échecs et un succès](verification/complements-t41a-avant.txt), puis [14 succès](verification/complements-t41a-tests.txt) après rédaction. Les valeurs sont celles de notre modèle et de nos sorties, dont les quatre erreurs connues de notre propre jeu d’or ; le bilan fourni à titre d’exemple par le professeur n’a pas été recopié.
+
+La rubrique la plus délicate est celle des biais : les effectifs sont petits et la longueur est confondue avec les retournements. Le croisement permet de décrire l’écart mesuré sans prétendre démontrer une causalité ni une équité démographique. La fiche explique aussi ce qu’un humain doit vérifier et le coût de l’abstention en relecture.

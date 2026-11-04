@@ -1,0 +1,181 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pytest tests/test_fiche_modele.py -q
+
+.FFFFFFFFFFFFF                                                           [100%]
+================================== FAILURES ===================================
+_________ test_chaque_rubrique_est_remplie[Identit\xe9 du mod\xe8le] __________
+
+titre = 'Identité du modèle'
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Identité du modèle » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique('Identité du modèle')
+
+tests\test_fiche_modele.py:41: AssertionError
+______________ test_chaque_rubrique_est_remplie[Usage pr\xe9vu] _______________
+
+titre = 'Usage prévu'
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Usage prévu » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique('Usage prévu')
+
+tests\test_fiche_modele.py:41: AssertionError
+_______________ test_chaque_rubrique_est_remplie[Usages exclus] _______________
+
+titre = 'Usages exclus'
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Usages exclus » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique('Usages exclus')
+
+tests\test_fiche_modele.py:41: AssertionError
+_______ test_chaque_rubrique_est_remplie[Donn\xe9es d'entra\xeenement] ________
+
+titre = "Données d'entraînement"
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Données d'entraînement » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique("Données d'entraînement")
+
+tests\test_fiche_modele.py:41: AssertionError
+_________ test_chaque_rubrique_est_remplie[Performances mesur\xe9es] __________
+
+titre = 'Performances mesurées'
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Performances mesurées » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique('Performances mesurées')
+
+tests\test_fiche_modele.py:41: AssertionError
+______________ test_chaque_rubrique_est_remplie[Limites connues] ______________
+
+titre = 'Limites connues'
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Limites connues » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique('Limites connues')
+
+tests\test_fiche_modele.py:41: AssertionError
+_____________ test_chaque_rubrique_est_remplie[Biais mesur\xe9s] ______________
+
+titre = 'Biais mesurés'
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Biais mesurés » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique('Biais mesurés')
+
+tests\test_fiche_modele.py:41: AssertionError
+_____________ test_chaque_rubrique_est_remplie[Explicabilit\xe9] ______________
+
+titre = 'Explicabilité'
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Explicabilité » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique('Explicabilité')
+
+tests\test_fiche_modele.py:41: AssertionError
+____________ test_chaque_rubrique_est_remplie[Conditions d'usage] _____________
+
+titre = "Conditions d'usage"
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Conditions d'usage » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique("Conditions d'usage")
+
+tests\test_fiche_modele.py:41: AssertionError
+________________ test_chaque_rubrique_est_remplie[Maintenance] ________________
+
+titre = 'Maintenance'
+
+    @pytest.mark.parametrize("titre", RUBRIQUES)
+    def test_chaque_rubrique_est_remplie(titre):
+>       assert len(rubrique(titre)) >= 40, f"rubrique « {titre} » vide ou trop courte"
+E       AssertionError: rubrique « Maintenance » vide ou trop courte
+E       assert 0 >= 40
+E        +  where 0 = len('')
+E        +    where '' = rubrique('Maintenance')
+
+tests\test_fiche_modele.py:41: AssertionError
+__________________ test_la_version_citee_est_celle_du_paquet __________________
+
+    def test_la_version_citee_est_celle_du_paquet():
+        from sentiment_app import __version__
+
+>       assert __version__ in rubrique("Identité du modèle"), f"citer la version {__version__}"
+E       AssertionError: citer la version 0.6.0
+E       assert '0.6.0' in ''
+E        +  where '' = rubrique('Identité du modèle')
+
+tests\test_fiche_modele.py:47: AssertionError
+______________ test_les_performances_citees_sont_celles_du_depot ______________
+
+    def test_les_performances_citees_sont_celles_du_depot():
+        metriques = json.loads(METRIQUES.read_text(encoding="utf-8"))
+        texte = rubrique("Performances mesurées")
+>       assert nombre_ecrit(metriques["f1_macro"], texte), f"citer le F1 macro {metriques['f1_macro']:.3f}"
+E       AssertionError: citer le F1 macro 0.879
+E       assert False
+E        +  where False = nombre_ecrit(0.879, '')
+
+tests\test_fiche_modele.py:53: AssertionError
+_______________ test_les_conditions_d_usage_prevoient_un_humain _______________
+
+    def test_les_conditions_d_usage_prevoient_un_humain():
+>       assert "humain" in rubrique("Conditions d'usage").lower()
+E       assert 'humain' in ''
+E        +  where '' = <built-in method lower of str object at 0x00007FFFC6CEC6E0>()
+E        +    where <built-in method lower of str object at 0x00007FFFC6CEC6E0> = ''.lower
+E        +      where '' = rubrique("Conditions d'usage")
+
+tests\test_fiche_modele.py:59: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Identit\xe9 du mod\xe8le]
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Usage pr\xe9vu]
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Usages exclus]
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Donn\xe9es d'entra\xeenement]
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Performances mesur\xe9es]
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Limites connues]
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Biais mesur\xe9s]
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Explicabilit\xe9]
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Conditions d'usage]
+FAILED tests/test_fiche_modele.py::test_chaque_rubrique_est_remplie[Maintenance]
+FAILED tests/test_fiche_modele.py::test_la_version_citee_est_celle_du_paquet
+FAILED tests/test_fiche_modele.py::test_les_performances_citees_sont_celles_du_depot
+FAILED tests/test_fiche_modele.py::test_les_conditions_d_usage_prevoient_un_humain
+13 failed, 1 passed in 0.39s

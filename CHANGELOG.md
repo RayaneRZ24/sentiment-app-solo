@@ -2,6 +2,10 @@
 
 Toutes les étapes solo ont été réellement rejouées le 28 octobre 2026, à partir des sources attribuées dans le README.
 
+## Non publié
+
+- Compléments du 2 novembre : explications SHAP, analyse des biais, graphiques et fiche modèle avec mesures et validation humaine.
+
 ## 0.6.0 — TP6
 
 Paquet sentiment_app, version unique, modèle configurable, commande sentiment, construction d'une roue et installation dans un venv neuf hors dépôt. L'API importe le paquet sans modifier sys.path. Le fichier de compatibilité conserve les anciens appels et les tests de panne.
