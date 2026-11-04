@@ -1,8 +1,31 @@
 # sentiment-app-solo
 
-Travail individuel d'**Ahmed Rayane Ramzi** (@RayaneRZ24), adapté le 28 octobre 2026 à la consigne de travail en solo. Étape actuelle : **TP6**.
+Travail individuel d'**Ahmed Rayane Ramzi** (@RayaneRZ24), adapté le 28 octobre 2026 à la consigne de travail en solo. Étape actuelle : **TP6 et compléments du 2 novembre — application client 0.6.1**, vérifiés le 4 novembre 2026.
 
 [Voir les captures par TP](#captures-tp1-tp6)
+
+## Utiliser l’application client
+
+[Télécharger la livraison 0.6.1](https://github.com/RayaneRZ24/sentiment-app-solo/releases/tag/v0.6.1) · [Notice utilisateur](docs/notice-utilisateur.md) · [Fiche du modèle](docs/fiche-modele.md)
+
+Extraire l’archive `sentiment-app-client-0.6.1.zip`, puis lancer `python installer.py` avec Python 3.11. L’installation initiale nécessite Internet ; les analyses s’exécutent ensuite localement. Le navigateur s’ouvre automatiquement. Ctrl+C ferme l’application et son service.
+
+La livraison contient seulement l’application, son modèle séparé, la notice, la fiche, un exemple CSV et les métriques. Les tests, SHAP, les scripts d’entraînement, le journal et les captures restent dans le dépôt destiné au développement et à l’évaluation.
+
+![Application client installée : avis positif](docs/captures/client-avis-positif.png)
+
+## Compléments vérifiés le 4 novembre 2026
+
+| Contrôle | Ajout | Vérification locale |
+| --- | --- | --- |
+| C6 — TP2 | Explications SHAP | [4 tests réussis](docs/verification/complements-c6-tests.txt) |
+| T27a — TP4 | Performances par groupes et biais | [8 tests réussis](docs/verification/complements-t27a-tests.txt) |
+| T34a — TP5 | Deux graphiques dans la page | [9 tests de graphiques et de page réussis](docs/verification/complements-t34a-tests.txt) |
+| T41a — TP6 | Fiche modèle renseignée | [14 tests réussis](docs/verification/complements-t41a-tests.txt) |
+
+Bilan de la suite : **137 passed, 4 xfailed**, couverture API **97,59 %**. Les quatre erreurs connues du modèle restent déclarées. [Résultat intégral](docs/verification/complements-tests-complets.txt).
+
+Le paquet a été installé et utilisé dans un environnement neuf hors dépôt, sans outils de développement : [preuve d’installation](docs/verification/client-installation-externe.json). Les deux graphiques, l’export CSV, l’abstention et le refus d’un fichier illisible ont été vérifiés dans un navigateur sur cette installation. La [CI de la livraison](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/41876000516) a aussi réussi l’installation sur Linux. [Historique des cinq validations](docs/verification/complements-checkpoints-ci.json).
 
 ## Origine du code
 
@@ -10,7 +33,7 @@ Ce dépôt réutilise le code du [projet de binôme](https://github.com/OthmaneW
 
 La consigne solo remplace le contrôle de deux auteurs par le contrôle d'un auteur unique dans les tests et le diagnostic. Les seuils du modèle et les autres exigences techniques restent inchangés.
 
-## Installation et tests
+## Développement et vérifications
 
 ```powershell
 py -3.11 -m venv .venv
@@ -35,7 +58,7 @@ python -m pytest tests/ -v
 
 Les erreurs connues du modèle sont documentées en `xfail(strict=True)` à partir du TP4 ; une abstention n'est pas présentée comme une prédiction correcte.
 
-## Résultats par étape
+## Checkpoints historiques du 28 octobre 2026
 
 | Étape | Tests locaux | Repère | CI |
 | --- | --- | --- | --- |
@@ -52,11 +75,12 @@ Le dossier de travail personnel est `C:\Users\NITRO 5\Downloads\sentiment-app-so
 python -m pip install -e ".[ui]"
 sentiment --version
 sentiment predict "Livraison rapide, produit conforme, très satisfait"
-sentiment serve
-# Dans un autre terminal activé : sentiment ui
+sentiment start
 ```
 
-Le TP6 est terminé : paquet 0.6.0, roue vérifiée dans un environnement neuf hors dépôt et étape CI de la roue réussie. Le modèle reste extérieur au paquet ; utiliser `SENTIMENT_MODELE` hors du dossier source. La fiche de choix d'un projet d'agent IA est un livrable séparé et n'est pas remplie avec un numéro de sujet inventé.
+Le tag v0.6.0 conserve le checkpoint initial du TP6. La livraison actuelle est en 0.6.1, avec les compléments et le lancement client. Le modèle reste extérieur au paquet ; utiliser `SENTIMENT_MODELE` hors du dossier source. La fiche de choix d'un projet d'agent IA est un livrable séparé et n'est pas remplie avec un numéro de sujet inventé.
+
+Les scripts et tests des compléments SHAP, biais, graphiques et fiche modèle proviennent du kit étudiant `complements-lot1.zip` fourni le 2 novembre 2026 par A. Larhlimi. Les interprétations, la fiche remplie, le lancement client et les mesures sont adaptés à ce dépôt ; les corrigés enseignants ne sont pas distribués.
 
 ## Fichier à joindre au formulaire
 
@@ -138,7 +162,7 @@ Les images de navigateur montrent l’application ou l’API. Les autres images 
 </details>
 
 <details>
-<summary><strong>TP2 — Données, entraînement et évaluation — 5 capture(s)</strong></summary>
+<summary><strong>TP2 — Données, entraînement et évaluation — 6 capture(s)</strong></summary>
 
 **C1 · Le kit installé (solo)**
 
@@ -169,6 +193,12 @@ Les images de navigateur montrent l’application ou l’API. Les autres images 
 *Rapport de vérification GitHub Actions*
 
 ![C5 · Le vrai jeu de données, les tests, le push](docs/captures/tp2-c5-allocine.png)
+
+**C6 · Ce que regarde le modèle**
+
+*Rapport de résultats enregistrés*
+
+![C6 · Ce que regarde le modèle](docs/captures/tp2-c6-expliquer.png)
 
 </details>
 
@@ -220,7 +250,7 @@ Les images de navigateur montrent l’application ou l’API. Les autres images 
 </details>
 
 <details>
-<summary><strong>TP4 — Limites, abstention et qualité — 9 capture(s)</strong></summary>
+<summary><strong>TP4 — Limites, abstention et qualité — 10 capture(s)</strong></summary>
 
 **T21 · Le kit installé et le point de départ (solo)**
 
@@ -276,10 +306,16 @@ Les images de navigateur montrent l’application ou l’API. Les autres images 
 
 ![T27 · Qualité statique, crochet et CI](docs/captures/tp4-t27-actions.png)
 
+**T27a · Performances par groupes**
+
+*Rapport de résultats enregistrés*
+
+![T27a · Performances par groupes](docs/captures/tp4-t27a-biais.png)
+
 </details>
 
 <details open>
-<summary><strong>TP5 — Interface Streamlit — 9 capture(s)</strong></summary>
+<summary><strong>TP5 — Interface Streamlit — 10 capture(s)</strong></summary>
 
 **T28 · Le kit installé (solo)**
 
@@ -335,10 +371,16 @@ Les images de navigateur montrent l’application ou l’API. Les autres images 
 
 ![T34 · Compte rendu, push, CI](docs/captures/tp5-t34-actions.png)
 
+**T34a · Les deux graphiques du client installé**
+
+*Capture navigateur — application ou API*
+
+![T34a · Les deux graphiques du client installé](docs/captures/tp5-t34a-graphiques.png)
+
 </details>
 
 <details open>
-<summary><strong>TP6 — Paquet installable et roue — 7 capture(s)</strong></summary>
+<summary><strong>TP6 — Paquet installable et roue — 8 capture(s)</strong></summary>
 
 **T35 · Le kit installé (solo)**
 
@@ -381,6 +423,12 @@ Les images de navigateur montrent l’application ou l’API. Les autres images 
 *Rapport de vérification GitHub Actions*
 
 ![T41 · Version, étiquette, push](docs/captures/tp6-t41-actions.png)
+
+**T41a · Fiche du modèle et conditions d’usage**
+
+*Rapport de résultats enregistrés*
+
+![T41a · Fiche du modèle et conditions d’usage](docs/captures/tp6-t41a-fiche-modele.png)
 
 </details>
 

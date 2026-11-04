@@ -1,0 +1,99 @@
+[
+  {
+    "controle": "C6 : SHAP",
+    "sha": "b30ee11e77c9e1ca7334374c149c8d5d87c3003c",
+    "id": 41871876528,
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/41871876528",
+    "conclusion": "success"
+  },
+  {
+    "controle": "T27a : biais",
+    "sha": "68b8c7093460c297c85c01e13ce86124470673ca",
+    "id": 41872136057,
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/41872136057",
+    "conclusion": "success"
+  },
+  {
+    "controle": "T34a : graphiques",
+    "sha": "0d7b1d46a9d28d87cc54abb706fd0157b59825f9",
+    "id": 41872260265,
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/41872260265",
+    "conclusion": "success"
+  },
+  {
+    "controle": "T41a : fiche modele",
+    "sha": "71fed3d8ce4c0a2a204a70e20864878fa8ccbbdb",
+    "id": 41872424771,
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/41872424771",
+    "conclusion": "success"
+  },
+  {
+    "controle": "Application client 0.6.1",
+    "sha": "5b2c30f77c0990cbe84935147818f603b986f941",
+    "id": 41876000516,
+    "url": "https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/41876000516",
+    "conclusion": "success",
+    "etapes": [
+      {
+        "nom": "Set up job",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Run actions/checkout@v4",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Run actions/setup-python@v5",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Environnement et dependances",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Installation editable du paquet",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Diagnostic solo",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Modele de demonstration",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Ruff",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Mypy",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Tests et couverture API",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Livraison client installee hors du depot",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Application installable et preuve de verification",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Post Run actions/setup-python@v5",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Post Run actions/checkout@v4",
+        "conclusion": "success"
+      },
+      {
+        "nom": "Complete job",
+        "conclusion": "success"
+      }
+    ]
+  }
+]

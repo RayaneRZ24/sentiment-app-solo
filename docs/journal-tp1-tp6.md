@@ -10,7 +10,9 @@
 **Dépôt** : https://github.com/RayaneRZ24/sentiment-app-solo
 
 
-> **Adaptation à la consigne solo.** Le modèle du 26 octobre 2026 est conservé : contrôles T0–T41, C1–C5, rubriques de résultat, commentaires et captures. Les rubriques du membre B sont explicitement non applicables. Les fichiers repris du projet de binôme et des kits sont attribués dans le README.
+> **Adaptation à la consigne solo.** Le modèle du 26 octobre 2026 est conservé et complété avec les contrôles C6, T27a, T34a et T41a du kit du 2 novembre : rubriques de résultat, commentaires et captures. Les rubriques du membre B sont explicitement non applicables. Les fichiers repris du projet de binôme et des kits sont attribués dans le README.
+>
+> **Mise à jour du 4 novembre 2026.** Les quatre compléments ont été intégrés, mesurés et poussés séparément. La livraison client est en version 0.6.1 : 137 tests réussis, quatre erreurs connues déclarées et couverture API 97,59 %. Les résultats du 28 octobre ci-dessous restent les mesures de leurs checkpoints.
 >
 > **Lecture des preuves.** Les checkpoints sont les étapes réellement poussées le 28 octobre 2026. Les reproductions complémentaires des états initiaux sont effectuées ensuite dans des dossiers temporaires ; elles sont identifiées comme telles. Les images de l'application sont de vraies captures du navigateur. Les images de commandes et CI sont des captures de rapports affichant les sorties enregistrées et leurs sources : elles ne prétendent pas être des captures historiques d'un terminal ou de l'interface GitHub.
 >
@@ -578,6 +580,35 @@ CI TP2 : success.
 **Preuves enregistrées** : [tp2-entrainement-allocine.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/tp2-entrainement-allocine.txt), [tp2-metrics-allocine.json](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/tp2-metrics-allocine.json), [tp2-modele-final-demo.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/tp2-modele-final-demo.txt), [tp2-tests.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/tp2-tests.txt).
 
 **CI du checkpoint** : [exécution réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40731888889).
+
+### C6 · Ce que regarde le modèle (étape F, complément)
+
+```powershell
+python C:\IA-DEV\complements-lot1\appliquer_complements.py C:\IA-DEV\sentiment-app --etape tp2
+python src/expliquer.py
+python -m pytest tests/test_explicabilite.py -q
+```
+
+**Attendu** : « je » (+0.771) et « en » (+0.683) parmi les termes qui poussent vers positive, « cassé » (-0.923) et « au » (-0.689) vers negative ; l'avis mitigé classé `negative (confiance 0.5335)`, 20 termes vers negative (-1.0061) contre 13 vers positive (+0.9177), `Base + contributions = -0.1343 ; sortie du modèle = -0.1343`, puis `4 passed`.
+
+**Obtenu** :
+
+```text
+4 passed ; base SHAP -0.0114 ; sortie et base + contributions : -0.1343.
+Avis mitigé : negative, confiance 0.5335 ; 20 termes négatifs (-1.0061), 13 positifs (+0.9177).
+```
+
+- [x] Conforme
+
+**Commentaire** (que révèlent les termes les plus influents ?) :
+
+> Les mots-outils « je », « en », « au » montrent des tournures apprises dans le corpus. SHAP reconstitue la sortie du modèle, sans expliquer une causalité réelle. Les fichiers étudiants ont été intégrés et les mesures rejouées le 4 novembre 2026.
+
+**Capture** :
+
+![C6 : explication du modèle](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/captures/tp2-c6-expliquer.png?raw=true)
+
+**Preuves enregistrées** : [complements-c6-explication.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-c6-explication.txt), [complements-c6-explication-negative.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-c6-explication-negative.txt), [complements-c6-tests.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-c6-tests.txt).
 
 ### Membre B, après le TP2 — non applicable en solo
 
@@ -1164,6 +1195,35 @@ CI TP4 : success.
 
 **CI du checkpoint** : [exécution réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40732610139).
 
+### T27a · Le modèle sert-il tous les avis de la même façon ? (étape F, complément)
+
+```powershell
+python C:\IA-DEV\complements-lot1\appliquer_complements.py C:\IA-DEV\sentiment-app --etape tp4
+python src/biais.py
+python -m pytest tests/test_biais.py -q
+```
+
+**Attendu** : avis avec retournement : 17 avis, exactitude 0.588, 7 erreurs, 15 vers un humain ; avis directs : 41 avis, 1.000. Avis longs : 0.741, mais les 10 avis longs sans retournement sont tous justes. Puis `8 passed`.
+
+**Obtenu** :
+
+```text
+8 passed ; 17 avis avec retournement : exactitude 0.588, 7 erreurs, 15 vers un humain.
+41 avis directs : exactitude 1.000 ; 10 avis longs sans retournement : tous corrects.
+```
+
+- [x] Conforme
+
+**Commentaire** (pourquoi la longueur n'est-elle pas la cause ?) :
+
+> La longueur ne suffit pas à expliquer l’écart : les avis longs sans retournement sont tous justes. Le seuil 0,60 reporte 15 des 17 avis difficiles vers un humain, et deux erreurs automatiques restent. Les effectifs sont petits ; aucune équité démographique n’a été mesurée.
+
+**Capture** :
+
+![T27a : performances par groupe](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/captures/tp4-t27a-biais.png?raw=true)
+
+**Preuves enregistrées** : [complements-t27a-biais.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-t27a-biais.txt), [complements-t27a-biais.json](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-t27a-biais.json), [complements-t27a-tests.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-t27a-tests.txt).
+
 ### Membre B, après le TP4 — non applicable en solo
 
 ```powershell
@@ -1414,6 +1474,35 @@ CI TP5 : success
 **Preuves enregistrées** : [tp5-tests.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/tp5-tests.txt).
 
 **CI du checkpoint** : [exécution réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40733058617).
+
+### T34a · Deux graphiques dans l'onglet fichier (étape G, complément)
+
+```powershell
+python C:\IA-DEV\complements-lot1\appliquer_complements.py C:\IA-DEV\sentiment-app --etape tp5
+python -m pytest tests/test_graphiques.py tests/test_interface.py -q
+streamlit run ui/app.py
+```
+
+**Attendu** : `9 passed` ; avec `data/avis_exemple.csv`, la répartition affiche positif 3, négatif 2, à vérifier 1, refus 0, et les confiances 1, 1, 3, 1, 0 avis de 50 à 100 %, par tranches de 10 points.
+
+**Obtenu** :
+
+```text
+9 passed pour graphiques et page. CSV : 3 positifs, 2 négatifs, 1 à vérifier, 0 refus.
+Tranches 50–60, 60–70, 70–80, 80–90, 90–100 % : 1, 1, 3, 1, 0 avis.
+```
+
+- [x] Conforme
+
+**Commentaire** (que montre le graphique des confiances que le tableau ne montre pas ?) :
+
+> L’histogramme rend visibles les résultats proches du seuil. Les refus ne reçoivent pas de confiance et les catégories vides restent présentes. La capture provient du paquet 0.6.1 installé dans un environnement neuf hors dépôt, avec le modèle de la livraison ; les messages et menus de développement sont masqués.
+
+**Capture** :
+
+![T34a : les deux graphiques](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/captures/tp5-t34a-graphiques.png?raw=true)
+
+**Preuves enregistrées** : [complements-t34a-tests.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-t34a-tests.txt), [client-installation-externe.json](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/client-installation-externe.json), [client-resultats-exemple.csv](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/client-resultats-exemple.csv).
 
 ### Membre B, après le TP5 — non applicable en solo
 
@@ -1687,6 +1776,37 @@ CI TP6 et étape Roue installee hors du depot : success.
 
 **CI du checkpoint** : [exécution réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/40733697516).
 
+### T41a · La fiche modèle (étape G, complément)
+
+```powershell
+python C:\IA-DEV\complements-lot1\appliquer_complements.py C:\IA-DEV\sentiment-app --etape tp6
+python -m pytest tests/test_fiche_modele.py -q
+notepad docs\fiche-modele.md
+python -m pytest tests/test_fiche_modele.py -q
+```
+
+**Attendu** : au départ `13 failed, 1 passed`, voulus ; une fois la fiche remplie, `14 passed` : version 0.6.0, F1 0.879 et rappel des négatifs 0.931 cités, un humain prévu dans les conditions d'usage.
+
+**Obtenu** :
+
+```text
+Fiche vierge : 13 failed, 1 passed ; fiche remplie : 14 passed.
+F1 macro 0.879 ; rappel négatif 0.931 ; validation humaine prévue.
+Paquet final 0.6.1 ; le tag 0.6.0 conserve le checkpoint initial du TP6.
+```
+
+- [x] Conforme
+
+**Commentaire** (quelle rubrique a été la plus difficile à remplir, et pourquoi ?) :
+
+> La fiche décrit notre modèle, nos mesures et les quatre erreurs connues de notre jeu d’or. Les biais demandent le plus de prudence : longueur et retournement sont confondus sur ce petit jeu. Les tests comparent la fiche à la version réelle du paquet, désormais 0.6.1, et aux métriques du dépôt. La version 0.6.0 et ses preuves historiques sont conservées.
+
+**Capture** :
+
+![T41a : fiche modèle](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/captures/tp6-t41a-fiche-modele.png?raw=true)
+
+**Preuves enregistrées** : [complements-t41a-tests.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-t41a-tests.txt), [complements-t41a-avant.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-t41a-avant.txt), [client-controles-finition.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/client-controles-finition.txt), [complements-tests-complets.txt](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-tests-complets.txt).
+
 ### Membre B, après le TP6 — non applicable en solo
 
 ```powershell
@@ -1769,6 +1889,26 @@ Consigne individuelle : Ahmed Rayane Ramzi est l'auteur unique des adaptations e
 **TP6** :
 
 > Le paquet 0.6.0 fonctionne hors dépôt avec son modèle configuré. Les 105 réussites et quatre xfail sont confirmés en CI ; couverture API finale 97,59 %. La roue exclut modèle et données, et le tag v0.6.0 est publié.
+
+---
+
+## Compléments et livraison du 4 novembre 2026
+
+Les contrôles C6, T27a, T34a et T41a figurent à la fin de leur TP respectif. Ils reprennent le nouveau modèle du professeur ; la fiche modèle contient nos chiffres et le jeu d’or conserve ses quatre erreurs connues.
+
+La suite complète obtient **137 passed, 4 xfailed**, couverture API **97,59 %**. Les deux avertissements proviennent des dépendances Starlette/AnyIO et Streamlit/Altair. Les xfail ne sont pas des réussites du modèle.
+
+La version **0.6.1** fournit `sentiment start`, qui lance et ferme les deux services. Le paquet installé a été vérifié dans un environnement neuf hors dépôt : prédiction positive à 0,777, abstention à 0,5162, import/export CSV, deux graphiques et refus d’un fichier illisible. Aucun pytest, SHAP, Ruff, mypy ou Hypothesis n’est présent dans cet environnement client. Le modèle utilisé provient de l’archive livrée.
+
+Les ressources de développement restent dans ce dépôt pour l’évaluation ; la livraison contient la roue, le modèle séparé, la notice, la fiche, un exemple CSV et les métriques. Le README pédagogique n’est plus embarqué dans les métadonnées de la roue. L’hébergement public relève d’une autre étape du cours.
+
+**CI de la livraison** : [validation Linux réussie](https://github.com/RayaneRZ24/sentiment-app-solo/actions/runs/41876000516), avec installation extérieure et dépôt de l’archive comme artefact. [Cinq checkpoints des compléments](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-checkpoints-ci.json).
+
+**Preuves** : [suite complète](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/complements-tests-complets.txt), [installation extérieure](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/verification/client-installation-externe.json), [notice client](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/notice-utilisateur.md).
+
+![Application client : avis](https://github.com/RayaneRZ24/sentiment-app-solo/blob/main/docs/captures/client-avis-positif.png?raw=true)
+
+La difficulté supplémentaire a été l’arrêt des processus sous Windows : le lanceur du venv possède un processus Python enfant. Le test réel a détecté un fichier de journal encore ouvert à l’arrêt ; la fermeture vise désormais l’arbre de nos propres processus. Les tests vérifient que les deux ports sont libérés et qu’un service déjà présent n’est pas remplacé.
 
 ---
 

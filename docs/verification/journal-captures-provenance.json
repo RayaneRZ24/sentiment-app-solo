@@ -435,5 +435,53 @@
       "tp6-tests.txt"
     ],
     "sha256": "d5056dabb1b8b7299ce262231dfc3363006b083e6f574607e9e5cb61762b99b8"
+  },
+  {
+    "capture": "tp2-c6-expliquer.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "sources": [
+      "complements-c6-explication.txt",
+      "complements-c6-explication-negative.txt",
+      "complements-c6-tests.txt"
+    ],
+    "date_verification": "2026-11-04",
+    "sha256": "f0c46863c1de9f33a983aba5efa92aedc8fa5ae752fffe181f4fcc686f032445",
+    "rapport": "docs/verification/journal-vues/tp2-c6-expliquer.html"
+  },
+  {
+    "capture": "tp4-t27a-biais.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "sources": [
+      "complements-t27a-biais.txt",
+      "complements-t27a-biais.json",
+      "complements-t27a-tests.txt"
+    ],
+    "date_verification": "2026-11-04",
+    "sha256": "a475d31030f50f56bace19199150de82b0566a1ed34a71f46d6e8dae50a142b1",
+    "rapport": "docs/verification/journal-vues/tp4-t27a-biais.html"
+  },
+  {
+    "capture": "tp5-t34a-graphiques.png",
+    "nature": "capture navigateur du paquet installé hors dépôt",
+    "sources": [
+      "complements-t34a-tests.txt",
+      "client-installation-externe.json",
+      "client-resultats-exemple.csv"
+    ],
+    "date_verification": "2026-11-04",
+    "sha256": "de52c2fa11a5082efe72dba32cce8fab739dcc6383ba30d25971d02bb124c63e"
+  },
+  {
+    "capture": "tp6-t41a-fiche-modele.png",
+    "nature": "capture d’un rapport de résultats enregistrés",
+    "sources": [
+      "complements-t41a-tests.txt",
+      "complements-t41a-avant.txt",
+      "client-controles-finition.txt",
+      "complements-tests-complets.txt"
+    ],
+    "date_verification": "2026-11-04",
+    "sha256": "e4a68922fc6d242d899bdde403df039f852573c2ed20a93ab4fdb106602f4b77",
+    "rapport": "docs/verification/journal-vues/tp6-t41a-fiche-modele.html"
   }
 ]

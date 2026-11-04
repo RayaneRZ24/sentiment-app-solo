@@ -1,0 +1,43 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><style>body{background:#eef2f7;color:#19314a;font:18px/1.5 Segoe UI,sans-serif;margin:0}main{max-width:1110px;margin:30px auto;background:white;padding:30px;border-radius:12px}h1{font-size:28px}h2{font-size:20px;color:#245e8a}pre{background:#f3f6fa;padding:20px;white-space:pre-wrap;font:15px/1.5 Consolas,monospace}.note{border-left:4px solid #3678ac;padding:15px;background:#edf5fc;font-size:15px}</style><main><h1>T41a · Fiche du modèle et conditions d’usage</h1><p>Ahmed Rayane Ramzi · Vérification du 4 novembre 2026</p><p class="note">Capture d’un rapport présentant les sorties réellement enregistrées. Ce document n’imite pas un terminal historique ni une page GitHub.</p><h2>Résultats mesurés</h2><pre>Fiche vierge : 13 failed, 1 passed ; fiche remplie : 14 passed.
+F1 macro 0.879 ; rappel négatif 0.931 ; validation humaine prévue.
+Paquet final 0.6.1 ; le tag 0.6.0 conserve le checkpoint initial du TP6.</pre><h2>Sortie enregistrée : complements-t41a-tests.txt</h2><pre>$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pytest tests/test_fiche_modele.py -q
+
+..............                                                           [100%]
+14 passed in 0.26s
+</pre><h2>Fiche rédigée</h2><pre># Fiche modèle : sentiment-app
+
+## Identité du modèle
+
+TF-IDF et régression logistique, paquet 0.6.1. Entraînement de référence : 28 octobre 2026 ; fiche vérifiée le 4 novembre 2026. La date de chaque modèle reconstruit figure dans les métriques qui l’accompagnent.
+
+## Usage prévu
+
+Aider une équipe de relation client à trier les avis en français : positifs, négatifs ou à vérifier. Le résultat guide une relecture et une réponse.
+
+## Usages exclus
+
+Ne pas analyser les personnes ni prendre de décision automatique sur un client. Ne pas appliquer sans nouvelle évaluation à une autre langue ou à un autre domaine.
+
+## Données d&#x27;entraînement
+
+290 avis synthétiques de démonstration : 145 positifs, 145 négatifs ; découpage stratifié, graine 42, avant vectorisation : 232 entraînement et 58 test. Ce corpus ne représente pas toute la clientèle réelle.
+
+## Performances mesurées
+
+`models/metrics.json` : F1 macro **0.879**, rappel négatif **0.931**, exactitude 0.8793. Au seuil 0,60 : 42/58 avis traités (72,4 %), 16 vers un humain, 2 erreurs automatiques contre 7 sans abstention ; exactitude sur les réponses : 40/42 = 95,2 %. Ces mesures portent sur un petit jeu jamais vu à l&#x27;entraînement.
+
+## Limites connues
+
+Les 7 erreurs de test concernent les retournements : « Taille trop petite […] sauf que ensuite produit conforme […] » est classé négatif à 0,5335 avant abstention. Sur les 20 avis du jeu d&#x27;or : 5 justes, 11 abstentions et 4 erreurs franches déclarées en xfail strict.
+
+## Biais mesurés
+
+17 avis avec retournement : exactitude 0,588, 7 erreurs ; 41 directs : 1,000. Les 10 avis longs sans retournement sont tous corrects : longueur et retournement se confondent ici. À 0,60, 15/17 retournements partent en relecture et deux erreurs subsistent. Aucune équité démographique n&#x27;a été mesurée.
+
+## Explicabilité
+
+SHAP explique la sortie linéaire : base −0,0114 + contributions = −0,1343 pour l&#x27;avis mitigé ; 20 termes négatifs contre 13 positifs. Les mots-outils « je », « en », « au » révèlent des tournures apprises. Cette décomposition explique le modèle, pas une causalité réelle.
+
+## Conditions d&#x27;usage
+
+Un humain relit les avis indéterminés, vérifie les formulations ambiguës et contrôle</pre><h2>Interprétation</h2><p>La fiche décrit notre modèle, nos mesures et les quatre erreurs connues de notre jeu d’or. Les biais demandent le plus de prudence : longueur et retournement sont confondus sur ce petit jeu. Les tests comparent la fiche à la version réelle du paquet, désormais 0.6.1, et aux métriques du dépôt. La version 0.6.0 et ses preuves historiques sont conservées.</p></main></html>

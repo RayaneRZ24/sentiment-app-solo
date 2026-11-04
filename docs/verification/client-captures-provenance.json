@@ -1,0 +1,32 @@
+[
+  {
+    "capture": "client-accueil.png",
+    "nature": "capture réelle de l’application 0.6.1 installée hors dépôt",
+    "preuve": "client-installation-externe.json",
+    "sha256": "99d151f27786a5512a7224ded8d2ff7132580718ebea88439319c7b2f40bb1bb"
+  },
+  {
+    "capture": "client-avis-positif.png",
+    "nature": "capture réelle de l’application 0.6.1 installée hors dépôt",
+    "preuve": "client-installation-externe.json",
+    "sha256": "bd360d45a8940e62edb04581605a47f1b94f3bc789decb68a6548c21e99de40b"
+  },
+  {
+    "capture": "client-avis-a-verifier.png",
+    "nature": "capture réelle de l’application 0.6.1 installée hors dépôt",
+    "preuve": "client-installation-externe.json",
+    "sha256": "afa747a00a376bcf751945d8216f7b05a12a61214a5be411514d94d9796efa23"
+  },
+  {
+    "capture": "client-csv-refuse.png",
+    "nature": "capture réelle de l’application 0.6.1 installée hors dépôt",
+    "preuve": "client-installation-externe.json",
+    "sha256": "e49efb0c936afea10788919a657b2c1abfb5dfd0d8ee8d996751aab9af6ba033"
+  },
+  {
+    "capture": "tp5-t34a-graphiques.png",
+    "nature": "capture réelle de l’application 0.6.1 installée hors dépôt",
+    "preuve": "client-installation-externe.json",
+    "sha256": "de52c2fa11a5082efe72dba32cce8fab739dcc6383ba30d25971d02bb124c63e"
+  }
+]
