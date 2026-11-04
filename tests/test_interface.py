@@ -37,8 +37,11 @@ def analyser(page, texte):
     return page
 
 
-def test_page_annonce_api_prete(page):
-    assert "API prête" in page.caption[0].value
+def test_page_annonce_service_disponible_sans_details_techniques(page):
+    affichage = " ".join(c.value for c in page.caption)
+    assert "Service d’analyse disponible" in affichage
+    assert "TP2" not in affichage and "joblib" not in affichage
+    assert "uvicorn" not in affichage and "src/train.py" not in affichage
 
 
 def test_avis_positif(page):

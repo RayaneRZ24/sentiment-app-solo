@@ -15,9 +15,9 @@ VERDICTS = {
     "NEGATIVE": "Avis négatif",
     "INDETERMINE": "Je ne sais pas : à faire vérifier par un humain",
 }
-INJOIGNABLE = "API injoignable : lancez d'abord uvicorn api.main:app"
+INJOIGNABLE = "Connexion au service impossible. Vérifiez votre connexion ou réessayez plus tard."
 REFUS = "Texte refusé : vide, fait d'espaces, ou de plus de 2000 caractères."
-SANS_MODELE = "Modèle non chargé : python src/train.py, puis relancer l'API."
+SANS_MODELE = "Le service d’analyse est temporairement indisponible. Réessayez plus tard."
 
 
 @dataclass

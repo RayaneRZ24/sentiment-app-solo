@@ -13,12 +13,15 @@ import streamlit as st
 from ui import client, graphiques
 
 st.set_page_config(page_title="Analyse de sentiment")
+st.set_option("client.toolbarMode", "minimal")
+st.set_option("client.showErrorDetails", False)
 st.title("Analyse de sentiment des avis")
+st.caption("Classez vos avis en positifs, négatifs ou à vérifier.")
 
 session = client.creer_session()
 etat = client.sante(session)
 if etat.ok:
-    st.caption(f"API prête : {etat.message}")
+    st.caption("Service d’analyse disponible.")
 else:
     st.error(etat.message)
 
@@ -40,7 +43,11 @@ with onglet_avis:
 with onglet_lot:
     fichier = st.file_uploader("Fichier CSV avec une colonne text", type="csv")
     if fichier is not None:
-        avis = pd.read_csv(fichier)
+        try:
+            avis = pd.read_csv(fichier)
+        except (pd.errors.ParserError, pd.errors.EmptyDataError, UnicodeDecodeError):
+            st.warning("Fichier illisible : utilisez un CSV UTF-8 avec une colonne text.")
+            st.stop()
         if "text" not in avis.columns:
             st.error("Colonne text absente du fichier.")
         else:
@@ -48,7 +55,9 @@ with onglet_lot:
             avis["verdict"] = [client.VERDICTS[r.label] if r.ok and r.label else r.message for r in reponses]
             avis["confiance"] = [r.score for r in reponses]
             st.dataframe(avis, use_container_width=True)
-            st.write(client.resumer(reponses))
+            compte = graphiques.repartition(reponses)["avis"]
+            st.caption(f"{compte['positif']} positifs · {compte['négatif']} négatifs · "
+                       f"{compte['à vérifier']} à vérifier · {compte['refus ou erreur']} refus ou erreurs")
             colonne_verdicts, colonne_confiances = st.columns(2)
             colonne_verdicts.caption("Répartition des verdicts")
             colonne_verdicts.bar_chart(graphiques.repartition(reponses))

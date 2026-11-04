@@ -1,0 +1,28 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 -m pip install --no-deps -e .[ui]
+
+Obtaining file:///C:/Users/NITRO%205/Downloads/sentiment-app-solo
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Checking if build backend supports build_editable: started
+Checking if build backend supports build_editable: finished with status 'done'
+Building wheels for collected packages: sentiment-app
+  Building editable for sentiment-app (pyproject.toml): started
+  Building editable for sentiment-app (pyproject.toml): finished with status 'done'
+  Created wheel for sentiment-app: filename=sentiment_app-0.6.1-0.editable-py3-none-any.whl size=4916 sha256=ed13dd41931228c68fc4dd8a4d809edfbae23629c29f16724a03df3934039917
+  Stored in directory: C:\Users\NITRO 5\AppData\Local\Temp\pip-ephem-wheel-cache-4bn0e774\wheels\9a\5d\ad\abfb071d64ccf440db3f1f285cabf3f33e6ece21d790609a6c
+Successfully built sentiment-app
+Installing collected packages: sentiment-app
+  Attempting uninstall: sentiment-app
+    Found existing installation: sentiment-app 0.6.0
+    Uninstalling sentiment-app-0.6.0:
+      Successfully uninstalled sentiment-app-0.6.0
+Successfully installed sentiment-app-0.6.1
+
+[notice] A new release of pip is available: 24.0 -> 26.3
+[notice] To update, run: python.exe -m pip install --upgrade pip

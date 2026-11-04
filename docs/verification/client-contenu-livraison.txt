@@ -1,0 +1,18 @@
+$ C:\Users\NITRO 5\Downloads\sentiment-app-solo\.venv\Scripts\python.exe -X utf8 scripts/preparer_livraison.py
+
+{
+  "livraison": "C:\\Users\\NITRO 5\\Downloads\\sentiment-app-solo\\dist\\sentiment-app-client-0.6.1.zip",
+  "octets": 26506,
+  "fichiers": [
+    "sentiment_app-0.6.1-py3-none-any.whl",
+    "modele/sentiment.joblib",
+    "NOTICE.md",
+    "FICHE-MODELE.md",
+    "installer.py",
+    "exemple-avis.csv",
+    "METRIQUES.json",
+    "MANIFESTE.json",
+    "SHA256SUMS.txt"
+  ],
+  "sha256": "cf73e9355c609d4a60e32698c86927f2c5dc7c53a68c53e7c4cadb086e351246"
+}

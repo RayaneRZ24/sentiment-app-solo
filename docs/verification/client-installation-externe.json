@@ -1,0 +1,41 @@
+{
+  "version": "0.6.1",
+  "origine_paquet": "C:\\Users\\NITRO 5\\AppData\\Local\\Temp\\sentiment-livraison-34jmxp2t\\application\\.venv-client\\Lib\\site-packages\\sentiment_app\\__init__.py",
+  "prefix": "C:\\Users\\NITRO5~1\\AppData\\Local\\Temp\\sentiment-livraison-34jmxp2t\\application\\.venv-client",
+  "api_url": "http://127.0.0.1:52239",
+  "ui_url": "http://127.0.0.1:52240",
+  "predictions": {
+    "positif": {
+      "status": 200,
+      "body": {
+        "label": "POSITIVE",
+        "score": 0.777,
+        "text": "Livraison rapide, produit conforme, très satisfait"
+      }
+    },
+    "inconnu": {
+      "status": 200,
+      "body": {
+        "label": "INDETERMINE",
+        "score": 0.5162,
+        "text": "xqzvb wlkptr grombu"
+      }
+    }
+  },
+  "navigateur": {
+    "graphiques": 2,
+    "resume": "3 positifs · 2 négatifs · 1 à vérifier · 0 refus ou erreurs",
+    "csv_resultats": "client-resultats-exemple.csv"
+  },
+  "archive": "sentiment-app-client-0.6.1.zip",
+  "sha256_archive": "cf73e9355c609d4a60e32698c86927f2c5dc7c53a68c53e7c4cadb086e351246",
+  "outils_developpement_installes": {
+    "pytest": false,
+    "shap": false,
+    "ruff": false,
+    "mypy": false,
+    "hypothesis": false
+  },
+  "sans_modele_code": 1,
+  "arret_deux_services": true
+}

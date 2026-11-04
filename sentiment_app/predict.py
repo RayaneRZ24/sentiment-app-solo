@@ -35,7 +35,7 @@ class Prediction(TypedDict):
 def charger_modele():
     """Chargé une seule fois par processus, pas à chaque appel."""
     if not MODELE.exists():
-        raise FileNotFoundError(f"modèle introuvable : {MODELE}. Lancez python src/train.py, ou indiquez son chemin dans SENTIMENT_MODELE.")
+        raise FileNotFoundError(f"modèle introuvable : {MODELE}. Indiquez le chemin du modèle fourni dans SENTIMENT_MODELE.")
     return joblib.load(MODELE)
 
 

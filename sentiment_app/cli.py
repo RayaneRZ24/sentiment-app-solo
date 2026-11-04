@@ -44,6 +44,12 @@ def _interface(args: argparse.Namespace) -> int:
     return subprocess.call([sys.executable, "-m", "streamlit", "run", str(page)])
 
 
+def _demarrer(args: argparse.Namespace) -> int:
+    from sentiment_app.application import lancer
+
+    return lancer(args.api_port, args.port, ouvrir=not args.sans_navigateur)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="sentiment", description="Analyse de sentiment d'avis clients.")
     parser.add_argument("--version", action="version", version=f"sentiment-app {__version__}")
@@ -61,5 +67,10 @@ def main(argv: list[str] | None = None) -> int:
     interface = commandes.add_parser("ui", help="lance la page Streamlit (l'API doit tourner)")
     interface.set_defaults(fonction=_interface)
 
+    demarrer = commandes.add_parser("start", help="ouvre l'application locale et son service")
+    demarrer.add_argument("--api-port", type=int, default=8000)
+    demarrer.add_argument("--port", type=int, default=8501)
+    demarrer.add_argument("--sans-navigateur", action="store_true")
+    demarrer.set_defaults(fonction=_demarrer)
     args = parser.parse_args(argv)
     return int(args.fonction(args))

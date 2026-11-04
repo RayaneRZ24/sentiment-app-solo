@@ -2,7 +2,7 @@
 
 ## Identité du modèle
 
-TF-IDF et régression logistique, paquet 0.6.0. Modèle de démonstration entraîné le 28 octobre 2026 ; fiche vérifiée le 4 novembre 2026.
+TF-IDF et régression logistique, paquet 0.6.1. Entraînement de référence : 28 octobre 2026 ; fiche vérifiée le 4 novembre 2026. La date de chaque modèle reconstruit figure dans les métriques qui l’accompagnent.
 
 ## Usage prévu
 
@@ -40,4 +40,4 @@ Un humain relit les avis indéterminés, vérifie les formulations ambiguës et 
 
 Suivre erreurs et charge de relecture ; réévaluer avant tout changement de domaine ou réentraînement. Entraîner et relire avec scikit-learn 1.5.x (poste : 1.5.2). Distribuer le modèle séparément, définir SENTIMENT_MODELE et mettre cette fiche à jour avec ses métriques.
 
-Mesures et commandes reproductibles : `docs/verification/complements-c6-*`, `complements-t27a-*`, `tp4-courbe-abstention.txt` et `tp4-bilan-jeu-or.txt` dans le dépôt de développement.
+Mesures et commandes reproductibles : `docs/verification/complements-c6-*`, `complements-t27a-*`, `tp4-courbe-seuil.txt` et `tp4-bilan-jeu-or.txt` dans le dépôt de développement.

@@ -32,7 +32,7 @@ build-backend = "setuptools.build_meta"
 name = "sentiment-app"
 dynamic = ["version"]
 description = "Analyse de sentiment d'avis clients : modèle, API et interface"
-readme = "README.md"
+readme = "docs/notice-utilisateur.md"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.115,<0.116",

@@ -4,7 +4,15 @@ Toutes les étapes solo ont été réellement rejouées le 28 octobre 2026, à p
 
 ## Non publié
 
-- Compléments du 2 novembre : explications SHAP, analyse des biais, graphiques et fiche modèle avec mesures et validation humaine.
+Aucun changement supplémentaire en attente après la livraison 0.6.1.
+
+## 0.6.1 — Compléments et application client
+
+- Explications SHAP, analyse des biais, graphiques et fiche modèle avec mesures et validation humaine.
+- Messages destinés au client, lecture des CSV invalides et commande `sentiment start`.
+- Archive installable avec modèle séparé, notice, installateur et empreintes ; vérification depuis une installation neuve sans outils de développement.
+- Description du paquet issue de la notice utilisateur ; le README pédagogique reste dans le dépôt.
+- Contrôle du démarrage, des ports occupés et de l’arrêt des deux services, y compris les processus enfants Windows.
 
 ## 0.6.0 — TP6
 

@@ -13,3 +13,7 @@ Le fichier avis_exemple.csv comporte six avis : trois positifs, deux négatifs, 
 Le module `ui/graphiques.py` et ses quatre tests sont repris du complément étudiant d’A. Larhlimi. La page affiche la répartition des verdicts et l’histogramme des confiances, calculés depuis les réponses HTTP. Les catégories vides restent à zéro et les refus ne sont pas comptés comme des confiances.
 
 Les [neuf tests de graphiques et de page](verification/complements-t34a-tests.txt) vérifient le fichier d’exemple : 3 positifs, 2 négatifs et 1 avis à vérifier ; les tranches de confiance contiennent respectivement 1, 1, 3, 1 et 0 avis. L’histogramme montre combien de résultats sont proches du seuil de décision ; la confiance n’est pas une garantie de justesse.
+
+## Présentation client, version 0.6.1
+
+La page annonce la disponibilité du service sans afficher les chemins du modèle ni les noms de TP. Les erreurs ne demandent plus à l’utilisateur de lancer uvicorn ou un script d’entraînement. Le résumé CSV emploie les libellés du client et un fichier illisible reçoit un message explicite. Le test de disponibilité est adapté à ce texte visible et vérifie aussi l’absence de détails internes.

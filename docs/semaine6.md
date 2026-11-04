@@ -21,3 +21,9 @@ Les deux échecs initiaux du kit et l'échec restant avant branchement de l'API 
 La [fiche modèle](fiche-modele.md) renseigne les dix rubriques du nouveau modèle étudiant. Le contrôle initial a effectivement produit [13 échecs et un succès](verification/complements-t41a-avant.txt), puis [14 succès](verification/complements-t41a-tests.txt) après rédaction. Les valeurs sont celles de notre modèle et de nos sorties, dont les quatre erreurs connues de notre propre jeu d’or ; le bilan fourni à titre d’exemple par le professeur n’a pas été recopié.
 
 La rubrique la plus délicate est celle des biais : les effectifs sont petits et la longueur est confondue avec les retournements. Le croisement permet de décrire l’écart mesuré sans prétendre démontrer une causalité ni une équité démographique. La fiche explique aussi ce qu’un humain doit vérifier et le coût de l’abstention en relecture.
+
+## Livraison client, version 0.6.1
+
+Le tag v0.6.0 conserve l’étape historique. La version 0.6.1 ajoute le lancement `sentiment start`, l’archive client, l’installateur et les compléments. La roue embarque la notice utilisateur comme description, à la place du README pédagogique. SHAP et les outils qualité restent des dépendances de développement.
+
+La livraison rassemble la roue, le modèle séparé, une notice, la fiche du modèle, un petit CSV d’exemple, les métriques et leurs empreintes. Le client n’a besoin ni du dépôt source ni du journal ni des tests. L’installation extérieure vérifie aussi le démarrage et l’arrêt des services ; sous Windows, il faut arrêter les enfants du lanceur Python du venv, pas seulement son processus parent.

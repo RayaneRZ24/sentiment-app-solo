@@ -27,11 +27,18 @@ jobs:
         run: . .venv/bin/activate && mypy api
       - name: Tests et couverture API
         run: . .venv/bin/activate && python -m pytest -q --cov=api --cov-report=term-missing --cov-fail-under=95
-      - name: Roue installee hors du depot
+      - name: Livraison client installee hors du depot
         run: |
           . .venv/bin/activate
           python -m build --wheel
-          python -m venv /tmp/roue-solo
-          /tmp/roue-solo/bin/pip install dist/*.whl
-          cd /tmp
-          SENTIMENT_MODELE="$GITHUB_WORKSPACE/models/sentiment.joblib" /tmp/roue-solo/bin/sentiment predict "Livraison rapide, produit conforme, très satisfait"
+          python scripts/preparer_livraison.py
+          python scripts/verifier_livraison.py dist/sentiment-app-client-*.zip --rapport /tmp/rapport-installation-client.json
+      - name: Application installable et preuve de verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentiment-app-client
+          path: |
+            dist/sentiment-app-client-*.zip
+            dist/*.whl
+            /tmp/rapport-installation-client.json
+          if-no-files-found: error

@@ -24,9 +24,11 @@ try {
     Invoke-Etape 'Prediction via le paquet' @('-m', 'sentiment_app', 'predict', 'Livraison rapide, produit conforme, tres satisfait')
     if ($Detail) {
         Invoke-Etape 'Tests detailles' @('-m', 'pytest', 'tests/', '-v')
-        foreach ($fichierTest in @('test_model.py','test_api.py','test_limites.py','test_integration.py','test_jeu_or.py','test_client.py','test_interface.py','test_packaging.py')) {
+        foreach ($fichierTest in @('test_model.py','test_api.py','test_limites.py','test_integration.py','test_jeu_or.py','test_client.py','test_interface.py','test_packaging.py','test_explicabilite.py','test_biais.py','test_graphiques.py','test_fiche_modele.py','test_application.py')) {
             Invoke-Etape $fichierTest @('-m', 'pytest', "tests/$fichierTest", '-q')
         }
+        Invoke-Etape 'Explication SHAP' @('src/expliquer.py')
+        Invoke-Etape 'Biais par groupes' @('src/biais.py')
         Invoke-Etape 'Courbe du seuil' @('src/courbe_seuil.py')
         Invoke-Etape 'Bilan du jeu or' @('src/bilan_jeu_or.py')
     }
